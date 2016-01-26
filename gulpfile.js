@@ -10,7 +10,7 @@ gulp.task('babel', function () {
     babel_stream.end();
   });
 
-  return gulp.src('src/index.js')
+  return gulp.src('src/**/*.js')
     .pipe(babel_stream)
     .pipe(gulp.dest('dist'));
 });
