@@ -1,0 +1,1532 @@
+<!DOCTYPE html><html lang="nl" data-cast-api-enabled="true"><head><style name="www-roboto">@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//fonts.gstatic.com/s/roboto/v15/W4wDsBUluyw0tK3tykhXEfesZW2xOQ-xsNqO47m55DA.ttf)format('truetype');}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0Z0EAVxt0G0biEntp43Qt6E.ttf)format('truetype');}</style><script name="www-roboto">if (document.fonts && document.fonts.load) {document.fonts.load("400 10pt Roboto", "N");document.fonts.load("500 10pt Roboto", "N");}</script><script>var ytcsi = {gt: function(n) {n = (n || '') + 'data_';return ytcsi[n] || (ytcsi[n] = {tick: {},span: {},info: {}});},tick: function(l, t, n) {ytcsi.gt(n).tick[l] = t || +new Date();},span: function(l, s, e, n) {ytcsi.gt(n).span[l] = (e ? e : +new Date()) - ytcsi.gt(n).tick[s];},setSpan: function(l, s, n) {ytcsi.gt(n).span[l] = s;},info: function(k, v, n) {ytcsi.gt(n).info[k] = v;},setStart: function(s, t, n) {ytcsi.info('yt_sts', s, n);ytcsi.tick('_start', t, n);}};(function(w, d) {ytcsi.perf = w.performance || w.mozPerformance ||w.msPerformance || w.webkitPerformance;ytcsi.setStart('dhs', ytcsi.perf ? ytcsi.perf.timing.responseStart : null);var isPrerender = (d.visibilityState || d.webkitVisibilityState) == 'prerender';var vName = d.webkitVisibilityState ? 'webkitvisibilitychange' : 'visibilitychange';if (isPrerender) {ytcsi.info('prerender', 1);var startTick = function() {ytcsi.setStart('dhs');d.removeEventListener(vName, startTick);};d.addEventListener(vName, startTick, false);}if (d.addEventListener) {d.addEventListener(vName, function() {ytcsi.tick('vc');}, false);}})(window, document);</script><script>var ytcfg = {d: function() {return (window.yt && yt.config_) || ytcfg.data_ || (ytcfg.data_ = {});},get: function(k, o) {return (k in ytcfg.d()) ? ytcfg.d()[k] : o;},set: function() {var a = arguments;if (a.length > 1) {ytcfg.d()[a[0]] = a[1];} else {for (var k in a[0]) {ytcfg.d()[k] = a[0][k];}}}};</script>  <script>ytcfg.set("LACT", null);</script>
+  
+
+
+
+
+  <script>
+        (function(){var b={f:"content-snap-width-1",h:"content-snap-width-2",j:"content-snap-width-3"};function f(){var a=[],c;for(c in b)a.push(b[c]);return a}
+function g(a){var c=f().concat(["guide-pinned","show-guide"]),d=c.length,e=[];a.replace(/\S+/g,function(a){for(var k=0;k<d;k++)if(a==c[k])return;e.push(a)});
+return e}
+;function l(a,c,d){var e=document.getElementsByTagName("html")[0],h=g(e.className);a&&1251<=(window.innerWidth||document.documentElement.clientWidth)&&(h.push("guide-pinned"),c&&h.push("show-guide"));d&&(d=(window.innerWidth||document.documentElement.clientWidth)-21-50,1251<=(window.innerWidth||document.documentElement.clientWidth)&&a&&c&&(d-=230),h.push(1262<=d?"content-snap-width-3":1056<=d?"content-snap-width-2":"content-snap-width-1"));e.className=h.join(" ")}
+var m=["yt","www","masthead","sizing","runBeforeBodyIsReady"],n=this;m[0]in n||!n.execScript||n.execScript("var "+m[0]);for(var p;m.length&&(p=m.shift());)m.length||void 0===l?n[p]?n=n[p]:n=n[p]={}:n[p]=l;})();
+
+      try {window.ytbuffer = {};ytbuffer.handleClick = function(e) {var element = e.target || e.srcElement;while (element.parentElement) {if (/(^| )yt-can-buffer( |$)/.test(element.className)) {window.ytbuffer = {bufferedClick: e};element.className += ' yt-is-buffered';break;}element = element.parentElement;}};if (document.addEventListener) {document.addEventListener('click', ytbuffer.handleClick);} else {document.attachEvent('onclick', ytbuffer.handleClick);}} catch(e) {}
+
+    yt.www.masthead.sizing.runBeforeBodyIsReady(false,false,true);
+  </script>
+
+      <script src="//s.ytimg.com/yts/jsbin/scheduler-vfl5r_pIb/scheduler.js" type="text/javascript" name="scheduler/scheduler"></script>
+
+
+    <script>var ytimg = {};ytimg.count = 1;ytimg.preload = function(src) {var img = new Image();var count = ++ytimg.count;ytimg[count] = img;img.onload = img.onerror = function() {delete ytimg[count];};img.src = src;};</script>
+
+
+          <script src="//s.ytimg.com/yts/jsbin/player-nl_NL-vflcqp8wo/base.js" name="player/base"></script>
+
+
+
+  <link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-core-vfl56kZpg.css" name="www-core">
+      <link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-player-vflRsq_1x.css" name="www-player">
+
+  <link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-pageframe-vflUA8MqU.css" name="www-pageframe">
+      <script>ytimg.preload("https:\/\/r2---sn-q5u5qpxonuxo-bg9e.googlevideo.com\/crossdomain.xml");ytimg.preload("https:\/\/r2---sn-q5u5qpxonuxo-bg9e.googlevideo.com\/generate_204");</script>
+
+
+<title>Blueprint [Melodic Techno Mix 2013] - YouTube</title><link rel="search" type="application/opensearchdescription+xml" href="https://www.youtube.com/opensearch?locale=nl_NL" title="Video&#39;s zoeken op YouTube"><link rel="shortcut icon" href="https://s.ytimg.com/yts/img/favicon-vflz7uhzw.ico" type="image/x-icon">     <link rel="icon" href="//s.ytimg.com/yts/img/favicon_32-vfl8NGn4k.png" sizes="32x32"><link rel="icon" href="//s.ytimg.com/yts/img/favicon_48-vfl1s0rGh.png" sizes="48x48"><link rel="icon" href="//s.ytimg.com/yts/img/favicon_96-vfldSA3ca.png" sizes="96x96"><link rel="icon" href="//s.ytimg.com/yts/img/favicon_144-vflWmzoXw.png" sizes="144x144"><meta name="theme-color" content="#e62117"><link rel="canonical" href="https://www.youtube.com/watch?v=7ruDVn70dPw"><link rel="alternate" media="handheld" href="http://m.youtube.com/watch?v=7ruDVn70dPw"><link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.youtube.com/watch?v=7ruDVn70dPw"><link rel="shortlink" href="https://youtu.be/7ruDVn70dPw">      <meta name="title" content="Blueprint [Melodic Techno Mix 2013]">
+
+      <meta name="description" content="WHOHO! I can&#39;t believe it! A new Techno mix from me! And it&#39;s a *VERY* special one! Of course! WHAT ELSE! This mix is deep, hypnotic, trippy, spacy, dreamy, ...">
+
+      <meta name="keywords" content="progressive, tb-303, tb303, 303, acid, Acid Techno, acidtrance, trance, downbeat, chillout, ambient, dj, mix, DJ Mix, tb, tobias bassline, toby bassline, dj ...">
+
+        <link rel="alternate" href="android-app://com.google.android.youtube/http/www.youtube.com/watch?v=7ruDVn70dPw">
+    <link rel="alternate" href="ios-app://544007664/vnd.youtube/www.youtube.com/watch?v=7ruDVn70dPw">
+
+      <link rel="alternate" type="application/json+oembed" href="http://www.youtube.com/oembed?format=json&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7ruDVn70dPw" title="Blueprint [Melodic Techno Mix 2013]">
+  <link rel="alternate" type="text/xml+oembed" href="http://www.youtube.com/oembed?format=xml&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7ruDVn70dPw" title="Blueprint [Melodic Techno Mix 2013]">
+
+        <meta property="og:site_name" content="YouTube">
+      <meta property="og:url" content="https://www.youtube.com/watch?v=7ruDVn70dPw">
+    <meta property="og:title" content="Blueprint [Melodic Techno Mix 2013]">
+    <meta property="og:image" content="https://i.ytimg.com/vi/7ruDVn70dPw/maxresdefault.jpg">
+
+      <meta property="og:description" content="WHOHO! I can&#39;t believe it! A new Techno mix from me! And it&#39;s a *VERY* special one! Of course! WHAT ELSE! This mix is deep, hypnotic, trippy, spacy, dreamy, ...">
+
+    <meta property="al:ios:app_store_id" content="544007664">
+    <meta property="al:ios:app_name" content="YouTube">
+      <meta property="al:ios:url" content="vnd.youtube://www.youtube.com/watch?v=7ruDVn70dPw&amp;feature=applinks">
+
+      <meta property="al:android:url" content="vnd.youtube://www.youtube.com/watch?v=7ruDVn70dPw&amp;feature=applinks">
+    <meta property="al:android:app_name" content="YouTube">
+    <meta property="al:android:package" content="com.google.android.youtube">
+    <meta property="al:web:url" content="https://www.youtube.com/watch?v=7ruDVn70dPw&amp;feature=applinks">
+
+    <meta property="og:type" content="video">
+        <meta property="og:video:url" content="https://www.youtube.com/embed/7ruDVn70dPw">
+        <meta property="og:video:secure_url" content="https://www.youtube.com/embed/7ruDVn70dPw">
+        <meta property="og:video:type" content="text/html">
+        <meta property="og:video:width" content="1280">
+        <meta property="og:video:height" content="720">
+        <meta property="og:video:url" content="http://www.youtube.com/v/7ruDVn70dPw?version=3&amp;autohide=1">
+        <meta property="og:video:secure_url" content="https://www.youtube.com/v/7ruDVn70dPw?version=3&amp;autohide=1">
+        <meta property="og:video:type" content="application/x-shockwave-flash">
+        <meta property="og:video:width" content="1280">
+        <meta property="og:video:height" content="720">
+
+        <meta property="og:video:tag" content="progressive">
+        <meta property="og:video:tag" content="tb-303">
+        <meta property="og:video:tag" content="tb303">
+        <meta property="og:video:tag" content="303">
+        <meta property="og:video:tag" content="acid">
+        <meta property="og:video:tag" content="Acid Techno">
+        <meta property="og:video:tag" content="acidtrance">
+        <meta property="og:video:tag" content="trance">
+        <meta property="og:video:tag" content="downbeat">
+        <meta property="og:video:tag" content="chillout">
+        <meta property="og:video:tag" content="ambient">
+        <meta property="og:video:tag" content="dj">
+        <meta property="og:video:tag" content="mix">
+        <meta property="og:video:tag" content="DJ Mix">
+        <meta property="og:video:tag" content="tb">
+        <meta property="og:video:tag" content="tobias bassline">
+        <meta property="og:video:tag" content="toby bassline">
+        <meta property="og:video:tag" content="dj tb">
+        <meta property="og:video:tag" content="divbyzero">
+        <meta property="og:video:tag" content="labor">
+        <meta property="og:video:tag" content="munich">
+        <meta property="og:video:tag" content="cronomi">
+        <meta property="og:video:tag" content="petar dundov">
+        <meta property="og:video:tag" content="extrawelt">
+        <meta property="og:video:tag" content="matt star">
+        <meta property="og:video:tag" content="microtrauma">
+        <meta property="og:video:tag" content="boris brejcha">
+        <meta property="og:video:tag" content="poison pro">
+        <meta property="og:video:tag" content="len faki">
+        <meta property="og:video:tag" content="virgil enzinger">
+        <meta property="og:video:tag" content="spada">
+        <meta property="og:video:tag" content="gregor tresher">
+        <meta property="og:video:tag" content="marco bailey">
+        <meta property="og:video:tag" content="tom hades">
+        <meta property="og:video:tag" content="techno">
+        <meta property="og:video:tag" content="electro">
+        <meta property="og:video:tag" content="minimal">
+        <meta property="og:video:tag" content="melodic techno">
+        <meta property="og:video:tag" content="Minimal Techno (Musical Genre)">
+        <meta property="og:video:tag" content="Melodic Music (Musical Genre)">
+        <meta property="og:video:tag" content="Trance Music (Musical Genre)">
+
+    <meta property="fb:app_id" content="87741124305">
+
+        <meta name="twitter:card" content="player">
+    <meta name="twitter:site" content="@youtube">
+    <meta name="twitter:url" content="https://www.youtube.com/watch?v=7ruDVn70dPw">
+    <meta name="twitter:title" content="Blueprint [Melodic Techno Mix 2013]">
+    <meta name="twitter:description" content="WHOHO! I can&#39;t believe it! A new Techno mix from me! And it&#39;s a *VERY* special one! Of course! WHAT ELSE! This mix is deep, hypnotic, trippy, spacy, dreamy, ...">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/7ruDVn70dPw/maxresdefault.jpg">
+    <meta name="twitter:app:name:iphone" content="YouTube">
+    <meta name="twitter:app:id:iphone" content="544007664">
+    <meta name="twitter:app:name:ipad" content="YouTube">
+    <meta name="twitter:app:id:ipad" content="544007664">
+      <meta name="twitter:app:url:iphone" content="vnd.youtube://www.youtube.com/watch?v=7ruDVn70dPw&amp;feature=applinks">
+      <meta name="twitter:app:url:ipad" content="vnd.youtube://www.youtube.com/watch?v=7ruDVn70dPw&amp;feature=applinks">
+    <meta name="twitter:app:name:googleplay" content="YouTube">
+    <meta name="twitter:app:id:googleplay" content="com.google.android.youtube">
+    <meta name="twitter:app:url:googleplay" content="https://www.youtube.com/watch?v=7ruDVn70dPw">
+      <meta name="twitter:player" content="https://www.youtube.com/embed/7ruDVn70dPw">
+      <meta name="twitter:player:width" content="1280">
+      <meta name="twitter:player:height" content="720">
+
+  
+</head>  <body dir="ltr" id="body" class="  ltr    exp-responsive exp-scrollable-guide   site-center-aligned site-as-giant-card sitewide-consent-visible appbar-hidden    visibility-logging-enabled   not-nirvana-dogfood  not-yt-legacy-css      flex-width-enabled      flex-width-enabled-snap    delayed-frame-styles-not-in  " data-spf-name="watch">
+<div id="early-body"></div><div id="body-container"><div id="a11y-announcements-container" role="alert"><div id="a11y-announcements-message"></div></div><form name="logoutForm" method="POST" action="/logout"><input type="hidden" name="action_logout" value="1"></form><div id="masthead-positioner">      <div class="yt-consent yt-consent-banner clearfix">
+    <div class="yt-consent-buttons">
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default consent-close" type="button" onclick=";return false;" aria-label="Laat me de privacyherinnering later zien"><span class="yt-uix-button-content">Later herinneren</span></button>
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-primary consent-review" type="button" onclick=";return false;" aria-label="Privacyherinnering nu bekijken"><span class="yt-uix-button-content">Bekijken</span></button>
+    </div>
+    <div class="yt-consent-icon"></div>
+    <div class="yt-consent-content" role="alert">
+Een privacyherinnering van YouTube, een bedrijf van Google
+    </div>
+  </div>
+
+  <div id="yt-masthead-container" class="clearfix yt-base-gutter">  <button id="a11y-skip-nav" class="skip-nav" data-target-id="main" tabindex="3">
+Navigatie overslaan
+  </button>
+<div id="yt-masthead"><div class="yt-masthead-logo-container ">  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text yt-uix-button-empty yt-uix-button-has-icon appbar-guide-toggle appbar-guide-clickable-ancestor" type="button" onclick=";return false;" id="appbar-guide-button" aria-label="Gids" aria-controls="appbar-guide-menu"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-appbar-guide yt-sprite"></span></span></button>
+  <div id="appbar-main-guide-notification-container"></div>
+<span id="yt-masthead-logo-fragment"><a href="/" class="yt-uix-sessionlink masthead-logo-renderer       spf-link " data-sessionlink="itct=CAUQsV4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0" id="logo-container" title="YouTube-homepage">  <span class="logo masthead-logo-renderer-logo yt-sprite" title="YouTube-homepage"></span>
+<span class="content-region">NL</span></a></span></div><div id="yt-masthead-signin"><a href="//www.youtube.com/upload" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw&amp;feature=mhsb" id="upload-btn"><span class="yt-uix-button-content">Uploaden</span></a><div class="signin-container "><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-primary" type="button" onclick=";window.location.href=this.getAttribute(&#39;href&#39;);return false;" role="link" href="https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26feature%3Dsign_in_button%26next%3D%252Fwatch%253Fv%253D7ruDVn70dPw%26hl%3Dnl&amp;hl=nl"><span class="yt-uix-button-content">Inloggen</span></button></div></div><div id="yt-masthead-content"><form id="masthead-search" class="search-form consolidated-form" action="/results" onsubmit="if (document.getElementById(&#39;masthead-search-term&#39;).value == &#39;&#39;) return false;" data-clicktracking="CAEQ7VAiEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default search-btn-component search-button" type="submit" onclick="if (document.getElementById(&#39;masthead-search-term&#39;).value == &#39;&#39;) return false; document.getElementById(&#39;masthead-search&#39;).submit(); return false;;return true;" id="search-btn" dir="ltr" tabindex="2"><span class="yt-uix-button-content">Zoeken</span></button><div id="masthead-search-terms" class="masthead-search-terms-border" dir="ltr"><input id="masthead-search-term" autocomplete="off"  onkeydown="if (!this.value &amp;&amp; (event.keyCode == 40 || event.keyCode == 32 || event.keyCode == 34)) {this.onkeydown = null; this.blur();}" class="search-term masthead-search-renderer-input yt-uix-form-input-bidi" name="search_query" value="" type="text" tabindex="1" placeholder="" title="Zoeken"></div></form></div></div></div>
+    <div id="masthead-appbar-container" class="clearfix"><div id="masthead-appbar"><div id="appbar-content" class=""></div></div></div>
+
+</div><div id="masthead-positioner-height-offset"></div><div id="page-container"><div id="page" class="  watch      watch-non-stage-mode   clearfix"><div id="guide" class="yt-scrollbar">    <div id="appbar-guide-menu" class="appbar-menu appbar-guide-menu-layout appbar-guide-clickable-ancestor">
+    <div id="guide-container">
+      <div class="guide-module-content guide-module-loading">
+          <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+      </div>
+    </div>
+  </div>
+
+</div><div class="alerts-wrapper"><div id="alerts" class="content-alignment">    <div class="yt-alert yt-alert-default yt-alert-info  " id="yt-lang-alert-container">  <div class="yt-alert-icon">
+    <span class="icon master-sprite yt-sprite"></span>
+  </div>
+<div class="yt-alert-content" role="alert">    <div class="yt-alert-message">
+            Kies je taal.
+
+    </div>
+</div><div class="yt-alert-buttons"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-close close yt-uix-close" type="button" onclick=";return false;" aria-label="Sluiten" data-close-parent-class="yt-alert"><span class="yt-uix-button-content">Sluiten</span></button></div><div class="yt-alert-panel ">  <div id="yt-lang-alert-content" class="clearfix">
+    <div id="default-language-message">
+      <div class="yt-lang-alert-controls">
+        <a href="//support.google.com/youtube/answer/1738660?hl=nl">Meer informatie</a><br>
+          <a href="javascript:void(0)" onclick="yt.style.toggle('default-language-message', 'default-language-message-english'); return false;">View this message in English</a>
+      </div>
+Je gebruikt YouTube in het <strong>Nederlands</strong>.
+Je kunt <a href="javascript:void(0)" onclick="yt.www.picker.displayLang();">deze voorkeur hieronder wijzigen</a>.
+    </div>
+    <div id="default-language-message-english" class="hid">
+      <div class="yt-lang-alert-controls">
+        <a href="//support.google.com/youtube/answer/1738660?hl=en">Learn more</a><br>
+      </div>
+      You're viewing YouTube in <strong>Dutch</strong>.
+        You can <a href="javascript:void(0)" onclick="yt.www.picker.displayLang();">change this preference below</a>.
+    </div>
+  </div>
+</div></div>
+  
+  <div id="editor-progress-alert-container"></div>
+  <div class="yt-alert yt-alert-default yt-alert-warn hid " id="editor-progress-alert-template">  <div class="yt-alert-icon">
+    <span class="icon master-sprite yt-sprite"></span>
+  </div>
+<div class="yt-alert-content" role="alert"></div><div class="yt-alert-buttons"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-close close yt-uix-close" type="button" onclick=";return false;" aria-label="Sluiten" data-close-parent-class="yt-alert"><span class="yt-uix-button-content">Sluiten</span></button></div></div>
+
+    <div id="edit-confirmation-alert"></div>
+  <div class="yt-alert yt-alert-actionable yt-alert-info hid " id="edit-confirmation-alert-template">  <div class="yt-alert-icon">
+    <span class="icon master-sprite yt-sprite"></span>
+  </div>
+<div class="yt-alert-content" role="alert">    <div class="yt-alert-message">
+    </div>
+</div><div class="yt-alert-buttons">  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-alert-info yt-uix-button-has-icon edit-confirmation-yes" type="button" onclick=";return false;"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-like-invert yt-sprite"></span></span><span class="yt-uix-button-content">Ja, nieuwe versie behouden</span></button>
+  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-alert-info yt-uix-button-has-icon edit-confirmation-no" type="button" onclick=";return false;"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-unlike-invert yt-sprite"></span></span><span class="yt-uix-button-content">Ongedaan maken</span></button>
+<button class="yt-uix-button yt-uix-button-size-default yt-uix-button-close close yt-uix-close" type="button" onclick=";return false;" aria-label="Sluiten" data-close-parent-class="yt-alert"><span class="yt-uix-button-content">Sluiten</span></button></div></div>
+
+
+
+</div></div><div id="header"></div><div id="player" class="  content-alignment       watch-small  " role="complementary"><div id="theater-background" class="player-height"></div>  <div id="player-mole-container">
+    <div id="player-unavailable" class="    hid    player-width player-height    player-unavailable ">
+              <img class="icon meh" src="//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" data-icon="//s.ytimg.com/yts/img/meh7-vflGevej7.png" alt="">
+  <div class="content">
+    <h1 id="unavailable-message" class="message">
+              Deze video is niet beschikbaar.
+
+    </h1>
+    <div id="unavailable-submessage" class="submessage">
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="player-api" class="player-width player-height off-screen-target player-api" tabIndex="-1"></div>
+        <script>if (window.ytcsi) {window.ytcsi.tick("cfg", null, '');}</script>
+    <script>var ytplayer = ytplayer || {};ytplayer.config = {"messages":{"player_fallback":["Je hebt Adobe Flash Player of een browser met HTML5-ondersteuning nodig om video's te kunnen afspelen. \u003ca href=\"http:\/\/get.adobe.com\/flashplayer\/\"\u003eDownload de meest recente Flash Player\u003c\/a\u003e \u003ca href=\"\/html5\"\u003eMeer informatie over het upgraden naar een HTML5-browser\u003c\/a\u003e"]},"attrs":{"id":"movie_player"},"args":{"gapi_hint_params":"m;\/_\/scs\/abc-static\/_\/js\/k=gapi.gapi.en.031mdWrIyGE.O\/m=__features__\/am=AAQ\/rt=j\/d=1\/rs=AHpOoo9LVH8q4HIB6ymfgTF00d12dbkTeA","is_listed":"1","vm":"CAIQAA","keywords":"progressive,tb-303,tb303,303,acid,Acid Techno,acidtrance,trance,downbeat,chillout,ambient,dj,mix,DJ Mix,tb,tobias bassline,toby bassline,dj tb,divbyzero,labor,munich,cronomi,petar dundov,extrawelt,matt star,microtrauma,boris brejcha,poison pro,len faki,virgil enzinger,spada,gregor tresher,marco bailey,tom hades,techno,electro,minimal,melodic techno,Minimal Techno (Musical Genre),Melodic Music (Musical Genre),Trance Music (Musical Genre)","account_playback_token":"QUFFLUhqbTRKXzI3bDByUTg3YVhDXzRUZlJLeWE3VDM1QXxBQ3Jtc0tubVBhRkZ2ZDhoTS1xb0JfbDh2ajJXZE1QWlJTOUtXUkJwS1FpSGJqQUlvLTNYNWFld0FRMS16U3hsbGZ1Zi1sa1hMRTlaaUdPWUlPVm04NndpV2FDZTBkanZtQUZ0QUZZOWY0bE5VRUV3UEI3dDlhZw==","url_encoded_fmt_stream_map":"fallback_host=tc.v21.cache6.googlevideo.com\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D22%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3DC5DDB95F58739E998A72F58BB9D4F3ED3C7FB570.13B870B16DD70CB04F06DFD23790C6DDC0A1A1E3%26initcwndbps%3D2423750%26mime%3Dvideo%252Fmp4%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.195%26lmt%3D1437148481253204%26sver%3D3%26ratebypass%3Dyes%26requiressl%3Dyes%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.64001F%2C+mp4a.40.2%22\u0026itag=22\u0026quality=hd720,fallback_host=tc.v12.cache4.googlevideo.com\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D43%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D4B6DC1AE1B803DEDBFDE6E928C4352FE98412773.A29F6D7E7EBDC8444B0D2DE6EE45EBEC32890380%26initcwndbps%3D2423750%26mime%3Dvideo%252Fwebm%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D0.000%26lmt%3D1378378867260255%26sver%3D3%26ratebypass%3Dyes%26requiressl%3Dyes%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026type=video%2Fwebm%3B+codecs%3D%22vp8.0%2C+vorbis%22\u0026itag=43\u0026quality=medium,fallback_host=tc.v7.cache5.googlevideo.com\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D18%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D9AD530FA734792DF996C3AFED1E04CEFBE71287C.812DA237BD4B49BB3DEA262095761CB5E5CDEC93%26initcwndbps%3D2423750%26mime%3Dvideo%252Fmp4%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.195%26lmt%3D1437130575728332%26sver%3D3%26ratebypass%3Dyes%26requiressl%3Dyes%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.42001E%2C+mp4a.40.2%22\u0026itag=18\u0026quality=medium,fallback_host=tc.v9.cache8.googlevideo.com\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26dur%3D9466.175%26itag%3D5%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26sver%3D3%26ipbits%3D0%26lmt%3D1389811655599875%26requiressl%3Dyes%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26signature%3D7ACACB3654890F31A55DC0BF1599F8B278D35922.DFC6859052DC34A8496DE5DB7F7D4F0801DA5305%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26initcwndbps%3D2423750%26source%3Dyoutube%26mime%3Dvideo%252Fx-flv%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133\u0026type=video%2Fx-flv\u0026itag=5\u0026quality=small,fallback_host=tc.v5.cache7.googlevideo.com\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26dur%3D9466.357%26itag%3D36%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26sver%3D3%26ipbits%3D0%26lmt%3D1389822662382124%26requiressl%3Dyes%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26signature%3D7FF278B4EDC0C519B177BAD52319AB5D2F1EC989.56458B4E1A78351F4E08623AE14F81D7F5D9E72C%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26initcwndbps%3D2423750%26source%3Dyoutube%26mime%3Dvideo%252F3gpp%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133\u0026type=video%2F3gpp%3B+codecs%3D%22mp4v.20.3%2C+mp4a.40.2%22\u0026itag=36\u0026quality=small,fallback_host=tc.v2.cache5.googlevideo.com\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26dur%3D9466.496%26itag%3D17%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26sver%3D3%26ipbits%3D0%26lmt%3D1389818247838871%26requiressl%3Dyes%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26signature%3D429CA94F0C0552D8DCDC63738DC83A6D741812C6.3894A77D977B3C455CFD16F5EE7A1F26089DA3A5%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26initcwndbps%3D2423750%26source%3Dyoutube%26mime%3Dvideo%252F3gpp%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133\u0026type=video%2F3gpp%3B+codecs%3D%22mp4v.20.3%2C+mp4a.40.2%22\u0026itag=17\u0026quality=small","t":"1","oid":"1imSkUELSb4NiIMoV9wb6Q.bzo0ljDVyneJlb_vxahMEg.YEw2Dq2F9ZIBjvlyzSt1sw.LbiyWFUb5HAgAl1kZuH3xQ.MIT4h2OXfu16-MLApUEooA.BtscXOksyqSTYfLFAiFZaw.iKlKI62iEFRKqVlo4JgD8w.iUms8yDFZjY6aCe_92nayQ.dA-2UC709fdvB3R541cmKg","fflags":"cards_drawer_auto_open_offset=0\u0026related_menu=false\u0026html5_live_disable_dg_pacing=false\u0026enable_yt_music_lp=true\u0026mweb_uniplayer_disable_adaptation=false\u0026hsts_for_all=true\u0026log_teaser_hover=false\u0026cards_drawer_auto_open=false\u0026enable_dynamic_ad_break=false\u0026dynamic_ad_break_seek_threshold_sec=0\u0026html5_strip_emsg=false\u0026creator_endscreens_enabled=false\u0026html5_multicam=false\u0026enable_stereo3d_ie_firefox_opera=true\u0026trueview_shopping_v2_rendering=false\u0026dynamic_ad_break_pause_threshold_sec=0\u0026loop_video_settings_menu=false\u0026native_controls_assume_media_volume=true\u0026show_ads_pay_this_creator_info_card=false\u0026teaser_on_button_hover=false\u0026disable_new_pause_state2=true\u0026doubleclick_gpt_retagging=false\u0026mweb_generate_cpn_on_page=false\u0026use_cougar_ads_ui=false\u0026dash_html5_release_loader=false\u0026product_listing_ads_cards_drawer_auto_open=false\u0026html5_request_sizing_multiplier=0.8\u0026new_stop_video3=true\u0026disable_skip_on_short_adsense=false\u0026html5_crossorigin_video=false\u0026log_backfill_requests=true\u0026html5_live_nonzero_first_segment_start_time=false\u0026enable_ad_video_end_renderers=false\u0026dash_html5_refresh_mapping_min_buffer=0\u0026video_wall_moving_thumbnails=false\u0026white_noise_with_interval=false\u0026hover_card_for_video_card_teaser=false\u0026cleanup_text_overlay_spam_signals=false\u0026merge_button_with_teaser=false\u0026send_presence_signal_vis_desktop=true\u0026tote_otf_inline_hls_manifests=true\u0026new_cue_range_manager=true\u0026log_it_display_tree=true\u0026html5_deadzone_multiplier=1.0\u0026cards_drawer_auto_open_duration=-1\u0026disable_webgl_hack=false\u0026video_wall_pagination=false\u0026video_wall_redesign=false\u0026enable_why_this_ad_for_desktop=true\u0026hsts_max_age=0\u0026enable_html5_spherical_direction_logging=true\u0026ios_path_probe_enabled=true\u0026tv_player_heartbeats=true\u0026new_ended_replay=false\u0026event_log_respect_caller_args=false\u0026enable_audio_cast=true\u0026always_request_animation_frame=false\u0026container_overflow=false\u0026sidebar_renderers=true\u0026combined_teaser_link=false\u0026autonav_notifications=false\u0026enable_spherical3d_firefox_opera=false\u0026html5_always_underrun_on_empty_buffer=false\u0026video_wall_storyboards_mouse_x=false\u0026player_scaling_360p_to_720p=false\u0026ui_logging=false\u0026dash_html5_refresh_mapping_interval=0\u0026enable_spherical3d_ie=true\u0026legacy_poster_behavior=true\u0026share_panel_continue_playback=false\u0026new_html5_dispose=true\u0026hover_card_on_button_hover=false\u0026use_html5_ad_break_service=false\u0026html5_live_only_stick_to_head=true\u0026html5_playing_event_buffer_underrun=false","watermark":",https:\/\/s.ytimg.com\/yts\/img\/watermark\/youtube_watermark-vflHX6b6E.png,https:\/\/s.ytimg.com\/yts\/img\/watermark\/youtube_hd_watermark-vflAzLcD6.png","token":"1","video_id":"7ruDVn70dPw","iurlmaxres":"https:\/\/i.ytimg.com\/vi\/7ruDVn70dPw\/maxresdefault.jpg","ucid":"UCY4K38bifejKdjpcBXVKk_Q","player_error_log_fraction":"1.0","dashmpd":"https:\/\/manifest.googlevideo.com\/api\/manifest\/dash\/id\/o-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i\/itag\/0\/pl\/16\/ms\/au\/mt\/1453845449\/mv\/m\/ip\/145.87.253.78\/mm\/31\/mn\/sn-q5u5qpxonuxo-bg9e\/ipbits\/0\/hfr\/1\/signature\/0A4CFDDEE6FBAB4B46A52EF2C2A4167EA1028673.C677546D235B8FE883854A833294C69DA062E296\/as\/fmp4_audio_clear%2Cwebm_audio_clear%2Cfmp4_sd_hd_clear%2Cwebm_sd_hd_clear%2Cwebm2_sd_hd_clear\/playback_host\/r2---sn-q5u5qpxonuxo-bg9e.googlevideo.com\/key\/yt6\/upn\/QC8_947Hicc\/expire\/1453867133\/sver\/3\/requiressl\/yes\/sparams\/as%2Chfr%2Cid%2Cip%2Cipbits%2Citag%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cplayback_host%2Crequiressl%2Csource%2Cexpire\/fexp\/9416126%2C9418045%2C9418204%2C9419452%2C9420452%2C9422556%2C9422596%2C9423662%2C9424134%2C9424163%2C9425730%2C9426624%2C9426943%2C9427247%2C9427670\/source\/youtube","adaptive_fmts":"index=711-22042\u0026lmt=1437297153076868\u0026init=0-710\u0026bitrate=7240910\u0026quality_label=720p\u0026size=1280x720\u0026clen=2485498453\u0026itag=136\u0026projection_type=1\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d401f%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D136%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D0DB6A2343B35C6718284BF132582F165B4E04A35.6955AF7C6F447FA696B962BB2AAE441443600B28%26initcwndbps%3D2423750%26mime%3Dvideo%252Fmp4%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.132%26lmt%3D1437297153076868%26gir%3Dyes%26clen%3D2485498453%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=30,index=235-34300\u0026lmt=1398276512034784\u0026init=0-234\u0026bitrate=31475723\u0026quality_label=720p\u0026size=1280x720\u0026clen=3066617043\u0026itag=247\u0026projection_type=1\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D247%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3DA6C5240B2CA6286DC249C0E25026463C437199BC.1B6CC3AB7F3EB19578889845057A685928D7802C%26initcwndbps%3D2423750%26mime%3Dvideo%252Fwebm%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.100%26lmt%3D1398276512034784%26gir%3Dyes%26clen%3D3066617043%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=1,index=710-22041\u0026lmt=1437296886510157\u0026init=0-709\u0026bitrate=2703441\u0026quality_label=480p\u0026size=854x480\u0026clen=1249886838\u0026itag=135\u0026projection_type=1\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d401f%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D135%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D042B489B71773B601E8B61664DA9975D9720E31B.D0E86B6D672B2955DE5D16E6BEBC3CF016D1EF13%26initcwndbps%3D2423750%26mime%3Dvideo%252Fmp4%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.132%26lmt%3D1437296886510157%26gir%3Dyes%26clen%3D1249886838%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=30,index=235-34286\u0026lmt=1398304361909672\u0026init=0-234\u0026bitrate=11235030\u0026quality_label=480p\u0026size=854x480\u0026clen=1253237674\u0026itag=244\u0026projection_type=1\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D244%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3DD58E4B03908EC305A2D9063EC1843B64E14D9AF9.901BAF8048DD1E53074C40983A7092542BB125E5%26initcwndbps%3D2423750%26mime%3Dvideo%252Fwebm%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.100%26lmt%3D1398304361909672%26gir%3Dyes%26clen%3D1253237674%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=1,index=710-22041\u0026lmt=1437296838914103\u0026init=0-709\u0026bitrate=1284786\u0026quality_label=360p\u0026size=640x360\u0026clen=680167199\u0026itag=134\u0026projection_type=1\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d401e%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D134%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D84DBDEDFC24767A23645771E6F0EE85BEEE22C9A.8DE984A848B9E325C74B980D3F98AAC6FC12DA09%26initcwndbps%3D2423750%26mime%3Dvideo%252Fmp4%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.132%26lmt%3D1437296838914103%26gir%3Dyes%26clen%3D680167199%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=30,index=235-34275\u0026lmt=1398368850855749\u0026init=0-234\u0026bitrate=6724075\u0026quality_label=360p\u0026size=640x360\u0026clen=727947675\u0026itag=243\u0026projection_type=1\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D243%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D18E212A940332EC615EA0CEAA345496AFA17CDB9.D9C4B8ECF5B5C3183BAA540C0EF0B0F732C07891%26initcwndbps%3D2423750%26mime%3Dvideo%252Fwebm%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.100%26lmt%3D1398368850855749%26gir%3Dyes%26clen%3D727947675%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=1,index=675-22006\u0026lmt=1437296510954171\u0026init=0-674\u0026bitrate=881813\u0026quality_label=240p\u0026size=426x240\u0026clen=312049341\u0026itag=133\u0026projection_type=1\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d4015%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D133%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D5787509255677DCCE7B857A49CFFC97AE0657AB0.6740E2FE2905A6DF204F2A050130531C56CA332D%26initcwndbps%3D2423750%26mime%3Dvideo%252Fmp4%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.132%26lmt%3D1437296510954171%26gir%3Dyes%26clen%3D312049341%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=30,index=234-34236\u0026lmt=1398288922103765\u0026init=0-233\u0026bitrate=2770456\u0026quality_label=240p\u0026size=426x240\u0026clen=370907866\u0026itag=242\u0026projection_type=1\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D242%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D098F6A31EC2A3C6C02BC3E0D356214301A169B07.1A1031A84D7E337B2DE46B14E2206834B4A53B8F%26initcwndbps%3D2423750%26mime%3Dvideo%252Fwebm%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.100%26lmt%3D1398288922103765%26gir%3Dyes%26clen%3D370907866%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=1,index=672-22003\u0026lmt=1437296407354921\u0026init=0-671\u0026bitrate=223612\u0026quality_label=144p\u0026size=256x144\u0026clen=129888860\u0026itag=160\u0026projection_type=1\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d400c%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D160%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D08859B0836A3BFFA6222E97E36DAEAA20F5F23E9.2ABA0DE94749E958A5AE4325BD5F051BA3C7E152%26initcwndbps%3D2423750%26mime%3Dvideo%252Fmp4%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.132%26lmt%3D1437296407354921%26gir%3Dyes%26clen%3D129888860%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=15,index=234-41686\u0026lmt=1398303952108805\u0026init=0-233\u0026bitrate=620392\u0026quality_label=144p\u0026size=256x144\u0026clen=139024132\u0026itag=278\u0026projection_type=1\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D278%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D3A245B5BC070F733F71B05AAC6C5C877D12DF58F.4AD4BC9142F02D83688340B7330A7709F92B8FE6%26initcwndbps%3D2423750%26mime%3Dvideo%252Fwebm%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.067%26lmt%3D1398303952108805%26gir%3Dyes%26clen%3D139024132%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026fps=1,index=592-11987\u0026projection_type=1\u0026clen=150342783\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D140%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3D23AFABC6866D3D4A3EF2D9459A8A864BD2197E79.6F4B000E760C5AA9AA299C3EF38DE5DA2D3EC5D8%26initcwndbps%3D2423750%26mime%3Daudio%252Fmp4%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.194%26lmt%3D1437124542586775%26gir%3Dyes%26clen%3D150342783%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026itag=140\u0026init=0-591\u0026bitrate=137016\u0026lmt=1437124542586775\u0026type=audio%2Fmp4%3B+codecs%3D%22mp4a.40.2%22,index=4452-21371\u0026projection_type=1\u0026clen=148514887\u0026fps=1\u0026url=https%3A%2F%2Fr2---sn-q5u5qpxonuxo-bg9e.googlevideo.com%2Fvideoplayback%3Fid%3Do-AMhUuanVSsZ1qC-ivl_MQVgJteCd3Iddch921rRwjO2i%26itag%3D171%26keepalive%3Dyes%26pl%3D16%26ms%3Dau%26mt%3D1453845449%26mv%3Dm%26ip%3D145.87.253.78%26mm%3D31%26mn%3Dsn-q5u5qpxonuxo-bg9e%26ipbits%3D0%26signature%3DDA99BBD485D0EA2AD222040CD752D28A3DF8A48B.B2F768582EDBC0E901A1C98EE2CAC45CFDE370A5%26initcwndbps%3D2423750%26mime%3Daudio%252Fwebm%26key%3Dyt6%26upn%3DQC8_947Hicc%26expire%3D1453867133%26dur%3D9466.127%26lmt%3D1398283200946093%26gir%3Dyes%26clen%3D148514887%26sver%3D3%26requiressl%3Dyes%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26fexp%3D9416126%252C9418045%252C9418204%252C9419452%252C9420452%252C9422556%252C9422596%252C9423662%252C9424134%252C9424163%252C9425730%252C9426624%252C9426943%252C9427247%252C9427670%26source%3Dyoutube\u0026itag=171\u0026init=0-4451\u0026bitrate=166617\u0026lmt=1398283200946093\u0026type=audio%2Fwebm%3B+codecs%3D%22vorbis%22","ismb":"19390000","hl":"nl_NL","ptk":"youtube_multi","apiary_host":"","atc":"a=3\u0026b=r-in8157x9ZyVtw7wmm0szMTM7A\u0026c=1453845533\u0026d=1\u0026e=7ruDVn70dPw\u0026c3a=21\u0026c1a=1\u0026c6a=1\u0026hh=DqFODIoI95wl_Z-wNAAhoe7g2To","watch_xlb":"https:\/\/s.ytimg.com\/yts\/xlbbin\/watch-strings-nl_NL-vflwMyAVh.xlb","title":"Blueprint [Melodic Techno Mix 2013]","ldpj":"-17","iv_module":"https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflkk6V4_\/iv_module.swf","csi_page_type":"watch,watch7_html5","iurlsd":"https:\/\/i.ytimg.com\/vi\/7ruDVn70dPw\/sddefault.jpg","iurl":"https:\/\/i.ytimg.com\/vi\/7ruDVn70dPw\/hqdefault.jpg","tmi":"1","idpj":"-4","iurlhq":"https:\/\/i.ytimg.com\/vi\/7ruDVn70dPw\/hqdefault.jpg","fmt_list":"22\/1280x720\/9\/0\/115,43\/640x360\/99\/0\/0,18\/640x360\/9\/0\/115,5\/426x240\/7\/0\/0,36\/320x180\/99\/1\/0,17\/176x144\/99\/1\/0","allow_ratings":"1","apiary_host_firstparty":"","loaderUrl":"https:\/\/www.youtube.com\/watch?v=7ruDVn70dPw","no_get_video_log":"1","eventid":"HeynVv7PGoeQiwac-Y2QDw","thumbnail_url":"https:\/\/i.ytimg.com\/vi\/7ruDVn70dPw\/default.jpg","view_count":"75288","of":"eL0kkng00f0FqQAGIyf2kw","probe_url":"https:\/\/r18---sn-vgqsen7z.googlevideo.com\/videogoodput?id=o-AFctysxZTzpmsAJGqHedB9VCz29qFK0Gy1d1WybyQ41I\u0026source=goodput\u0026range=0-4999\u0026expire=1453849133\u0026ip=145.87.253.78\u0026ms=pm\u0026mm=35\u0026pl=24\u0026nh=IgpwcjA1Lm9yZDEyKgs2Mi4xMTUuNjEuNQ\u0026sparams=id,source,range,expire,ip,ms,mm,pl,nh\u0026signature=0104EA7F9FA925505CDF95829852D14F5309ADBD.46BFE737D82627969DBBB1067098FCAB16C84EB0\u0026key=cms1","enablejsapi":"1","cr":"NL","length_seconds":"9466","allow_embed":"1","iurlmq":"https:\/\/i.ytimg.com\/vi\/7ruDVn70dPw\/mqdefault.jpg","cl":"112815225","videostats_playback_base_url":"https:\/\/s.youtube.com\/api\/stats\/playback?docid=7ruDVn70dPw\u0026ns=yt\u0026fexp=9416126%2C9418045%2C9418204%2C9419452%2C9420452%2C9422556%2C9422596%2C9423662%2C9424134%2C9424163%2C9425730%2C9426624%2C9426943%2C9427247%2C9427670\u0026plid=AAUqQ8qVtBpdF1ec\u0026of=eL0kkng00f0FqQAGIyf2kw\u0026ei=HeynVv7PGoeQiwac-Y2QDw\u0026len=9467\u0026vm=CAIQAA\u0026cl=112815225\u0026el=detailpage","c":"WEB","author":"Tobias Bassline","enablecsi":"1","iv_invideo_url":"https:\/\/www.youtube.com\/annotations_invideo?cap_hist=1\u0026video_id=7ruDVn70dPw","innertube_context_client_version":"1.20160121","loudness":"-18.6089992523","pltype":"contentugc","host_language":"nl","avg_rating":"4.92278003693","innertube_api_version":"v1","fexp":"9416126,9418045,9418204,9419452,9420452,9422556,9422596,9423662,9424134,9424163,9425730,9426624,9426943,9427247,9427670","ssl":"1","plid":"AAUqQ8qVtBpdF1ec","storyboard_spec":"https:\/\/i.ytimg.com\/sb\/7ruDVn70dPw\/storyboard3_L$L\/$N.jpg|48#27#100#10#10#0#default#_iwzIj_jlb0_3Ub1Vav6NuRSC9E|80#45#948#10#10#10000#M$M#5UuMYo3EQCSmCNG8w4B0oTtmGKg|160#90#948#5#5#10000#M$M#CEwFMLJr8_6pHZZzAavApl28HiY","iv_load_policy":"1","timestamp":"1453845533","innertube_api_key":"AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8","iv3_module":"1"},"assets":{"js":"\/\/s.ytimg.com\/yts\/jsbin\/player-nl_NL-vflcqp8wo\/base.js","css":"\/\/s.ytimg.com\/yts\/cssbin\/www-player-vflRsq_1x.css"},"html5":true,"url_v9as2":"https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflkk6V4_\/cps.swf","min_version":"8.0.0","url":"https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflkk6V4_\/watch_as3.swf","params":{"allowscriptaccess":"always","bgcolor":"#000000","allowfullscreen":"true"},"sts":16819,"url_v8":"https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflkk6V4_\/cps.swf"};ytplayer.load = function() {yt.player.Application.create("player-api", ytplayer.config);ytplayer.config.loaded = true;};(function() {if (!!window.yt && yt.player && yt.player.Application) {ytplayer.load();}}());</script>
+
+
+    <div id="watch-queue-mole" class="video-mole mole-collapsed hid"><div id="watch-queue" class="watch-playlist player-height"><div class="main-content"><div class="watch-queue-header"><div class="watch-queue-info"><div class="watch-queue-info-icon"><span class="tv-queue-list-icon yt-sprite"></span></div><h3 class="watch-queue-title">Weergavewachtrij</h3><h3 class="tv-queue-title">Wachtrij</h3><span class="tv-queue-details"></span></div><div class="watch-queue-control-bar control-bar-button"><div class="watch-queue-mole-info"><div class="watch-queue-control-bar-icon"><span class="watch-queue-icon yt-sprite"></span></div><div class="watch-queue-title-container"><span class="watch-queue-count"></span><span class="watch-queue-title">Weergavewachtrij</span><span class="tv-queue-title">Wachtrij</span></div></div>  <span class="dark-overflow-action-menu">
+    
+    
+    <button aria-expanded="false" type="button" aria-label="Acties voor de wachtrij" aria-haspopup="true" onclick=";return false;" class="flip control-bar-button yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty" ><span class="yt-uix-button-arrow yt-sprite"></span><ul class="watch-queue-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid" role="menu" aria-haspopup="true"><li role="menuitem"><span data-action="remove-all" class="watch-queue-menu-choice overflow-menu-choice yt-uix-button-menu-item" onclick=";return false;" >Alles verwijderen</span></li><li role="menuitem"><span data-action="disconnect" class="watch-queue-menu-choice overflow-menu-choice yt-uix-button-menu-item" onclick=";return false;" >Ontkoppelen</span></li></ul></button>
+  </span>
+  <div class="watch-queue-controls">
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-empty yt-uix-button-has-icon control-bar-button prev-watch-queue-button yt-uix-button-opacity yt-uix-tooltip yt-uix-tooltip" type="button" onclick=";return false;" title="Vorige video"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-queue-prev yt-sprite"></span></span></button>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-empty yt-uix-button-has-icon control-bar-button play-watch-queue-button yt-uix-button-opacity yt-uix-tooltip yt-uix-tooltip" type="button" onclick=";return false;" title="Afspelen"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-queue-play yt-sprite"></span></span></button>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-empty yt-uix-button-has-icon control-bar-button pause-watch-queue-button yt-uix-button-opacity yt-uix-tooltip hid yt-uix-tooltip" type="button" onclick=";return false;" title="Onderbreken"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-queue-pause yt-sprite"></span></span></button>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-empty yt-uix-button-has-icon control-bar-button next-watch-queue-button yt-uix-button-opacity yt-uix-tooltip yt-uix-tooltip" type="button" onclick=";return false;" title="Volgende video"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-queue-next yt-sprite"></span></span></button>
+  </div>
+</div></div><div class="watch-queue-items-container yt-scrollbar-dark yt-scrollbar"><ol class="watch-queue-items-list playlist-videos-list yt-uix-scroller" data-scroll-action="yt.www.watchqueue.loadThumbnails">  <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+</ol></div></div>  <div class="hid">
+    <div id="watch-queue-title-msg">
+Weergavewachtrij
+    </div>
+
+    <div id="tv-queue-title-msg">Wachtrij</div>
+
+    <div id="watch-queue-count-msg">
+__count__/__total__
+    </div>
+
+    <div id="watch-queue-loading-template">
+      <!--
+          <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+      -->
+    </div>
+  </div>
+</div></div>
+    <div id="player-playlist" class="  content-alignment    watch-player-playlist  ">
+          
+
+    </div>
+
+  </div>
+
+  <div class="clear"></div>
+</div><div id="content" class="  content-alignment" role="main">      <div id="placeholder-player">
+    <div class="player-api player-width player-height"></div>
+  </div>
+
+  <div id="watch7-container" class="">
+      <div id="watch7-main-container">
+    <div id="watch7-main" class="clearfix">
+      <div id="watch7-preview" class="player-width player-height hid">
+      </div>
+      <div id="watch7-content" class="watch-main-col " itemscope itemid="" itemtype="http://schema.org/VideoObject"
+      >
+            <link itemprop="url" href="https://www.youtube.com/watch?v=7ruDVn70dPw">
+    <meta itemprop="name" content="Blueprint [Melodic Techno Mix 2013]">
+    <meta itemprop="description" content="WHOHO! I can&#39;t believe it! A new Techno mix from me! And it&#39;s a *VERY* special one! Of course! WHAT ELSE! This mix is deep, hypnotic, trippy, spacy, dreamy, ...">
+    <meta itemprop="paid" content="False">
+
+      <meta itemprop="channelId" content="UCY4K38bifejKdjpcBXVKk_Q">
+      <meta itemprop="videoId" content="7ruDVn70dPw">
+
+      <meta itemprop="duration" content="PT157M47S">
+      <meta itemprop="unlisted" content="False">
+
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <link itemprop="url" href="http://www.youtube.com/user/TobiasBassline">
+        </span>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <link itemprop="url" href="https://plus.google.com/103237082582097620980">
+        </span>
+
+    <link itemprop="thumbnailUrl" href="https://i.ytimg.com/vi/7ruDVn70dPw/maxresdefault.jpg">
+    <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+      <link itemprop="url" href="https://i.ytimg.com/vi/7ruDVn70dPw/maxresdefault.jpg">
+      <meta itemprop="width" content="1280">
+      <meta itemprop="height" content="720">
+    </span>
+
+      <link itemprop="embedURL" href="https://www.youtube.com/embed/7ruDVn70dPw">
+      <meta itemprop="playerType" content="HTML5 Flash">
+      <meta itemprop="width" content="1280">
+      <meta itemprop="height" content="720">
+
+      <meta itemprop="isFamilyFriendly" content="True">
+      <meta itemprop="regionsAllowed" content="AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CW,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,SS,ST,SV,SX,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW">
+      <meta itemprop="interactionCount" content="75288">
+      <meta itemprop="datePublished" content="2013-09-04">
+      <meta itemprop="genre" content="Music">
+
+          
+        <div id="watch-header" class=" yt-card yt-card-has-padding">
+      <div id="watch7-headline" class="clearfix">
+    <div id="watch-headline-title">
+      <h1 class="yt watch-title-container" >
+        
+
+  <span id="eow-title" class="watch-title " dir="ltr" title="Blueprint [Melodic Techno Mix 2013]">
+    Blueprint [Melodic Techno Mix 2013]
+  </span>
+
+      </h1>
+    </div>
+  </div>
+
+    <div id="watch7-user-header" class=" spf-link ">  <a href="/user/TobiasBassline" class="yt-uix-sessionlink yt-user-photo g-hovercard      spf-link " data-ytid="UCY4K38bifejKdjpcBXVKk_Q" data-sessionlink="itct=CDAQ4TkiEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0">
+      <span class="video-thumb  yt-thumb yt-thumb-48 g-hovercard"
+      data-ytid="UCY4K38bifejKdjpcBXVKk_Q"
+    >
+    <span class="yt-thumb-square">
+      <span class="yt-thumb-clip">
+        <img width="48" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="48" data-thumb="https://yt3.ggpht.com/-gEoGSC9YHCc/AAAAAAAAAAI/AAAAAAAAAAA/d0DPp8pjVsc/s88-c-k-no/photo.jpg" alt="Tobias Bassline" >
+        <span class="vertical-align"></span>
+      </span>
+    </span>
+  </span>
+
+  </a>
+  <div class="yt-user-info">
+    <a href="/channel/UCY4K38bifejKdjpcBXVKk_Q" class="yt-uix-sessionlink g-hovercard      spf-link " data-ytid="UCY4K38bifejKdjpcBXVKk_Q" data-sessionlink="itct=CDAQ4TkiEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0" >Tobias Bassline</a>
+  </div>
+<span id="watch7-subscription-container"><span class=" yt-uix-button-subscription-container"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-subscribe-branded yt-uix-button-has-icon no-icon-markup yt-uix-subscription-button yt-can-buffer" type="button" onclick=";return false;" aria-busy="false" aria-live="polite" data-style-type="branded" data-channel-external-id="UCY4K38bifejKdjpcBXVKk_Q" data-href="https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252Fchannel%252FUCY4K38bifejKdjpcBXVKk_Q%26hl%3Dnl%26action_handle_signin%3Dtrue%26feature%3Dsubscribe%26app%3Ddesktop%26continue_action%3DQUFFLUhqbVNWWXh2d2hmVEJhUS1nYlBnMWQ3S0xSYUVmZ3xBQ3Jtc0tuOXVEWHJBTGhFRTd2SWdwVXJRam1MT09hRjBVSHBvSDc2aDFzcmhwSTZPWmdyNW1FaUQ2bGxDRnR5NWhQd2RpUFplQVdvRlNob1k3YVhPNGYxdk1Xc2x5TjBCTEVuV2lWYnZQZDlZZlFMb3JkY09YdEc0WTBiTEw5S0toM2NEdWlsRmhPSndtUVVMdDh5ejVhLUlyV3VwX2R5UWhnN3ljM0NSZllQQnNoLWExTEhranAzZHhCcHM2aVBIMURHV0ItWDRKb3lSdVhTV1ZRX0JCelVoSm9VSTEzQUZB&amp;hl=nl" data-clicktracking="itct=CDEQmysiEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yBXdhdGNo"><span class="yt-uix-button-content"><span class="subscribe-label" aria-label="Abonneren">Abonneren</span><span class="subscribed-label" aria-label="Afmelden">Geabonneerd</span><span class="unsubscribe-label" aria-label="Afmelden">Afmelden</span></span></button><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon yt-uix-subscription-preferences-button" type="button" onclick=";return false;" aria-role="button" aria-busy="false" aria-label="Abonnementsvoorkeuren" aria-live="polite" data-channel-external-id="UCY4K38bifejKdjpcBXVKk_Q"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-subscription-preferences yt-sprite"></span></span></button><span class="yt-subscription-button-subscriber-count-branded-horizontal yt-subscriber-count" title="36.184" aria-label="36.184" tabindex="0">36.184</span><span class="yt-subscription-button-subscriber-count-branded-horizontal yt-short-subscriber-count" title="999+" aria-label="999+" tabindex="0">999+</span>  
+  <div class="yt-uix-overlay "  data-overlay-style="primary" data-overlay-shape="tiny">
+    
+        <div class="yt-dialog hid ">
+    <div class="yt-dialog-base">
+      <span class="yt-dialog-align"></span>
+      <div class="yt-dialog-fg" role="dialog">
+        <div class="yt-dialog-fg-content">
+          <div class="yt-dialog-loading">
+              <div class="yt-dialog-waiting-content">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+  </div>
+
+          </div>
+          <div class="yt-dialog-content">
+              <div class="subscription-preferences-overlay-content-container">
+    <div class="subscription-preferences-overlay-loading ">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+    </div>
+    <div class="subscription-preferences-overlay-content">
+    </div>
+  </div>
+
+          </div>
+          <div class="yt-dialog-working">
+              <div class="yt-dialog-working-overlay"></div>
+  <div class="yt-dialog-working-bubble">
+    <div class="yt-dialog-waiting-content">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+        Bezig...
+    </span>
+  </p>
+
+      </div>
+  </div>
+
+          </div>
+        </div>
+        <div class="yt-dialog-focus-trap" tabindex="0"></div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+</span></span></div>
+    <div id="watch8-action-buttons" class="watch-action-buttons clearfix"><div id="watch8-secondary-actions" class="watch-secondary-actions yt-uix-button-group" data-button-toggle-group="optional">    <span class="yt-uix-clickcard">
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup yt-uix-clickcard-target addto-button pause-resume-autoplay yt-uix-tooltip" type="button" onclick=";return false;" title="Toevoegen aan" data-position="bottomleft" data-orientation="vertical"><span class="yt-uix-button-content">Toevoegen aan</span></button>
+        <div class="signin-clickcard yt-uix-clickcard-content">
+    <h3 class="signin-clickcard-header">Wil je hier later nog een keer naar kijken?</h3>
+    <div class="signin-clickcard-message">
+      Log in om deze video toe te voegen aan een afspeellijst.
+    </div>
+    <a href="https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26feature%3D__FEATURE__%26next%3D%252Fwatch%253Fv%253D7ruDVn70dPw%26hl%3Dnl&amp;hl=nl" class="yt-uix-button  signin-button yt-uix-sessionlink yt-uix-button-primary yt-uix-button-size-default" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw"><span class="yt-uix-button-content">Inloggen</span></a>
+  </div>
+
+    </span>
+  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup pause-resume-autoplay action-panel-trigger action-panel-trigger-share   yt-uix-tooltip" type="button" onclick=";return false;" title="Delen
+" data-trigger-for="action-panel-share" data-button-toggle="true"><span class="yt-uix-button-content">Delen
+</span></button>
+<div class="yt-uix-menu " >  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup pause-resume-autoplay yt-uix-menu-trigger yt-uix-tooltip" type="button" onclick=";return false;" id="action-panel-overflow-button" role="button" aria-pressed="false" aria-haspopup="true" title="Meer acties"><span class="yt-uix-button-content">Meer</span></button>
+<div class="yt-uix-menu-content yt-ui-menu-content yt-uix-menu-content-hidden" role="menu"><ul id="action-panel-overflow-menu">  <li>
+      <span class="yt-uix-clickcard" data-card-class=report-card>
+          <button type="button" class="yt-ui-menu-item has-icon action-panel-trigger action-panel-trigger-report report-button yt-uix-clickcard-target"
+ data-position="topright" data-orientation="horizontal">
+    <span class="yt-ui-menu-item-label">Rapporteren</span>
+  </button>
+
+          <div class="signin-clickcard yt-uix-clickcard-content">
+    <h3 class="signin-clickcard-header">Wil je een melding indienen over de video?</h3>
+    <div class="signin-clickcard-message">
+      Log in om ongepaste content te melden.
+    </div>
+    <a href="https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26feature%3D__FEATURE__%26next%3D%252Fwatch%253Fv%253D7ruDVn70dPw%26hl%3Dnl&amp;hl=nl" class="yt-uix-button  signin-button yt-uix-sessionlink yt-uix-button-primary yt-uix-button-size-default" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw"><span class="yt-uix-button-content">Inloggen</span></a>
+  </div>
+
+      </span>
+  </li>
+</ul></div></div></div><div id="watch8-sentiment-actions"><div id="watch7-views-info"><div class="watch-view-count">75.288</div>
+  <div class="video-extras-sparkbars">
+    <div class="video-extras-sparkbar-likes" style="width: 98.0694980695%"></div>
+    <div class="video-extras-sparkbar-dislikes" style="width: 1.9305019305%"></div>
+  </div>
+</div>
+
+
+
+
+
+  <span class="like-button-renderer " data-button-toggle-group="optional" >
+    <span class="yt-uix-clickcard">
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup like-button-renderer-like-button like-button-renderer-like-button-unclicked yt-uix-clickcard-target   yt-uix-tooltip" type="button" onclick=";return false;" aria-label="vindt deze video leuk samen met nog 508 anderen" title="Ik vind dit leuk" data-position="bottomright" data-orientation="vertical" data-force-position="true"><span class="yt-uix-button-content">508</span></button>
+          <div class="signin-clickcard yt-uix-clickcard-content">
+    <h3 class="signin-clickcard-header">Vind je dit een leuke video?</h3>
+    <div class="signin-clickcard-message">
+      Log in om je mening te geven.
+    </div>
+    <a href="https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26feature%3D__FEATURE__%26next%3D%252Fwatch%253Fv%253D7ruDVn70dPw%26hl%3Dnl&amp;hl=nl" class="yt-uix-button  signin-button yt-uix-sessionlink yt-uix-button-primary yt-uix-button-size-default" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw"><span class="yt-uix-button-content">Inloggen</span></a>
+  </div>
+
+    </span>
+    <span class="yt-uix-clickcard">
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup like-button-renderer-like-button like-button-renderer-like-button-clicked yt-uix-button-toggled  hid yt-uix-tooltip" type="button" onclick=";return false;" aria-label="vindt deze video leuk samen met nog 508 anderen" title="Vind ik niet meer leuk" data-position="bottomright" data-orientation="vertical" data-force-position="true"><span class="yt-uix-button-content">509</span></button>
+    </span>
+    <span class="yt-uix-clickcard">
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup like-button-renderer-dislike-button like-button-renderer-dislike-button-unclicked yt-uix-clickcard-target   yt-uix-tooltip" type="button" onclick=";return false;" aria-label="vindt deze video niet leuk samen met nog 10 anderen" title="Ik vind dit niet leuk" data-position="bottomright" data-orientation="vertical" data-force-position="true"><span class="yt-uix-button-content">10</span></button>
+          <div class="signin-clickcard yt-uix-clickcard-content">
+    <h3 class="signin-clickcard-header">Vind je dit geen leuke video?</h3>
+    <div class="signin-clickcard-message">
+      Log in om je mening te geven.
+    </div>
+    <a href="https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26feature%3D__FEATURE__%26next%3D%252Fwatch%253Fv%253D7ruDVn70dPw%26hl%3Dnl&amp;hl=nl" class="yt-uix-button  signin-button yt-uix-sessionlink yt-uix-button-primary yt-uix-button-size-default" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw"><span class="yt-uix-button-content">Inloggen</span></a>
+  </div>
+
+    </span>
+    <span class="yt-uix-clickcard">
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup like-button-renderer-dislike-button like-button-renderer-dislike-button-clicked yt-uix-button-toggled  hid yt-uix-tooltip" type="button" onclick=";return false;" aria-label="vindt deze video niet leuk samen met nog 10 anderen" title="Ik vind dit niet leuk" data-position="bottomright" data-orientation="vertical" data-force-position="true"><span class="yt-uix-button-content">11</span></button>
+    </span>
+  </span>
+</div></div>
+  </div>
+
+
+
+      <div id="watch-action-panels" class="watch-action-panels yt-uix-button-panel hid yt-card yt-card-has-padding">
+      <div id="action-panel-share" class="action-panel-content hid">
+      <div id="watch-actions-share-loading">
+    <div class="action-panel-loading">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+    </div>
+  </div>
+  <div id="watch-actions-share-panel"></div>
+
+  </div>
+
+      <div id="action-panel-stats" class="action-panel-content hid">
+    <div class="action-panel-loading">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+      <div id="action-panel-report" class="action-panel-content hid"
+      data-auth-required="true"
+  >
+    <div class="action-panel-loading">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+    
+  <div id="action-panel-rental-required" class="action-panel-content hid">
+      <div id="watch-actions-rental-required">
+    <strong>Beoordelingen zijn beschikbaar wanneer de video is verhuurd.</strong>
+  </div>
+
+  </div>
+
+  <div id="action-panel-error" class="action-panel-content hid">
+    <div class="action-panel-error">
+      Deze functie is momenteel niet beschikbaar. Probeer het later opnieuw.
+    </div>
+  </div>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup yt-uix-button-opacity yt-uix-close" type="button" onclick=";return false;" id="action-panel-dismiss" aria-label="Sluiten" data-close-parent-id="watch8-action-panels"></button>
+  </div>
+
+  <div id="action-panel-details" class="action-panel-content yt-uix-expander yt-uix-expander-collapsed yt-card yt-card-has-padding"><div id="watch-description" class="yt-uix-button-panel"><div id="watch-description-content"><div id="watch-description-clip"><span id="watch-description-badges"></span><div id="watch-uploader-info"><strong class="watch-time-text">Gepubliceerd op 4 sep. 2013</strong></div><div id="watch-description-text" class=""><p id="eow-description" >WHOHO! I can&#39;t believe it! A new Techno mix from me!<br /><br />And it&#39;s a *VERY* special one!<br /><br />Of course!<br /><br />WHAT ELSE!<br /><br />This mix is deep, hypnotic, trippy, spacy, dreamy, trancy, melodic, psychedelic, emotional and a lot more!<br /><br />2,5h simply absolutely outstanding electronic music!<br /><br />This mix will take you on a trip like rarely any other mix can do! Enjoy the ride!<br /><br /><br /><br />Actually I&#39;ve stopped playing Techno a few years ago for several reasons, so don&#39;t expect more Techno mixes in the near future! :)<br /><br />I need to say a *BIG* THANK YOU to one of my 2 best friends, DJ Adrian Vines for helping me to find tracks for this mix. He is one of the best Techno DJs I know!<br /><br />If you like quality Techno music you should check his<br />YouTube channel or SoundCloud!<br /><a href="http://www.youtube.com/user/adrianvines" target="_blank" title="http://www.youtube.com/user/adrianvines" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.youtube.com/user/adrianvines</a><br /><a href="http://www.soundcloud.com/adrian-vines" target="_blank" title="http://www.soundcloud.com/adrian-vines" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.soundcloud.com/adrian-vines</a><br /><br />Visuals created with MilkDrop2 for Winamp!<br /><br />Download: <br /><a href="http://rghost.net/47533070" target="_blank" title="http://rghost.net/47533070" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://rghost.net/47533070</a><br />CD1&amp;2 (for burning onto CDR): <br /><a href="http://rghost.net/47533167" target="_blank" title="http://rghost.net/47533167" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://rghost.net/47533167</a><br /><a href="http://rghost.net/47533267" target="_blank" title="http://rghost.net/47533267" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://rghost.net/47533267</a><br /><br />IF YOU LIKE THIS MIX PLEASE SHARE IT WITH YOUR FRIENDS, LEAVE A COMMENT AND SUBSCRIBE TO MY CHANNEL! THANKS! <br /><br />*HINT* LOOK INTO MY CHANNEL FOR MORE OF MY MIXES!<br /><br /><br />Follow me!<br />Facebook: <a href="http://www.facebook.com/deejay.tb" target="_blank" title="http://www.facebook.com/deejay.tb" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.facebook.com/deejay.tb</a><br />SoundCloud: <a href="http://www.soundcloud.com/deejay-tb" target="_blank" title="http://www.soundcloud.com/deejay-tb" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.soundcloud.com/deejay-tb</a><br />Mixcloud: <a href="http://www.mixcloud.com/deejay-tb" target="_blank" title="http://www.mixcloud.com/deejay-tb" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.mixcloud.com/deejay-tb</a><br />Twitter: <a href="http://www.twitter.com/deejaytb" target="_blank" title="http://www.twitter.com/deejaytb" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.twitter.com/deejaytb</a><br />Downloads: <a href="http://www.tinyurl.com/tb-mixes" target="_blank" title="http://www.tinyurl.com/tb-mixes" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.tinyurl.com/tb-mixes</a><br />Suntrip Records: <a href="http://www.suntriprecords.com" target="_blank" title="http://www.suntriprecords.com" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.suntriprecords.com</a><br /><br /><br />Tracklist:<br />[<a href="#" onclick="yt.www.watch.player.seekTo(0*3600+00*60+00);return false;">0:00:00</a>] Petar Dundov - Ideas From The Pond<br />BUY: <a href="http://www.beatport.com/track/ideas-from-the-pond-original-mix/3319483" target="_blank" title="http://www.beatport.com/track/ideas-from-the-pond-original-mix/3319483" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/ideas-f...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(0*3600+08*60+40);return false;">0:08:40</a>] Extrawelt - Yummy Unbroken<br />BUY: <a href="http://www.beatport.com/track/yummy-unbroken-original-mix/1921778" target="_blank" title="http://www.beatport.com/track/yummy-unbroken-original-mix/1921778" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/yummy-u...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(0*3600+13*60+16);return false;">0:13:16</a>] Matt Star + Locke - Gaucho (Digital Bonus Remix)<br />BUY: <a href="http://www.beatport.com/track/gaucho-digital-bonus-remix/3210740" target="_blank" title="http://www.beatport.com/track/gaucho-digital-bonus-remix/3210740" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/gaucho-...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(0*3600+20*60+57);return false;">0:20:57</a>] Petar Dundov - Distant Shores<br />BUY: <a href="http://www.beatport.com/track/distant-shores-original-mix/3319485" target="_blank" title="http://www.beatport.com/track/distant-shores-original-mix/3319485" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/distant...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(0*3600+30*60+56);return false;">0:30:56</a>] Petar Dundov - Quinta<br />BUY: <a href="http://www.beatport.com/track/quinta-original-mix/1839956" target="_blank" title="http://www.beatport.com/track/quinta-original-mix/1839956" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/quinta-...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(0*3600+40*60+09);return false;">0:40:09</a>] Microtrauma - Monody<br />BUY: <a href="http://www.beatport.com/track/monody-original-mix/3355258" target="_blank" title="http://www.beatport.com/track/monody-original-mix/3355258" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/monody-...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(0*3600+46*60+25);return false;">0:46:25</a>] Boris Brejcha - Flockentanz<br />BUY: <a href="http://www.beatport.com/track/flockentanz-original-mix/1316067" target="_blank" title="http://www.beatport.com/track/flockentanz-original-mix/1316067" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/flocken...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(0*3600+52*60+49);return false;">0:52:49</a>] Petar Dundov - Triton<br />BUY: <a href="http://www.beatport.com/track/triton-original-mix/3746818" target="_blank" title="http://www.beatport.com/track/triton-original-mix/3746818" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/triton-...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+01*60+32);return false;">1:01:32</a>] Poison Pro - The City Of Gods (Petar Dundov Remix)<br />BUY: <a href="http://www.beatport.com/track/the-city-of-gods-petar-dundov-remix/3994988" target="_blank" title="http://www.beatport.com/track/the-city-of-gods-petar-dundov-remix/3994988" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/the-cit...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+07*60+25);return false;">1:07:25</a>] Microtrauma - Reflection<br />BUY: <a href="http://www.beatport.com/track/reflection-original-mix/3272894" target="_blank" title="http://www.beatport.com/track/reflection-original-mix/3272894" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/reflect...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+14*60+07);return false;">1:14:07</a>] Petar Dundov - The Arch<br />BUY: <a href="http://www.beatport.com/track/the-arch-original-mix/3257654" target="_blank" title="http://www.beatport.com/track/the-arch-original-mix/3257654" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/the-arc...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+18*60+49);return false;">1:18:49</a>] Len Faki - Kraft Und Licht<br />BUY: <a href="http://www.beatport.com/track/kraft-und-licht-original-mix/1499494" target="_blank" title="http://www.beatport.com/track/kraft-und-licht-original-mix/1499494" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/kraft-u...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+24*60+42);return false;">1:24:42</a>] Petar Dundov - Stairway<br />BUY: <a href="http://www.beatport.com/track/stairway-original-mix/3257653" target="_blank" title="http://www.beatport.com/track/stairway-original-mix/3257653" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/stairwa...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+32*60+38);return false;">1:32:38</a>] Virgil Enzinger - Way Of The World<br />BUY: <a href="http://www.beatport.com/track/way-of-the-world-original-mix/1567514" target="_blank" title="http://www.beatport.com/track/way-of-the-world-original-mix/1567514" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/way-of-...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+38*60+43);return false;">1:38:43</a>] Spada &amp; Emmanuel - Primavera (Petar Dundov Remix)<br />BUY: <a href="http://www.beatport.com/track/primavera-petar-dundov-remix/3522549" target="_blank" title="http://www.beatport.com/track/primavera-petar-dundov-remix/3522549" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/primave...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+45*60+07);return false;">1:45:07</a>] Petar Dundov - Tenth Plateau<br />BUY: <a href="http://www.beatport.com/track/tenth-plateau-original-mix/1839955" target="_blank" title="http://www.beatport.com/track/tenth-plateau-original-mix/1839955" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/tenth-p...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(1*3600+58*60+10);return false;">1:58:10</a>] Gregor Tresher - The Life Wire (Petar Dundov Variation)<br />BUY: <a href="http://www.beatport.com/track/the-life-wire-petar-dundov-variation/923504" target="_blank" title="http://www.beatport.com/track/the-life-wire-petar-dundov-variation/923504" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/the-lif...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(2*3600+08*60+02);return false;">2:08:02</a>] Extrawelt - Phoebe (Clastic Version)<br />BUY: <a href="http://www.beatport.com/track/phoebe-clastic-version/3232050" target="_blank" title="http://www.beatport.com/track/phoebe-clastic-version/3232050" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/phoebe-...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(2*3600+14*60+10);return false;">2:14:10</a>] Petar Dundov &amp; Gregor Tresher - Duo Tone<br />BUY: <a href="http://www.beatport.com/track/duo-tone-original-mix/3116593" target="_blank" title="http://www.beatport.com/track/duo-tone-original-mix/3116593" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/duo-ton...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(2*3600+22*60+30);return false;">2:22:30</a>] Marco Bailey &amp; Tom Hades - Why Don&#39;t You Answer<br />BUY: <a href="http://www.beatport.com/track/why-dont-you-answer-original-mix/3322553" target="_blank" title="http://www.beatport.com/track/why-dont-you-answer-original-mix/3322553" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/why-don...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(2*3600+28*60+07);return false;">2:28:07</a>] Extrawelt - Schlusslicht<br />BUY: <a href="http://www.beatport.com/track/schlusslicht-original-mix/3008454" target="_blank" title="http://www.beatport.com/track/schlusslicht-original-mix/3008454" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/schluss...</a><br />[<a href="#" onclick="yt.www.watch.player.seekTo(2*3600+32*60+35);return false;">2:32:35</a>] Extrawelt - Zu Fuss<br />BUY: <a href="http://www.beatport.com/track/zu-fuss-original-mix/536192" target="_blank" title="http://www.beatport.com/track/zu-fuss-original-mix/536192" rel="nofollow" dir="ltr" class="yt-uix-redirect-link">http://www.beatport.com/track/zu-fuss...</a> <br /><br /><br />*IF YOU&#39;RE COPYRIGHT OWNER PLEASE READ THE LEGAL NOTICE IN THE CHANNEL DESCRIPTION!*</p></div>  <div id="watch-description-extras" >
+    <ul class="watch-extras-section">
+            <li class="watch-meta-item yt-uix-expander-body">
+    <h4 class="title">
+      Categorie
+    </h4>
+    <ul class="content watch-info-tag-list">
+        <li><a href="/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ" class="yt-uix-sessionlink g-hovercard      spf-link " data-ytid="UC-9-kyTW8ZkZNDHQJ6FgpwQ" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw" >Muziek</a></li>
+    </ul>
+  </li>
+
+            <li class="watch-meta-item yt-uix-expander-body">
+    <h4 class="title">
+      Licentie
+    </h4>
+    <ul class="content watch-info-tag-list">
+        <li>Standaard YouTube-licentie</li>
+    </ul>
+  </li>
+
+            <li class="watch-meta-item yt-uix-expander-body">
+    <h4 class="title">
+      Muziek
+    </h4>
+    <ul class="content watch-info-tag-list">
+        <li>&#39;Schlusslicht (Original Mix)&#39; van <a href="/channel/UCwrIaEZZlLe5C31O7DJE5Xg" class="yt-uix-sessionlink g-hovercard      spf-link " data-ytid="UCwrIaEZZlLe5C31O7DJE5Xg" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw" >Extrawelt</a> (<a href="https://www.youtube.com/cthru?version=2&amp;c2b=googlemusic&amp;v=7ruDVn70dPw&amp;key=AE_82TfkBZkJ4I21WQX2yEuBH2WGdZkxAr5rh3GksRmSvUhx86VLcaBirEXeBEG9J11aa2H-65aZGSxsNyZSGzDpE8L6C0tUietPW47Fe-zPc-QunP1n-7_l9R0sWVLNI4cynw1DASpQReaiEwWKYdKxXb-ZGb-64ckOY3Mj4hb-fGrwHgS3RYg_fQYVs6VN-Oe6VL-EwVR1UQybbuw1F2R8BiloFS8iV4oRVWfsxMthABTG1dmjZENzCHGIGIX0_OPlCj66it1ilUKT8DHEja_5QF2djU_VLYfOMgeryHVVMifjCWoKBIkbpW4PLoIHSnvSy3PGeQO7JSWltPRkXMBOIkkZ4zDuIw" class="yt-uix-sessionlink  " data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw" >Google Play</a> • <a href="https://www.youtube.com/cthru?version=2&amp;c2b=itunes&amp;v=7ruDVn70dPw&amp;key=AE_82TcH9lWeYalRPVgMhsoGTv4dxH2hs6GX0qXgqpy7KhPqEpdsi7EHq8MHdok-KA-3g9lriibi1Axt1Wisg5cbf60oCWv5k8H563xYJL2FNtbvLBGroVTyo_-UZO5xlUO-l44NhpntlCI9Khzugj6-IWhiY3KIaCBwnXsh6fBOFRUdvc2PSqiXtSmUasD2ctYM2_TpVTKC" class="yt-uix-sessionlink  " data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw" >iTunes</a>)</li>
+    </ul>
+  </li>
+
+    </ul>
+  </div>
+</div></div></div>  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-expander yt-uix-expander-head yt-uix-expander-collapsed-body yt-uix-gen204" type="button" onclick=";return false;" data-gen204="feature=watch-show-more-metadata"><span class="yt-uix-button-content">Meer weergeven</span></button>
+  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-expander yt-uix-expander-head yt-uix-expander-body" type="button" onclick=";return false;"><span class="yt-uix-button-content">Minder weergeven</span></button>
+</div>
+
+            <div class="cmt_iframe_holder" data-href="http://www.youtube.com/watch?v=7ruDVn70dPw" data-viewtype="FILTERED" style="display: none;"></div>
+
+  <div id="watch-discussion" class="branded-page-box yt-card">
+            
+  <div class="comments-iframe-container">
+    <div id="comments-test-iframe"></div>
+    <div id="distiller-spinner" class="action-panel-loading">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+      </div>
+      <div id="watch7-sidebar" class="watch-sidebar">
+            <div id="placeholder-playlist" class="watch-playlist player-height  hid"></div>
+
+
+  <div id="watch7-sidebar-contents" class="watch-sidebar-gutter     yt-card yt-card-has-padding    yt-uix-expander yt-uix-expander-collapsed">
+      <div id="watch7-sidebar-offer">
+        
+      </div>
+
+    <div id="watch7-sidebar-ads">
+      
+    </div>
+    <div id="watch7-sidebar-modules">
+          <div class="watch-sidebar-section">
+    <div class="autoplay-bar">
+      <div class="checkbox-on-off">
+       <label for="autoplay-checkbox">Autoplay</label>
+       <span class="autoplay-hovercard yt-uix-hovercard">
+          <span class="autoplay-info-icon yt-uix-button-opacity yt-uix-hovercard-target yt-sprite" data-position="topright" data-orientation="vertical"></span>
+<span class="yt-uix-hovercard-content">Wanneer autoplay is ingeschakeld, wordt een aanbevolen video automatisch als volgende afgespeeld.</span>        </span>
+          <span class="yt-uix-checkbox-on-off ">
+<input id="autoplay-checkbox" class="" type="checkbox"  checked><label for="autoplay-checkbox" id="autoplay-checkbox-label"><span class="checked"></span><span class="toggle"></span><span class="unchecked"></span></label>  </span>
+
+      </div>
+      <h4 class="watch-sidebar-head">
+          Volgende
+      </h4>
+            <div class="watch-sidebar-body">
+      <ul class="video-list">
+        <li class="video-list-item related-list-item show-video-time">
+          
+
+    <div class="content-wrapper">
+    <a href="/watch?v=4OxXqajVwtk" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBUQpDAYACITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIHYXV0b25hdkj86dH35-rg3e4B" title="Technotic Dreams (Something For The Girls) [Techno Mix 2010]" rel="spf-prefetch" data-visibility-tracking="CBUQpDAYACITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDZhdfGmvWV9uAB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-890142">
+    Technotic Dreams (Something For The Girls) [Techno Mix 2010]
+  </span>
+  <span class="accessible-description" id="description-id-890142">
+     - Duur: 1:18:01.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="autonav" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">9.536 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=4OxXqajVwtk" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBUQpDAYACITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIHYXV0b25hdkj86dH35-rg3e4B" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBUQpDAYACITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDZhdfGmvWV9uAB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="4OxXqajVwtk"><img height="90" data-thumb="//i.ytimg.com/vi/4OxXqajVwtk/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:18:01
+    </span>
+
+  </div>
+
+
+        </li>
+      </ul>
+    </div>
+
+    </div>
+  </div>
+
+        
+          <div class="watch-sidebar-section">
+      <hr class="watch-sidebar-separation-line">
+    <div class="watch-sidebar-body">
+      <ul id="watch-related" class="video-list">
+            <li class="video-list-item related-list-item  show-video-time related-list-item-compact-radio"><a href="/watch?v=7ruDVn70dPw&amp;list=RD7ruDVn70dPw" class="yt-uix-sessionlink related-playlist yt-pl-thumb-link spf-link  mix-playlist resumable-list vve-check       spf-link " data-sessionlink="itct=CCkQozAYACITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIKbGlzdF9vdGhlckj86dH35-rg3e4B" data-secondary-video-url="/watch?v=4OxXqajVwtk&amp;list=RD7ruDVn70dPw" data-visibility-tracking="CCkQozAYACITCL7S0NS8yMoCFQfIwgodnHwD8ij4HQ==" rel="spf-prefetch">
+  <span class="yt-pl-thumb  is-small yt-mix-thumb">
+      
+    <span class="video-thumb  yt-thumb yt-thumb-120"
+    >
+    <span class="yt-thumb-default">
+      <span class="yt-thumb-clip">
+        <img width="120" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi/7ruDVn70dPw/default.jpg" alt="" >
+        <span class="vertical-align"></span>
+      </span>
+    </span>
+  </span>
+
+
+
+    <span class="sidebar">
+      <span class="yt-pl-sidebar-content yt-valign">
+        <span class="yt-valign-container">
+              <span class="formatted-video-count-label">
+      <b>50+</b> video&#39;s
+  </span>
+
+          <span class="yt-pl-icon yt-pl-icon-mix yt-sprite"></span>
+        </span>
+      </span>
+    </span>
+
+      <span class="yt-pl-thumb-overlay">
+        <span class="yt-pl-thumb-overlay-content">
+          <span class="play-icon yt-sprite"></span>
+          <span class="yt-pl-thumb-overlay-text">
+Alles afspelen
+          </span>
+        </span>
+      </span>
+
+        <span class="yt-pl-watch-queue-overlay">
+      <span class="thumb-menu dark-overflow-action-menu video-actions">
+    <button aria-expanded="false" class="yt-uix-button-reverse flip addto-watch-queue-menu spf-nolink hide-until-delayloaded yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty" type="button" aria-haspopup="true" onclick=";return false;" ><span class="yt-uix-button-arrow yt-sprite"></span><ul class="watch-queue-thumb-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid"><li role="menuitem" class="overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-now yt-uix-button-menu-item" data-action="play-now" onclick=";return false;"  data-list-id="RD7ruDVn70dPw" data-video-ids="7ruDVn70dPw"><span class="addto-watch-queue-menu-text">Nu afspelen</span></li></ul></button>
+  </span>
+
+      <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button addto-queue-button video-actions spf-nolink hide-until-delayloaded addto-tv-queue-button yt-uix-tooltip" type="button" onclick=";return false;" title="Wachtrij" data-list-id="RD7ruDVn70dPw" data-video-ids="7ruDVn70dPw" data-style="tv-queue"></button>
+
+  </span>
+
+  </span>
+<span dir="ltr" class="title" title="Mix - Blueprint [Melodic Techno Mix 2013]">Mix - Blueprint [Melodic Techno Mix 2013]</span><span class="stat attribution">YouTube</span></a></li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=_gp51lt9kdA" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCgQpDAYASITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Supernova [Progressive Psytrance Mix 2014]" rel="spf-prefetch" data-visibility-tracking="CCgQpDAYASITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDQo_bb5bqehf4B" >
+  <span dir="ltr" class="title" aria-describedby="description-id-490884">
+    Supernova [Progressive Psytrance Mix 2014]
+  </span>
+  <span class="accessible-description" id="description-id-490884">
+     - Duur: 2:34:56.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">8.534.047 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=_gp51lt9kdA" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCgQpDAYASITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCgQpDAYASITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDQo_bb5bqehf4B" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="_gp51lt9kdA"><img height="90" data-thumb="//i.ytimg.com/vi/_gp51lt9kdA/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      2:34:56
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=g_HY-f5GZ8M" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCcQpDAYAiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Steps to the Stars [Progressive Psytrance Mix 2011]" rel="spf-prefetch" data-visibility-tracking="CCcQpDAYAiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDDz5nyn5_2-IMB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-450701">
+    Steps to the Stars [Progressive Psytrance Mix 2011]
+  </span>
+  <span class="accessible-description" id="description-id-450701">
+     - Duur: 1:19:58.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">84.499 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=g_HY-f5GZ8M" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCcQpDAYAiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCcQpDAYAiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDDz5nyn5_2-IMB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="g_HY-f5GZ8M"><img height="90" data-thumb="//i.ytimg.com/vi/g_HY-f5GZ8M/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:19:58
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=ZinMdlpIu_8" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCYQpDAYAyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="A Voltage Controlled Lovestory [Acid Mix 2014]" rel="spf-prefetch" data-visibility-tracking="CCYQpDAYAyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUD_96LS5Y7zlGY=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-149184">
+    A Voltage Controlled Lovestory [Acid Mix 2014]
+  </span>
+  <span class="accessible-description" id="description-id-149184">
+     - Duur: 1:20:02.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">19.504 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=ZinMdlpIu_8" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCYQpDAYAyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCYQpDAYAyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUD_96LS5Y7zlGY=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="ZinMdlpIu_8"><img height="90" data-thumb="//i.ytimg.com/vi/ZinMdlpIu_8/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:20:02
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=AO6v2tU79Yg" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCUQpDAYBCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIHcmVsYXRlZEj86dH35-rg3e4B" title="Melodic Techno mix 1 (Romulus, Worakls, Microtrauma ....) 2013" rel="spf-prefetch" data-visibility-tracking="CCUQpDAYBCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUCI6--prfurdw==" >
+  <span dir="ltr" class="title" aria-describedby="description-id-848936">
+    Melodic Techno mix 1 (Romulus, Worakls, Microtrauma ....) 2013
+  </span>
+  <span class="accessible-description" id="description-id-848936">
+     - Duur: 1:22:25.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="related" data-ytid="UChEOlG3GZAjPhQIqRUH4NDg">BroI〈 en drum Machine</span></span>
+  <span class="stat view-count">359.885 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=AO6v2tU79Yg" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCUQpDAYBCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIHcmVsYXRlZEj86dH35-rg3e4B" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCUQpDAYBCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUCI6--prfurdw==" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="AO6v2tU79Yg"><img height="90" data-thumb="//i.ytimg.com/vi/AO6v2tU79Yg/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:22:25
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=efjCHtCsXGI" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCQQpDAYBSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Voyager I [Progressive Psytrance Mix 2012]" rel="spf-prefetch" data-visibility-tracking="CCQQpDAYBSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDiuLGF7cOw_Hk=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-404107">
+    Voyager I [Progressive Psytrance Mix 2012]
+  </span>
+  <span class="accessible-description" id="description-id-404107">
+     - Duur: 1:19:58.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">76.757 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=efjCHtCsXGI" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCQQpDAYBSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCQQpDAYBSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDiuLGF7cOw_Hk=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="efjCHtCsXGI"><img height="90" data-thumb="//i.ytimg.com/vi/efjCHtCsXGI/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:19:58
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=vwUhznN1ZO4" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCMQpDAYBiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Singularity [Progressive Psytrance Mix 2011]" rel="spf-prefetch" data-visibility-tracking="CCMQpDAYBiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDuydWb57nIgr8B" >
+  <span dir="ltr" class="title" aria-describedby="description-id-348456">
+    Singularity [Progressive Psytrance Mix 2011]
+  </span>
+  <span class="accessible-description" id="description-id-348456">
+     - Duur: 1:19:25.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">51.552 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=vwUhznN1ZO4" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCMQpDAYBiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCMQpDAYBiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDuydWb57nIgr8B" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="vwUhznN1ZO4"><img height="90" data-thumb="//i.ytimg.com/vi/vwUhznN1ZO4/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:19:25
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=VSW_m-kY1dw" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCIQpDAYByITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Live at Theaterfabrik Munich [Progressive Psytrance Mix 25.05.2013]" rel="spf-prefetch" data-visibility-tracking="CCIQpDAYByITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDcq-PIvvPvklU=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-43144">
+    Live at Theaterfabrik Munich [Progressive Psytrance Mix 25.05.2013]
+  </span>
+  <span class="accessible-description" id="description-id-43144">
+     - Duur: 1:58:50.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">38.298 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=VSW_m-kY1dw" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCIQpDAYByITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCIQpDAYByITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDcq-PIvvPvklU=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="VSW_m-kY1dw"><img height="90" data-thumb="//i.ytimg.com/vi/VSW_m-kY1dw/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:58:50
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=LdhQWAUjidc" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCEQpDAYCCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIHcmVsYXRlZEj86dH35-rg3e4B" title="Melodic Techno mix 3 (Worakls, N&#39;to....) 2014" rel="spf-prefetch" data-visibility-tracking="CCEQpDAYCCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDXk46pgIuU7C0=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-196889">
+    Melodic Techno mix 3 (Worakls, N&#39;to....) 2014
+  </span>
+  <span class="accessible-description" id="description-id-196889">
+     - Duur: 1:51:53.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="related" data-ytid="UChEOlG3GZAjPhQIqRUH4NDg">BroI〈 en drum Machine</span></span>
+  <span class="stat view-count">57.173 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=LdhQWAUjidc" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCEQpDAYCCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIHcmVsYXRlZEj86dH35-rg3e4B" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCEQpDAYCCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDXk46pgIuU7C0=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="LdhQWAUjidc"><img height="90" data-thumb="//i.ytimg.com/vi/LdhQWAUjidc/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:51:53
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=1vZcaf71kQs" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCAQpDAYCSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Travelling To Eternity And Back [Progressive Psytrance Mix 2014]" rel="spf-prefetch" data-visibility-tracking="CCAQpDAYCSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUCLotb3n42X-9YB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-641744">
+    Travelling To Eternity And Back [Progressive Psytrance Mix 2014]
+  </span>
+  <span class="accessible-description" id="description-id-641744">
+     - Duur: 3:39:57.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">213.495 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=1vZcaf71kQs" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCAQpDAYCSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCAQpDAYCSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUCLotb3n42X-9YB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="1vZcaf71kQs"><img height="90" data-thumb="//i.ytimg.com/vi/1vZcaf71kQs/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      3:39:57
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=iFEW0PmEslM" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CB8QpDAYCiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Hirnschraube [Techno Mix 2010]" rel="spf-prefetch" data-visibility-tracking="CB8QpDAYCiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDT5JLMj9rFqIgB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-415389">
+    Hirnschraube [Techno Mix 2010]
+  </span>
+  <span class="accessible-description" id="description-id-415389">
+     - Duur: 1:19:59.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">13.168 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=iFEW0PmEslM" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CB8QpDAYCiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CB8QpDAYCiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDT5JLMj9rFqIgB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="iFEW0PmEslM"><img height="90" data-thumb="//i.ytimg.com/vi/iFEW0PmEslM/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:19:59
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=RiXqvWh-9P0" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CB4QpDAYCyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Stardiver [Psy Downbeat Mix 2014]" rel="spf-prefetch" data-visibility-tracking="CB4QpDAYCyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUD96fvD1tf6kkY=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-486482">
+    Stardiver [Psy Downbeat Mix 2014]
+  </span>
+  <span class="accessible-description" id="description-id-486482">
+     - Duur: 2:39:25.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">102.893 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=RiXqvWh-9P0" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CB4QpDAYCyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CB4QpDAYCyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUD96fvD1tf6kkY=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="RiXqvWh-9P0"><img height="90" data-thumb="//i.ytimg.com/vi/RiXqvWh-9P0/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      2:39:25
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=aVIVSuAHnSg" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CB0QpDAYDCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Tribute to Goa Vol. 3 [Oldschool Goa Mix 2012]" rel="spf-prefetch" data-visibility-tracking="CB0QpDAYDCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUCoup6ArqmFqWk=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-782715">
+    Tribute to Goa Vol. 3 [Oldschool Goa Mix 2012]
+  </span>
+  <span class="accessible-description" id="description-id-782715">
+     - Duur: 1:20:00.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">26.921 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=aVIVSuAHnSg" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CB0QpDAYDCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CB0QpDAYDCITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUCoup6ArqmFqWk=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="aVIVSuAHnSg"><img height="90" data-thumb="//i.ytimg.com/vi/aVIVSuAHnSg/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:20:00
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=nAe-P16QIEs" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBwQpDAYDSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Live at Labor Club Closing Party Munich [Techno Mix 31.05.2009]" rel="spf-prefetch" data-visibility-tracking="CBwQpDAYDSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDLwMD09cfvg5wB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-370734">
+    Live at Labor Club Closing Party Munich [Techno Mix 31.05.2009]
+  </span>
+  <span class="accessible-description" id="description-id-370734">
+     - Duur: 2:06:40.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">13.387 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=nAe-P16QIEs" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBwQpDAYDSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBwQpDAYDSITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDLwMD09cfvg5wB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="nAe-P16QIEs"><img height="90" data-thumb="//i.ytimg.com/vi/nAe-P16QIEs/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      2:06:40
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=4iDOYPbHV3k" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBsQpDAYDiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Aurora Borealis [Goa Trance Mix 2014]" rel="spf-prefetch" data-visibility-tracking="CBsQpDAYDiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUD5rp22j8yzkOIB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-207287">
+    Aurora Borealis [Goa Trance Mix 2014]
+  </span>
+  <span class="accessible-description" id="description-id-207287">
+     - Duur: 1:17:06.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">98.537 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=4iDOYPbHV3k" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBsQpDAYDiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBsQpDAYDiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUD5rp22j8yzkOIB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="4iDOYPbHV3k"><img height="90" data-thumb="//i.ytimg.com/vi/4iDOYPbHV3k/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:17:06
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=n26PpNJV7OU" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBoQpDAYDyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Destination Infinity [Goa Ambient Mix 2012]" rel="spf-prefetch" data-visibility-tracking="CBoQpDAYDyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDl2deSzfSjt58B" >
+  <span dir="ltr" class="title" aria-describedby="description-id-803440">
+    Destination Infinity [Goa Ambient Mix 2012]
+  </span>
+  <span class="accessible-description" id="description-id-803440">
+     - Duur: 1:19:46.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">171.190 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=n26PpNJV7OU" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBoQpDAYDyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBoQpDAYDyITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDl2deSzfSjt58B" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="n26PpNJV7OU"><img height="90" data-thumb="//i.ytimg.com/vi/n26PpNJV7OU/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:19:46
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=24-lFDs5FX8" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBkQpDAYECITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Distances Vol. 2 [Psy Downbeat Mix 2010]" rel="spf-prefetch" data-visibility-tracking="CBkQpDAYECITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUD_quTZw6Lpx9sB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-506195">
+    Distances Vol. 2 [Psy Downbeat Mix 2010]
+  </span>
+  <span class="accessible-description" id="description-id-506195">
+     - Duur: 1:16:24.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">29.399 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=24-lFDs5FX8" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBkQpDAYECITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBkQpDAYECITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUD_quTZw6Lpx9sB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="24-lFDs5FX8"><img height="90" data-thumb="//i.ytimg.com/vi/24-lFDs5FX8/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:16:24
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=nCVJG_s_TNY" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBgQpDAYESITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIHcmVsYXRlZEj86dH35-rg3e4B" title="Trance classics mix: Trance anthems 1999-2004" rel="spf-prefetch" data-visibility-tracking="CBgQpDAYESITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDWmf3Zv6PSkpwB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-50884">
+    Trance classics mix: Trance anthems 1999-2004
+  </span>
+  <span class="accessible-description" id="description-id-50884">
+     - Duur: 1:19:10.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="related" data-ytid="UCzvtyQ2mEu6YOo9VPC5b7oA">Trance Voyage Sessions</span></span>
+  <span class="stat view-count">255.594 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=nCVJG_s_TNY" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBgQpDAYESITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIHcmVsYXRlZEj86dH35-rg3e4B" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBgQpDAYESITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDWmf3Zv6PSkpwB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="nCVJG_s_TNY"><img height="90" data-thumb="//i.ytimg.com/vi/nCVJG_s_TNY/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:19:10
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=Ob1AowHzAtw" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBcQpDAYEiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" title="Hyperspace [Morning Psytrance Mix 2013]" rel="spf-prefetch" data-visibility-tracking="CBcQpDAYEiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDchcyPsJTQ3jk=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-322101">
+    Hyperspace [Morning Psytrance Mix 2013]
+  </span>
+  <span class="accessible-description" id="description-id-322101">
+     - Duur: 1:20:01.
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-name="relmfu" data-ytid="UCY4K38bifejKdjpcBXVKk_Q">Tobias Bassline</span></span>
+  <span class="stat view-count">389.341 weergaven</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=Ob1AowHzAtw" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBcQpDAYEiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HTIGcmVsbWZ1SPzp0ffn6uDd7gE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBcQpDAYEiITCL7S0NS8yMoCFQfIwgodnHwD8ij4HUDchcyPsJTQ3jk=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="Ob1AowHzAtw"><img height="90" data-thumb="//i.ytimg.com/vi/Ob1AowHzAtw/default.jpg" alt="" width="120" aria-hidden="true" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" ></span></a>
+        <span class="video-time">
+      1:20:01
+    </span>
+
+  </div>
+
+</li>
+                  <div id="watch-more-related" class="hid">
+    <li id="watch-more-related-loading">
+Meer suggesties laden...
+    </li>
+  </div>
+  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-expander" type="button" onclick=";return false;" id="watch-more-related-button" data-continuation="CBQSExILN3J1RFZuNzBkUHfAAQDIAQAYAA%3D%3D" data-button-action="yt.www.watch.related.loadMore"><span class="yt-uix-button-content">Meer weergeven</span></button>
+
+      </ul>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="watch7-hidden-extras">
+      <div style="visibility: hidden; height: 0px; padding: 0px; overflow: hidden;">
+  </div>
+
+  </div>
+
+
+  </div>
+
+</div></div></div>    <div class="yt-dialog hid " id="yt-consent-dialog">
+    <div class="yt-dialog-base">
+      <span class="yt-dialog-align"></span>
+      <div class="yt-dialog-fg" role="dialog">
+        <div class="yt-dialog-fg-content">
+          <div class="yt-dialog-loading">
+              <div class="yt-dialog-waiting-content">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+  </div>
+
+          </div>
+          <div class="yt-dialog-content">
+              <div class="yt-consent-dialog-content">
+    <iframe id="yt-consent-iframe" data-src="https://consent.google.com/?l=0&amp;m=0&amp;if=1&amp;gl=NL&amp;continue=https%3A%2F%2Fwww.youtube.com&amp;pc=yt&amp;wp=71&amp;origin=https%3A%2F%2Fwww.youtube.com&amp;hl=nl"></iframe>
+  </div>
+
+          </div>
+          <div class="yt-dialog-working">
+              <div class="yt-dialog-working-overlay"></div>
+  <div class="yt-dialog-working-bubble">
+    <div class="yt-dialog-waiting-content">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+        Bezig...
+    </span>
+  </p>
+
+      </div>
+  </div>
+
+          </div>
+        </div>
+        <div class="yt-dialog-focus-trap" tabindex="0"></div>
+      </div>
+    </div>
+  </div>
+
+</div>  <div id="footer-container" class="yt-base-gutter force-layer"><div id="footer"><div id="footer-main"><div id="footer-logo"><a href="/" id="footer-logo-link" title="YouTube-startpagina" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw&amp;ved=CAIQpmEiEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0" class="yt-uix-sessionlink"><span class="footer-logo-icon yt-sprite"></span></a></div>  <ul class="pickers yt-uix-button-group" data-button-toggle-group="optional">
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-has-icon" type="button" onclick=";return false;" id="yt-picker-language-button" data-button-menu-id="arrow-display" data-picker-key="language" data-picker-position="footer" data-button-action="yt.www.picker.load" data-button-toggle="true"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-footer-language yt-sprite"></span></span><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+Taal:
+  </span>
+  Nederlands
+</span><span class="yt-uix-button-arrow yt-sprite"></span></button>
+
+
+      </li>
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default" type="button" onclick=";return false;" id="yt-picker-country-button" data-button-menu-id="arrow-display" data-picker-key="country" data-picker-position="footer" data-button-action="yt.www.picker.load" data-button-toggle="true"><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+Land:
+  </span>
+  Nederland
+</span><span class="yt-uix-button-arrow yt-sprite"></span></button>
+
+
+      </li>
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default" type="button" onclick=";return false;" id="yt-picker-safetymode-button" data-button-menu-id="arrow-display" data-picker-key="safetymode" data-picker-position="footer" data-button-action="yt.www.picker.load" data-button-toggle="true"><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+Beperkte modus:
+  </span>
+Uit
+</span><span class="yt-uix-button-arrow yt-sprite"></span></button>
+
+
+      </li>
+  </ul>
+<a href="/feed/history" class="yt-uix-button  footer-history yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default yt-uix-button-has-icon" data-sessionlink="ei=HeynVv7PGoeQiwac-Y2QDw"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-footer-history yt-sprite"></span></span><span class="yt-uix-button-content">Geschiedenis</span></a>    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-has-icon yt-uix-button-reverse yt-google-help-link inq-no-click " type="button" onclick=";return false;" id="google-help" data-ghelp-anchor="google-help" data-ghelp-tracking-param="" data-load-chat-support=""><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-questionmark yt-sprite"></span></span><span class="yt-uix-button-content">Help
+</span></button>
+      <div id="yt-picker-language-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+  </div>
+
+      <div id="yt-picker-country-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+  </div>
+
+      <div id="yt-picker-safetymode-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+  </div>
+
+</div><div id="footer-links"><ul id="footer-links-primary">  <li><a href="//www.youtube.com/yt/about/nl/">Over</a></li>
+  <li><a href="//www.youtube.com/yt/press/nl/">
+Pers
+  </a></li>
+  <li><a href="//www.youtube.com/yt/copyright/nl/">Auteursrecht</a></li>
+  <li><a href="//www.youtube.com/yt/creators/nl/">
+Videomakers
+  </a></li>
+  <li><a href="//www.youtube.com/yt/advertise/nl/">
+Adverteren
+  </a></li>
+  <li><a href="//www.youtube.com/yt/dev/nl/">Ontwikkelaars</a></li>
+  <li><a href="https://plus.google.com/+youtube" dir="ltr">+YouTube</a></li>
+</ul><ul id="footer-links-secondary">  <li><a href="/t/terms">Voorwaarden</a></li>
+  <li><a href="https://www.google.nl/intl/nl/policies/privacy/">Privacy</a></li>
+  <li><a href="//www.youtube.com/yt/policyandsafety/nl/">
+Beleid &amp; veiligheid
+  </a></li>
+  <li><a href="//support.google.com/youtube/?hl=nl" onclick="return yt.www.feedback.start(59);" class="reportbug">Feedback verzenden</a></li>
+  <li><a href="/testtube">Probeer iets nieuws!</a></li>
+  <li></li>
+</ul></div></div></div>
+
+
+      <div class="yt-dialog hid " id="feed-privacy-lb">
+    <div class="yt-dialog-base">
+      <span class="yt-dialog-align"></span>
+      <div class="yt-dialog-fg" role="dialog">
+        <div class="yt-dialog-fg-content">
+          <div class="yt-dialog-loading">
+              <div class="yt-dialog-waiting-content">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+Laden...
+    </span>
+  </p>
+
+  </div>
+
+          </div>
+          <div class="yt-dialog-content">
+              <div id="feed-privacy-dialog">
+  </div>
+
+          </div>
+          <div class="yt-dialog-working">
+              <div class="yt-dialog-working-overlay"></div>
+  <div class="yt-dialog-working-bubble">
+    <div class="yt-dialog-waiting-content">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+        Bezig...
+    </span>
+  </p>
+
+      </div>
+  </div>
+
+          </div>
+        </div>
+        <div class="yt-dialog-focus-trap" tabindex="0"></div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="hidden-component-template-wrapper" class="hid">    <div id="shared-addto-watch-later-login" class="hid">
+      <a class="sign-in-link" href="https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26feature%3Dplaylist%26next%3D%252Fwatch%253Fv%253D7ruDVn70dPw%26hl%3Dnl&amp;hl=nl">Log in</a> om dit toe te voegen aan de afspeellijst &#39;Later bekijken&#39;
+
+    </div>
+  <div id="yt-uix-videoactionmenu-menu" class="yt-ui-menu-content">
+      <div class="hide-on-create-pl-panel">
+    <h3>
+Toevoegen aan
+    </h3>
+  </div>
+  <div class="add-to-widget">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="Pictogram laden"></span>
+
+    <span class="yt-spinner-message">
+        Afspeellijsten laden...
+    </span>
+  </p>
+
+  </div>
+
+  </div>
+</div>    <script>var ytspf = ytspf || {};ytspf.enabled = true;ytspf.config = {'reload-identifier': 'spfreload'};ytspf.config['cache-max'] = 50;ytspf.config['navigate-limit'] = 50;ytspf.config['navigate-lifetime'] = 64800000;</script>
+  <script src="//s.ytimg.com/yts/jsbin/spf-vfljW6yZb/spf.js" type="text/javascript" name="spf/spf"></script>
+  <script src="//s.ytimg.com/yts/jsbin/www-en_US-vfl-nJA5u/base.js" name="www/base"></script>
+<script>spf.script.path({'www/': '//s.ytimg.com/yts/jsbin/www-en_US-vfl-nJA5u/'});var ytdepmap = {"www/base": null, "www/common": "www/base", "www/angular_base": "www/common", "www/channels_accountupload": "www/common", "www/channels": "www/common", "www/dashboard": "www/common", "www/debugpolymer": "www/common", "www/downloadreports": "www/common", "www/experiments": "www/common", "www/feed": "www/common", "www/innertube": "www/common", "www/instant": "www/common", "www/legomap": "www/common", "www/live_chat": "www/common", "www/live_chat_moderation": "www/common", "www/promo_join_network": "www/common", "www/results_harlemshake": "www/common", "www/results": "www/common", "www/results_starwars": "www/common", "www/subscriptionmanager": "www/common", "www/unlimited": "www/common", "www/watch": "www/common", "www/ypc_bootstrap": "www/common", "www/ypc_core": "www/common", "www/ytstyles": "www/common", "www/channels_edit": "www/channels", "www/innertube_watchnext": "www/innertube", "www/live_broadcasts": "www/angular_base", "www/live_dashboard": "www/angular_base", "www/videomanager": "www/angular_base", "www/watch_autoplayrenderer": "www/watch", "www/watch_edit": "www/watch", "www/watch_editor": "www/watch", "www/watch_live": "www/watch", "www/watch_missilecommand": "www/watch", "www/watch_promos": "www/watch", "www/watch_speedyg": "www/watch", "www/watch_transcript": "www/watch", "www/watch_videoshelf": "www/watch", "www/ct_advancedsearch": "www/videomanager", "www/my_videos": "www/videomanager"};spf.script.declare(ytdepmap);</script><script>if (window.ytcsi) {window.ytcsi.tick("je", null, '');}</script>      <script>
+    yt.setConfig({
+      'VIDEO_ID': "7ruDVn70dPw",
+      'THUMB_LOADER_PAUSE_MS': 0,
+      'THUMB_LOADER_GROUP_PX': 400,
+      'THUMB_LOADER_IGNORE_FOLD': false,
+      'WAIT_TO_DELAYLOAD_FRAME_CSS': true,
+      'IS_UNAVAILABLE_PAGE': false,
+      'DROPDOWN_ARROW_URL': "https:\/\/s.ytimg.com\/yts\/img\/pixel-vfl3z5WfW.gif",
+      'AUTONAV_EXTRA_CHECK': false,
+
+      'JS_PAGE_MODULES': [
+        'www/watch',
+        'www/ypc_bootstrap',
+          'www/watch_autoplayrenderer',
+        ''       ],
+
+
+      'REPORTVIDEO_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-reportvideo-vflnN4wdh\/www-reportvideo.js",
+      'REPORTVIDEO_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-watch-reportvideo-vflmOtl99.css",
+
+        'IS_RESUMABLE_PLAYBACK': true,
+
+      'TIMING_AFT_KEYS': ['pbp', 'pbs'],
+      'YPC_CAN_RATE_VIDEO': true,
+
+
+        'RELATED_PLAYER_ARGS': {"rvs":"id=4OxXqajVwtk\u0026endscreen_autoplay_session_data=playnext%3D1%26feature%3Drelated-auto%26autonav%3D1\u0026length_seconds=4681\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCBMQvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Technotic+Dreams+%28Something+For+The+Girls%29+%5BTechno+Mix+2010%5D,playlist_iurlhq=%2F%2Fi.ytimg.com%2Fvi%2F7ruDVn70dPw%2Fhqdefault.jpg\u0026thumbnail_ids=4OxXqajVwtk\u0026playlist_iurlmq=%2F%2Fi.ytimg.com%2Fvi%2F7ruDVn70dPw%2Fmqdefault.jpg\u0026video_id=4OxXqajVwtk\u0026list=RD7ruDVn70dPw\u0026session_data=itct%3DCBIQvk4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026playlist_length=0\u0026playlist_title=Mix+-+Blueprint+%5BMelodic+Techno+Mix+2013%5D,id=_gp51lt9kdA\u0026length_seconds=9296\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCBEQvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Supernova+%5BProgressive+Psytrance+Mix+2014%5D,id=g_HY-f5GZ8M\u0026length_seconds=4798\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCBAQvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Steps+to+the+Stars+%5BProgressive+Psytrance+Mix+2011%5D,id=ZinMdlpIu_8\u0026length_seconds=4802\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCA8QvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=A+Voltage+Controlled+Lovestory+%5BAcid+Mix+2014%5D,id=AO6v2tU79Yg\u0026length_seconds=4945\u0026short_view_count_text=\u0026author=BroI%E3%80%88+en+drum+Machine\u0026session_data=itct%3DCA4QvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Melodic+Techno+mix+1+%28Romulus%2C+Worakls%2C+Microtrauma+....%29+2013,id=efjCHtCsXGI\u0026length_seconds=4798\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCA0QvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Voyager+I+%5BProgressive+Psytrance+Mix+2012%5D,id=vwUhznN1ZO4\u0026length_seconds=4765\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCAwQvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Singularity+%5BProgressive+Psytrance+Mix+2011%5D,id=VSW_m-kY1dw\u0026length_seconds=7130\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCAsQvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Live+at+Theaterfabrik+Munich+%5BProgressive+Psytrance+Mix+25.05.2013%5D,id=LdhQWAUjidc\u0026length_seconds=6713\u0026short_view_count_text=\u0026author=BroI%E3%80%88+en+drum+Machine\u0026session_data=itct%3DCAoQvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Melodic+Techno+mix+3+%28Worakls%2C+N%27to....%29+2014,id=1vZcaf71kQs\u0026length_seconds=13197\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCAkQvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Travelling+To+Eternity+And+Back+%5BProgressive+Psytrance+Mix+2014%5D,id=iFEW0PmEslM\u0026length_seconds=4799\u0026short_view_count_text=\u0026author=Tobias+Bassline\u0026session_data=itct%3DCAgQvU4iEwi-0tDUvMjKAhUHyMIKHZx8A_Io-B0yCWVuZHNjcmVlbkj86dH35-rg3e4B\u0026title=Hirnschraube+%5BTechno+Mix+2010%5D"},
+
+
+
+
+          'BG_P': "dg9GGKWFd5SI0o85B4XaXghlB4hyua0X6KmsXEqD8bgHN2hsWNsVLWoh9glYE3NXQOZrMTeZQdFI9rCiZ3R+slNUZZv\/YzAt6In0WtLTzRz8g80M7clG\/0YyLWTx5WHRtPcxOTd6PcW8vRVWZ35g2Z9LF9wZsdicnm0oFtLrl8WoGTO+XIcPs6rbcHWutDWvOJQBRsqPKKq2C3NVIVeTcwDuSKgFlDwm7Zz02PswSRhcOvjzGTVTZsMfltzJpYwy0zDWcsEsbOpSZMq66Xyk+kNdK9DmLtXfsUI0\/QuHuPpWyuLt3T\/s4EC0nrRPoK6Us5RCQOk0qPxg2xv73kL3MfjuF8T5l+C2irKwSNDQOEc8zPNkGI9EIgF6Ml8xi+X3zj2WEZke49xwrXjFeT5S0DPX8xGujEyhjyqSAhBCVf6tM2T\/IMU40I6anfg6wuYPjWpvpAfS9a6gxxoPk2ckPmme1ZmX\/uduY3B8\/43AxFjSB7qjoXdAkzPMtmkARCcGnTqK+KPcrBNm4pR\/OeZOGx8y60bHpsjLVG5xBGTxgsQOh4CBcgw7VBMgTC3wgsv1xUoJb8ElzDn5ds1YzQ1OSZ\/e0ThKuXxxAGnFZYKcryaw5NKrR1cdi5HSctfQaXDqvW0NkcM7kxTr7g4zBcjjNj5cmdA4dhKepq6o85OaAyhyuKEpByvGLqLTWgDQ17oCrRYhGOss4TPJPrx+pKpusGJ+AvEqvO41tM0Eb5FfWgLMTgQqyetrMci6zcryuY+KE++F5x9jaP5TWLA6lt9ux5K9b2v94pem1LNIKl7\/VFbGetUx8JIPCibSRlHrxY6QucQn2EGAfpDkLgrM6Ml30KlPh23F7BfDBJSkyf\/pFvRDnbmUSQ\/FKpxWD5RKkFznLu8pj5CqNq8Lc3cL9AvVnyxlZNOtI1ljCXfjneZOvBrsjQOAcovlCf+ouMbjO5w4anRPAAswjP7zmmJvmjhkoyUzkw9nyCy1T+yuM1gJEzeI3qCIYvHo2W9Z0uDwB6No8GQkL6X6IyqxxVO44IFNVIXSPq\/cOyomQ0z6rCdWNNLizo6DSODJjj62Vl77fSdugJ3MIuiiojOJZZrml2S8\/VeG6jw37uJdjQ0Eb1F\/PsdvHks6MT4Z4m3hEH\/5a37Rq\/NCdoMatFm96FFXPQto83soZDczbIuHn2ub17BlIIf34rTj9W11Ka1yknAj864pYa7\/8wxs1WwQOjxawJZ2rsER7h30tYP\/OnPctwdTiTwJJ6V3JSOi2M7Wd\/wUST977A5JRGUMYpHEgAGN5jBkfFG+vdEsJV2JqzTYI4ybWUezBcYv7BO0KvR\/j6nKEOLH8s+fu7HQ5TTjJuHR6Nc463X5Sf9Pn+Kq7DLtgDzojjou43ZKInZfyoykzJ6ekmdPIi5uozR2FIUViYeMiZe9yuQyVnKa+TBfynRh\/61bLTLgM3n9LQGU2ityuuLczMa7wun7EsvqwEo\/C3yoqy\/zf+dQEC18qZJCJda2oRUAjmrSjopWSruSsc4utQkMXM8Sz5JRP1TVq2\/OVUQYoUGeZ9l0k0TgR4E8C8dgdgfKLrfOZLvdD8t5AoA7RZiPEvtlvuRFvY+RvatvoA\/fhxGC2FNIrm6RDapOIZQ+K3rhRmZY9iIrXvvZd\/qJf95GKZxTJJS33mSh7j2RpivEmpfJPDqYbgCl05P1vD7t654nU8VwtqAz2KaomQwUMLQ+mwPg77EwNdJs\/bN9QKH8Xo0O8i1r37Ww3G+NUDOcYSSpvpg1HqpXpUp9Hm2tkibZAktk\/TnJqcI8xcp72iJhM8VoWGSJNA3FyXKpwItGosf3oC4RDrQbZRBL5JKOqTU0XpPPphKUuLveHNT5X\/axcfBalWWf3GaFdPvK0uJdwx3zF9ZWUZldphLu+XL5DVKZ0AvpD9GaE3Wm+nv59pmFObaWshVFWFe79ma73Yzc1KXOUv9g95YwiEdtw3XDHCWlJ7NQ5j2TcUDvPjMd0yQ2cBp\/9CF5EpGkPbRgJnEKjUmTu1mRZGS92Kyg1+nJRxh9UXB2dW4ZeP5EWJxTWgiDuaxezAJ9m5i5KOW5sAOHwmmycdmpDVKVd6RTbxy8cWGCS4RYewCBA58t8Rw0cWqjFcZr8uAnxRRzmGQM9oXwRUOycA5HgmZA23IqaFNaGefO9o1kBFhYJcGCva6zZeDvk46r4V68HS3aGekI4anm3M522ivKQeT+rSxOo9uB1UlgL+P77XsMeR5+PFTAHym3uxCNWEBmevRHabt4RAzDjW5mMm1yDbl+FooVFOqjatwi0rGh84\/t5YyM3RNcpYQdTwA+cyrejph0cztSusfH30dhAtrHSO\/owyeF7Is7uhC1Fxpxr1T7bR+DCnoZNlqt91sukoR\/2DdhSQ80S+g+2cLzH9bEFvG+r5vOx0XcrflO8IdQTKlKktq5S+GkEINCNfGeIlXBWAzxcqqhe6Z01BC\/hSxZjn\/GDVCfaysyt5SknryNkRlt+zqCE5Db2kqMJ5QyiDESl8Igb1VWGOzi27SGCKKqs0sGmTk8IHJdGRHV8pCSMg1lnvg7Fl1vafBQEInHXv6JEgOs7jL9DBduS6T17t4bFQ0jvhaRztmymOKiJluxadnoN0SLVUBfgrZ6Uk0H7SKv62YctffqVy14lFQFI6XN9YwbQgOIFbOCsBy+mOkB0PYN+utVK7sI4GKFlQvLToW4e6eHDmltBsaE61F9o7WBUgO6ccPd5w3h5kvv3Ysu4GEHkztHUm5WWGM\/7h7BeGWhO01Mcqk3czFxsl5dICVGW3D1FZmCTVtoE1JvkvgK1E05Ptw6EgqMzIjj7w9jY8zc+ys6H4hrHPCDXLoYtUvtWle4dQfEIoYIemMhie4Wp7QmHhSiQktiViYkwixWV42tVSnAsCiY3vsDxL+NgpGOcgJZ2vDHL2e2SgKsLR1EG2pEaj38C9lmzifKGj\/PReDh5xTAbtcUDewGDr78qp\/c0OfhGuWQlN0Qpj4mZP7MUiYMcuYDjRWrYJ6Z2LQjkR12UstxaOZDiPjrm3lyM0+cmBwOWcBDnENZeCsAIDycTDsRc8E+dCjI1xbafsJgIuvPxgSgCILWg5Sj9jadP8b+nt8RsDEJzDvzDpESFWvHCb\/kTP8bh3Zq9+0EpdFXoWiXw0XF+ShkU6iam1RqvEmnncL\/Qi3uQljCyiLyRNGQRH\/rxox44J7Qzar1qf1Js0MGmcN8neD8sk+B4pd++\/YUkri73UzFUHQ\/KbVQevas2a4ufa0iG8XyEEAVHrMZRLs7wLWHgoMe2iB9wOIR2E6x\/ZPZ0ZNaA6SznlJ1VZShpVJUJqD5+Da32vfQh5TEJnEXYDIpAIvLr+CL3UKcnTRiu0xwcxp+0h0BRKsnhoYWaNYWEdh+88zOZXNArJLO4auZx+C6rVU8PgNUfGREzIiixpn0BtP1hHjhl4PjbDjuOF4CiM7dvKGME6JogsP3gjKkB3qDoLjTYs9B5K73sKl84Y4rikWNORrS1GDXDREoDq949eDKrMNwo+GacPmtc08B2e51UigqoiNyojCkFWs6kN602AqNrLbTqmudJFw31UBm1mLBVNTSbnscuQ22HO0\/KH7SGGb7u6KVzzlt1LAC6wfrRDPkpQbK6nyvkPJfTerXt2zuMbaoZ5CUU08OQ5pXEpueL0pKtQOWfG57+700ynwd5rCT0CbF38M2IkRIKit3VlSEOaqYSIuh4seTyT6SmLcuU045kRtCbgiM\/QOY3mDwPp\/Z9bY1fqFTR+\/M3z2JfDMP5d23x6iGM5lz7X5WgWAgjMycccaDaoorwM5ZJaR8O4\/EdxcSrxdAyHzOIEhAWASH\/VJc6fl0g8lj2oR1El\/o7\/jHM83k1TmS95ZE+pW4Mk1FA+cwwwzBJp99E4p0PhRDxomUPTPqZZm7Msv7nQems89e1FCs6858IjZfoDmmwJG3yIvqf85xUJVaqinpyX3qoOdtArrrDvsb8vCEhxJUgFip9FTpct74SgCRtqPb4fvN2exTgcEaAsL82hqz3KPwohXTgrFccVPMKLO7fygCaWooqwwCPY\/YU+hWetiCABJ6wKl1egV6TaIo6onk+AFCQccPkyu5XBQAypiU\/+gPmtU1xxkMvSn3oM2sron64OjfxNzjOwLYuxL\/mDUbiK3UOtIUVrnvKova9Jayf9TRuLBk6jJcQac+z3+Ygtf5Qc0DXdY9j0QeaBaY9IaX25t+p0F0bbU3bQPqcyUDQUqA+8g38WSlUjFCL57CjJ+1VmsMwO9VTJiHnqY+SpgeJh\/9Jwem8pYhnZMJs3jOIXsaDlTjlFw900EyQQWvIqGi7vHf4MuFiwng\/YXhRPTd4sAQmTRjk6PAs2no2F76V6eQUezACyVrlk9\/s9hjnIR9VUm0sLJYmGO1ZQOcOg2Ew5FjGX5dEBVlelmDWyNACHo5WM9vGrs+1qDyoKR6IEhmQGK8Xq3VuYi312bkXgIQopg+vapjeGdjvK\/Me\/tNXFBGMRFa\/9EiZwqLC77ry\/w2CDBOH+pghqrqNOEa8rE6Yg7Xt4+fm0mXknorwjJIF4b\/2IG+Zl4gGUVuN5BqargPDchQDVlNervrwuCivr3mfUHw\/UEfZKm4AN4QQZbtQeHJWiHh6QNOErjsrfkfwpQgkHw6Gu11MXptkj1HyaUoBihT7nNfAKpB5QPrlppS5G37jIEf8eMji\/j6vu2rC6s5Zri0wgqF8jWTLE8K7MgT2cOh5xbAhICqDpqZpLdDiIqhXXhSKEl9FBU7cyoZTV1SnBLyNjEDDDAyV5xVgm0faSvUxUrLLz0PGFuFDnIKD3U7dF2++5Zk46LRE+q4dwmcd6uqZjMUJT1YQyK7fPIji2uhri3DHeGn0Sh6fh5tkPc\/TV3vqEv0AeyyPRANklmOJDEfjjqH79G6EHq+wT7bgs+u2zJgVlUAAm3WhKbgqu9ffAI+OgL3T7VaxY\/lBELQve6FVjJb\/oLDG9viHkyrR5lfQW6CF5QbsTVcOZQlcziHIjZvZFxds8dgWRan86Qp\/TZKSAMrMqYIE1AkU\/32hyKuWRx7IGSqi1X3V0QvstH1bYVAGvNhB75dxGreNWackKYutZenQf5YCyoGmuNvKDLaZD4TYX8y2SWrWy3mp\/2H5LwfWpQAYlsEBP2881XKyhzXtdi\/lAAFt46JT+4JWEPYlnbqxNP0x5\/ZURRG\/PoBe08qTIQA8AdG6dRa294LgItUzkf3QqrC9EjpjX8MODffEAaN+GJXC28BIu2OSCaE7E0ZT60v0cjH9blc8bmqh\/cvwX5Wd9EsxT5pH5GaluhDtC+\/\/BLYab9rlMEyph8Ue76rL7Fugs6QGyC5I\/elS2oLk4aDs12i2ZDyB8owQvJpxDzX4LIIK9agPwxT5FFnQTWZpBB6a5qIBSrIvWaSCKWcZG3k51t3LExaj2e+sGQkl31ZkuisGXtGwq0XrTAQVwBPcd4rET2yv+JG45quLgp2il2h3+smo\/ej9lsvMAKX\/kMG84LgehZRyxkLove019Jqt1E08kSW4belLICBpU2LElWviFtf5B6nlcTg3iEzI\/m5+7PPVaHlqyX9mwDq5r94KiZ\/5EziF\/GPd+\/o9\/qqCqdlJKxidVn0xCC0690QAUFslwIc+aIZqf7F+6RTDadlFc8VEg5z7Rxk0W0xrXfmgsMl1Odm8FGO3h4DxLxPN\/IkgoppHzncMdu7gBt2FfQDtjkdAAo0gAz76G+nJz32mRlg\/17f3Inz\/FJnHHBCD9YaytWAMakuX1a1zMtYUI7vx7moUgEP9Abh34w6Mc8kDkjEkEXRV\/s+GQRaiY67YewFk1weCaTZkdn2YZiTvemdjLAl9NxvUx1fx+TxCrnDbMybFMa78rUuJ3nFh7CFUe42xuFtvfy+5n4Nex6rwox0NmGyeEPQ8ZrBzZRmWedSMKpKrXvnKWtJV05sB4BauyIy7EyNZ5pHZFUXJkGOH3lju34wioOsEd1GZpHXtvVxl06XpueaxirwABDut57VABw6HjknnKgMZY\/AYpbMCfjXdq64nsfxzRiuP3kghLgVfmbvekDTUQIZk1kN8KBFB4ab+SuKEIsu+QUo2nIykOqM3r6vCRZUrdbe1Ps2Rhs46\/K0tELf+lCXplDKY3q\/I9YaXFXngyOVBtpJxdTAfftPuhegFgyQlSO3L72Z8X0OYctJhu1Jr1ulLuYWgouZbD+GIPQr8ZNFHPuXJTdkPWXT743\/El\/pEkzTHuqV52AhPJhrIapkL7zAs2gj9sLoyM\/a6UDiztSUKoLspAT\/6EMFlqjZHOK09Gh5JNzD7V49cg07SYu0q4iA1gJEr1kB9iC7SprGT2lUlLvYXq8Dd+z65L6MkRtj8mZhlvo\/uievDEydNWq2Ho8bmWFJkgHoE27i5lPFUnFA721uXsflVfm7HmnCSvvdq13jdDrdbayHfDJ\/51ONXisp4xhjigoa+l7axDRsRhLuL05ANx6GQqJnRP2IcE\/o1zt1oYvzczEHtPBlf4VhKCSen8JcBnrcbtAv7LToTRk+qvGgiGxyHqSeBB0hl1sYz5ZNchffTGxcSQHcehi34OijLLtkChbkB1RtyQdesLGJcrC0ta+fSeIZPCy\/9qVzLQYPfk+cEimJZzODXE7sUpmQW6xSlgp4mRlKCtlKBHrLv7dQ\/VChAdUL\/xDXSOat82XFDkPcTWbZ4PL4RvS0WgO0aRuu\/Oblt25nAACpEw1Fg0l+TKYcJ6Z70WSXATNqTgHjhqht8kI3pOiQiAppk16EAha8xxjyyC9cBnPRhBOj9vzngdFkwL2nAMjrEiLU2VhD3DVOynWxu6beqnJ9ofnc2fNIn3rKy7eiQd0++lYQH8M27PdZaiXbTPz\/GLERlGIi+x7IW5irr1T7bSFo34RzsHtfFYvaBxsd+DSFPmUU3Jyr1g0jMcuQyL6D16TWJc9FtcJZqMHbrSvt0sGpLO3AsKB+RRYUFpsqiRb0HZ9NEGfavYN9XPEZ\/oaecJtvUXoboTgocWjUE+g9lLNGJKgeYGgaTsou\/ACuVfdxGuyQUmZElusf8P3Ls0mY9twYQwUVSyVMRN66ze0woR6Pdjk26gbZ8UDcfNjREfbA9OHCLKZ\/Fn\/evB\/1tkC7fgk2nVwSa6VAdKM2SAmDP9B49x\/zWAt1o+hvos0Fn7wDaExG9jelj4BJQEc6WszuWOtJ\/uhJUP5MXD+QqVMRKEJGoGZIf\/dbhWhnfghNbIIkXEDbCkivY80WCrcENVGtHQS5mv4NozZs+YTZuNWBSFpiYmJkxDYTL6zRl4mzOhEJ\/LVq\/ctcjC\/XQ7m2K8Hk\/vZEAWHSaLXM4tWpEmoXU9vZT0qHUIAf\/da1yGG2kWykJP0JU3kVnFtMAwT85Ea0wnGTToGUsqGg6YL0vqczA2xFY0sgKDxx5o+8jQsynLTLQh7ZjlOlEKVgTdGgLOEcv0W3\/lAYgzrPLzvlZWDkh+jLhvfW+rYQCkMqKz6T3XflSXMUYn1I2eWywhWgGghCJ+0wgSd2LsG5pOfVEMwpFVF+x6Roen0J7IdRg2Q71oiHIGat5BwQrhcN6+efPEKwNFsI5Cg2+rK46Fi2T20iDxMmTwKPbRK6gXuH\/X9mh\/V0JbD0QRkayu2wk+UXKExAw7XdF8Dir1J1Oo\/PULfImIgNz0+7Q8LQEYKVoDy88MmcaT4xNiblb3zWeEhzBHqpJI6DE0cZSQgq7F4Lbv57aVCwf+XvdHiB5KSzNS05n9H44cw=",
+          'BG_IU': "\/\/www.google.com\/js\/bg\/cRnXcBD9u2ryEiY71pdLCEDnuWs1ITI4Lp4kcNIxtYI.js",
+
+
+
+
+        'PYV_DISABLE_MUTE': true,
+
+
+
+
+
+      'HL_LOCALE': "nl_NL",
+      'TTS_URL': "",
+      'JS_DELAY_LOAD': 0,
+      'LIST_AUTO_PLAY_VALUE': 1,
+      'SHUFFLE_VALUE': 0,
+      'SKIP_RELATED_ADS': false,
+      'SKIP_TO_NEXT_VIDEO': false,
+      'RESUME_COOKIE_NAME': null,
+      'CONVERSION_CONFIG_DICT': {},
+      'RESOLUTION_TRACKING_ENABLED': false,
+      'MEMORY_TRACKING_ENABLED': false,
+      'NAVIGATION_TRACKING_ENABLED': false,
+      'WATCH_LEGAL_TEXT_ENABLE_AUTOSCROLL': false,
+      'SHARE_ON_VIDEO_END': true,
+      'SHARE_ON_VIDEO_START': false,
+      'ADS_DATA': {"check_status":false},
+      'PLAYBACK_ID': "AAUqQ8qVtBpdF1ec",
+      'IS_DISTILLER': true,
+      'SHARE_CAPTION': null,
+      'SHARE_REFERER': "",
+      'PLAYLIST_INDEX': null
+    });
+
+    yt.setMsg({
+      'EDITOR_AJAX_REQUEST_FAILED': "Er is een probleem opgetreden bij het ophalen van de gegevens van de server. Probeer het nogmaals of laad de pagina opnieuw.",
+      'EDITOR_AJAX_REQUEST_503': "Deze functie is momenteel niet beschikbaar. Probeer het later opnieuw.",
+      'LOADING': "Laden..."    });
+
+
+      yt.setMsg({
+    'UNBLOCK_USER': "Weet je zeker dat je de blokkering van deze gebruiker wilt opheffen?",
+    'BLOCK_USER': "Weet je zeker dat je deze gebruiker wilt blokkeren?"
+  });
+  yt.setConfig('BLOCK_USER_AJAX_XSRF', 'QUFFLUhqbnozaUNjTEcwaFJzRExyWVhob2syMjF6di1Yd3xBQ3Jtc0trTXRJYkMwWVFxa1VXRTV3U3NnVzRrdFFaMlowVDVkNGJvenB5TTdCRkZySTdKSEJnVlEyeWJmTFgwdy1rVlVOMFVDbUtTY0VHcHBXcXJJYjlCb2J3VklYZDY5ZDMzNHhfbDBTNUtTVGtrbFd0U0NJaVdqcEZHc2pNTVo4UmRZbHRFZ0kwelpQYWtJeFd0N1d4Z3JILVc1bjJiYkE=');
+
+
+    
+
+
+
+
+
+
+
+    
+
+      yt.setConfig({
+    'GUIDED_HELP_LOCALE': "nl_NL",
+    'GUIDED_HELP_ENVIRONMENT': "prod"
+  });
+
+
+  </script>
+
+
+<script>yt.setConfig({GAPI_HINT_PARAMS: "m;\/_\/scs\/abc-static\/_\/js\/k=gapi.gapi.en.031mdWrIyGE.O\/m=__features__\/am=AAQ\/rt=j\/d=1\/rs=AHpOoo9LVH8q4HIB6ymfgTF00d12dbkTeA",APIARY_HOST_FIRSTPARTY: "",INNERTUBE_API_VERSION: "v1",INNERTUBE_CONTEXT_CLIENT_VERSION: "1.20160121",APIARY_HOST: "",INNERTUBE_API_KEY: "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8",'VISITOR_DATA': "CgtPRXpBdGNFcTM1SQ%3D%3D",'GAPI_HOST': "https:\/\/apis.google.com",'GAPI_LOCALE': "nl_NL",'INNERTUBE_CONTEXT_HL': "nl",'INNERTUBE_CONTEXT_GL': "NL"});yt.setConfig({"MENDEL_FLAG_PLAYER_SWFCFG_CLEANUP":true,"MENDEL_FLAG_OVERHAUL_CHAT_LOADING":true,"MENDEL_FLAG_GAME_METADATA_BOX_ART":false,"MENDEL_FLAG_CONSENT_URL_OVERRIDE":"","MENDEL_FLAG_GAME_METADATA_ON_WATCH":false});yt.setConfig({'EVENT_ID': "HeynVv7PGoeQiwac-Y2QDw",'PAGE_NAME': "watch",'LOGGED_IN': false,'SESSION_INDEX': null,'VALID_SESSION_TEMPDATA_DOMAINS': ["www.youtube.com","gaming.youtube.com"],'PARENT_TRACKING_PARAMS': "",'FORMATS_FILE_SIZE_JS': ["%s B","%s kB","%s MB","%s GB","%s TB"],'DELEGATED_SESSION_ID': null,'ONE_PICK_URL': "",'UNIVERSAL_HOVERCARDS': true,'GOOGLEPLUS_HOST': "https:\/\/plus.google.com",'PAGEFRAME_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-pageframe-vflkZN5_9\/www-pageframe.js",'JS_COMMON_MODULE': "\/\/s.ytimg.com\/yts\/jsbin\/www-en_US-vfl-nJA5u\/common.js",'PAGE_FRAME_DELAYLOADED_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-pageframedelayloaded-vflWd3pQq.css",'EXPERIMENT_FLAGS': {"gfeedback_for_signed_out_users_enabled":true},'GUIDE_DELAY_LOAD': true,'GUIDE_DELAYLOADED_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-guide-vfl5Jqnht.css",'HIGH_CONTRAST_MODE_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-highcontrastmode-vfldwww0V.css",'PREFETCH_CSS_RESOURCES' : ["\/\/s.ytimg.com\/yts\/cssbin\/www-player-vflRsq_1x.css"],'PREFETCH_JS_RESOURCES': ["\/\/s.ytimg.com\/yts\/jsbin\/player-nl_NL-vflcqp8wo\/base.js",''         ],'PREFETCH_LINKS': false,'PREFETCH_LINKS_MAX': 1,'PREFETCH_AUTOPLAY': false,'PREFETCH_AUTOPLAY_TIME': 0,'PREFETCH_AUTONAV': false,'PREBUFFER_MAX': 1,'PREBUFFER_LINKS': false,'PREBUFFER_AUTOPLAY': false,'PREBUFFER_AUTONAV': false,'WATCH_LATER_BUTTON': "\n\n  \u003cbutton class=\"yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip\" type=\"button\" onclick=\";return false;\" role=\"button\" title=\"Later bekijken\" data-button-menu-id=\"shared-addto-watch-later-login\" data-video-ids=\"__VIDEO_ID__\"\u003e\u003cspan class=\"yt-uix-button-arrow yt-sprite\"\u003e\u003c\/span\u003e\u003c\/button\u003e\n",'WATCH_QUEUE_BUTTON': "  \u003cbutton class=\"yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button addto-queue-button video-actions spf-nolink hide-until-delayloaded addto-tv-queue-button yt-uix-tooltip\" type=\"button\" onclick=\";return false;\" title=\"Wachtrij\" data-video-ids=\"__VIDEO_ID__\" data-style=\"tv-queue\"\u003e\u003c\/button\u003e\n",'WATCH_QUEUE_MENU': "  \u003cspan class=\"thumb-menu dark-overflow-action-menu video-actions\"\u003e\n    \u003cbutton aria-expanded=\"false\" class=\"yt-uix-button-reverse flip addto-watch-queue-menu spf-nolink hide-until-delayloaded yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty\" type=\"button\" aria-haspopup=\"true\" onclick=\";return false;\" \u003e\u003cspan class=\"yt-uix-button-arrow yt-sprite\"\u003e\u003c\/span\u003e\u003cul class=\"watch-queue-thumb-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid\"\u003e\u003cli role=\"menuitem\" class=\"overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-next yt-uix-button-menu-item\" data-action=\"play-next\" onclick=\";return false;\"  data-video-ids=\"__VIDEO_ID__\"\u003e\u003cspan class=\"addto-watch-queue-menu-text\"\u003eVolgende afspelen\u003c\/span\u003e\u003c\/li\u003e\u003cli role=\"menuitem\" class=\"overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-now yt-uix-button-menu-item\" data-action=\"play-now\" onclick=\";return false;\"  data-video-ids=\"__VIDEO_ID__\"\u003e\u003cspan class=\"addto-watch-queue-menu-text\"\u003eNu afspelen\u003c\/span\u003e\u003c\/li\u003e\u003c\/ul\u003e\u003c\/button\u003e\n  \u003c\/span\u003e\n",'SAFETY_MODE_PENDING': false,'I18N_PLURAL_RULES': function(n) { return (n == 1) ? 'one' : 'other'; },'LOCAL_DATE_TIME_CONFIG': {"formatLongDate":"d MMMM yyyy H:mm","firstWeekCutoffDay":3,"weekdays":["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"],"amPms":null,"formatShortTime":"H:mm","months":["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],"formatWeekdayShortTime":"EE H:mm","shortWeekdays":["zo","ma","di","wo","do","vr","za"],"formatLongDateOnly":"d MMMM yyyy","dateFormats":["d MMMM yyyy H:mm","d MMMM yyyy","d MMM yyyy","d MMM yyyy"],"weekendRange":[6,5],"formatShortDate":"d MMM yyyy","firstDayOfWeek":0,"shortMonths":["jan.","feb.","mrt.","apr.","mei","jun.","jul.","aug.","sep.","okt.","nov.","dec."]},'PAGE_CL': 112815225,'PAGE_BUILD_LABEL': "youtube_20160121_RC6",'VARIANTS_CHECKSUM': "4ce3d35ae11f319bac3c4d42bc2be720",'CLIENT_PROTOCOL': "HTTP\/1.1",'CLIENT_TRANSPORT': "tcp",'MDX_ENABLE_CASTV2': true,'MDX_ENABLE_QUEUE': true,'FEEDBACK_BUCKET_ID': "Watch",'FEEDBACK_LOCALE_LANGUAGE': "nl",'FEEDBACK_LOCALE_EXTRAS': {"logged_in":false,"is_partner":"","experiments":"9412901,9413431,9415048,9415297,9415398,9415575,9416038,9416126,9416475,9417035,9417482,9417664,9417755,9418045,9418141,9418204,9418543,9418755,9419452,9419979,9420240,9420289,9420304,9420452,9420790,9420949,9420951,9421162,9421226,9421392,9421404,9421625,9422250,9422376,9422425,9422523,9422556,9422575,9422596,9422800,9422849,9422852,9422928,9422972,9423032,9423052,9423057,9423119,9423155,9423185,9423272,9423465,9423553,9423555,9423649,9423661,9423662,9423704,9423769,9423832,9423911,9423990,9423994,9424039,9424105,9424134,9424159,9424163,9424225,9424255,9424262,9424666,9424672,9424678,9424702,9424730,9424781,9424786,9424796,9424900,9424903,9425033,9425330,9425413,9425485,9425553,9425730,9425882,9425892,9425931,9425947,9426022,9426095,9426110,9426154,9426466,9426542,9426624,9426734,9426943,9426994,9427068,9427234,9427236,9427247,9427294,9427388,9427492,9427670,9427694","accept_language":null}});   yt.setConfig({
+    'GUIDED_HELP_LOCALE': "nl_NL",
+    'GUIDED_HELP_ENVIRONMENT': "prod"
+  });
+yt.setConfig('SPF_SEARCH_BOX', true);yt.setMsg({'ADDTO_CREATE_NEW_PLAYLIST': "Nieuwe afspeellijst maken\n",'ADDTO_CREATE_PLAYLIST_DYNAMIC_TITLE': "  $dynamic_title_placeholder (nieuwe maken)\n",'ADDTO_WATCH_LATER': "Watch Later",'ADDTO_WATCH_LATER_ADDED': "Toegevoegd",'ADDTO_WATCH_LATER_ERROR': "Fout",'ADDTO_WATCH_QUEUE': "Watch Queue",'ADDTO_WATCH_QUEUE_ADDED': "Toegevoegd",'ADDTO_WATCH_QUEUE_ERROR': "Fout",'ADDTO_TV_QUEUE': "Queue",'ADS_INSTREAM_FIRST_PLAY': "Er wordt een videoadvertentie afgespeeld.",'ADS_INSTREAM_SKIPPABLE': "De videoadvertentie kan worden overgeslagen.",'ADS_OVERLAY_IMPRESSION': "Er werd een advertentie weergegeven.",'MASTHEAD_NOTIFICATIONS_LABEL': {"other": "# ongelezen meldingen.", "case0": "0 ongelezen meldingen.", "case1": "1 ongelezen melding."},'MASTHEAD_NOTIFICATIONS_COUNT_99PLUS': "99+"});    yt.setConfig({
+    'XSRF_TOKEN': "QUFFLUhqbnozaUNjTEcwaFJzRExyWVhob2syMjF6di1Yd3xBQ3Jtc0trTXRJYkMwWVFxa1VXRTV3U3NnVzRrdFFaMlowVDVkNGJvenB5TTdCRkZySTdKSEJnVlEyeWJmTFgwdy1rVlVOMFVDbUtTY0VHcHBXcXJJYjlCb2J3VklYZDY5ZDMzNHhfbDBTNUtTVGtrbFd0U0NJaVdqcEZHc2pNTVo4UmRZbHRFZ0kwelpQYWtJeFd0N1d4Z3JILVc1bjJiYkE=",
+    'XSRF_REDIRECT_TOKEN': "99UXoMWfLNYeSSiOhTwmuv5w4AJ8MTQ1MzkzMTkzM0AxNDUzODQ1NTMz",
+    'XSRF_FIELD_NAME': "session_token"
+  });
+
+  yt.setConfig('FEED_PRIVACY_CSS_URL', "\/\/s.ytimg.com\/yts\/cssbin\/www-feedprivacydialog-vflFtw76j.css");
+
+  yt.setConfig('FEED_PRIVACY_LIGHTBOX_ENABLED', true);
+yt.setConfig({'SBOX_JS_URL': "\/\/s.ytimg.com\/yts\/jsbin\/www-searchbox-legacy-vflS2cDyd\/www-searchbox-legacy.js",'SBOX_SETTINGS': {"EXPERIMENT_STR":"","EXPERIMENT_ID":-1,"HAS_ON_SCREEN_KEYBOARD":true,"REQUEST_LANGUAGE":"nl","SESSION_INDEX":null,"PSUGGEST_TOKEN":null,"IS_FUSION":false,"PQ":"","REQUEST_DOMAIN":"nl"},'SBOX_LABELS': {"SUGGESTION_DISMISSED_LABEL":"Suggestie afgewezen","SUGGESTION_DISMISS_LABEL":"Verwijderen"}});  yt.setConfig({
+    'YPC_LOADER_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-ypc-vflboiPTi\/www-ypc.js",
+    'YPC_LOADER_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-ypc-vfl0csEwI.css",
+    'YPC_SIGNIN_URL': "https:\/\/accounts.google.com\/ServiceLogin?uilel=3\u0026service=youtube\u0026passive=true\u0026continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26next%3D%252F%26hl%3Dnl\u0026hl=nl",
+    'DBLCLK_ADVERTISER_ID': "2542116",
+    'DBLCLK_YPC_ACTIVITY_GROUP': "youtu444",
+    'SUBSCRIPTION_URL': "\/subscription_ajax",
+    'YPC_SWITCH_URL': "\/signin?action_handle_signin=true\u0026skip_identity_prompt=True\u0026feature=purchases\u0026next=%2F",
+    'YPC_GB_LANGUAGE': "nl_NL",
+    'YPC_GB_URL': "https:\/\/checkout.google.com\/inapp\/lib\/buy.js",
+    'YPC_TRANSACTION_URL': "\/transaction_handler",
+    'YPC_SUBSCRIPTION_URL': "\/ypc_subscription_ajax",
+    'YPC_POST_PURCHASE_URL': "\/ypc_post_purchase_ajax"
+  });
+  yt.setMsg({
+    'YPC_OFFER_OVERLAY': "  \n",
+    'YPC_UNSUBSCRIBE_OVERLAY': "  \n"
+  });
+  yt.setConfig('GOOGLE_HELP_CONTEXT', "watch");
+ytcsi.setSpan('st', 203);yt.setConfig({'CSI_LOG_WITH_YT': true,'CSI_SERVICE_NAME': "youtube",'TIMING_ACTION': "watch,watch7_html5",'TIMING_INFO': {"yt_pl":0,"yt_li":0,"cver":"1.20160121","yt_spf":0,"yt_err":0,"e":"9416126,9418045,9418204,9419452,9420452,9422556,9422596,9423662,9424134,9424163,9425730,9426624,9426943,9427247,9427670","ei":"HeynVv7PGoeQiwac-Y2QDw","yt_lt":"cold","yt_ad":0,"c":"WEB"}});  yt.setConfig({
+    'XSRF_TOKEN': "QUFFLUhqbnozaUNjTEcwaFJzRExyWVhob2syMjF6di1Yd3xBQ3Jtc0trTXRJYkMwWVFxa1VXRTV3U3NnVzRrdFFaMlowVDVkNGJvenB5TTdCRkZySTdKSEJnVlEyeWJmTFgwdy1rVlVOMFVDbUtTY0VHcHBXcXJJYjlCb2J3VklYZDY5ZDMzNHhfbDBTNUtTVGtrbFd0U0NJaVdqcEZHc2pNTVo4UmRZbHRFZ0kwelpQYWtJeFd0N1d4Z3JILVc1bjJiYkE=",
+    'XSRF_REDIRECT_TOKEN': "99UXoMWfLNYeSSiOhTwmuv5w4AJ8MTQ1MzkzMTkzM0AxNDUzODQ1NTMz",
+    'XSRF_FIELD_NAME': "session_token"
+  });
+  yt.setConfig('THUMB_DELAY_LOAD_BUFFER', 0);
+if (window.ytcsi) {window.ytcsi.tick("jl", null, '');}</script>
+</body></html>
