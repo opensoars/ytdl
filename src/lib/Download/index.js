@@ -160,7 +160,7 @@ Download.prototype.regexp = {
    * ytplayer.config property.
    *  (\{.+?\});
    * This matches and captures the object that is assigned to the
-   * ytplayer.config property. This works because of the fact that the
+   * ytplayer its config property. This works because of the fact that the
    * assignment statement is closed by these two characters };
    *  .+?;<\/script>
    * Allow as much character matches as needed till the closing
