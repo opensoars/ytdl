@@ -14,6 +14,15 @@ let Download = class Download {
   constructor(a) {
     this.a = ens.obj(a);
   }
+  writeFile(fn, content, silent) {
+    if (!silent) console.log('writeFile', fn);
+    return new Promise((resolve, reject) => {
+      fs.writeFile(__dirname + '/../../../dump/' + fn, content, err => {
+        if (err) return reject(err);
+        resolve();
+      });
+    });
+  }
   getValidatedArguments(a) {
     return new Promise((resolve, reject) => {
       if (!a)
@@ -61,45 +70,30 @@ let Download = class Download {
   }
   getValidatedSource(source) {
     return new Promise((resolve, reject) => {
-      //if (source.indexOf())
-      // <script>.+?ytplayer.config.+?=
-
       resolve(source);
     });
   }
-  getPlayerConfigFromSource(source) {
+  getYtPlayerConfigFromSource(source, regexp_ytplayer_config) {
     return new Promise((resolve, reject) => {
-      /**
-       * Capture the ytplayer object, the pattern used is simple:
-       *  <script>.+?ytplayer.config.+?=.+?
-       * This matches a script containing a statement which assigns the
-       * ytplayer.config property.
-       *  (\{.+?\});
-       * This matches and captures the object that is assigned to the
-       * ytplayer.config property. This works because of the fact that the
-       * assignment statement is closed by these two characters };
-       *  .+?;<\/script>
-       * Allow as much character matches as needed till the closing
-       * script tag is found
-       */
-      let ytplayer_config_matches = 
-        /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/
-        .exec(source);
+      if (!is.string(source)) 
+        return reject('!is.string(source)');
+      else if (!is.regexp(regexp_ytplayer_config)) 
+        return reject('!is.regexp(regexp_ytplayer_config)');
+      
+      let ytplayer_config_matches = regexp_ytplayer_config.exec(source);
 
-      if (is.array(ytplayer_config_matches) && ytplayer_config_matches[1]) {
-        let t1 = JSON.parse(ytplayer_config_matches[1]);
-
-        console.log(t1);
-      }
-
+      if (is.array(ytplayer_config_matches) && ytplayer_config_matches[1])
+        resolve(JSON.parse(ytplayer_config_matches[1]));
+      else
+        reject('!ytplayer_config_matches');
     });
   }
-  sanitizeVideoInfo(video_info) {
+  getSanizitedYtPlayerConfig(ytplayer_config) {
     return new Promise((resolve, reject) => {
-      resolve(video_info);
+      resolve(ytplayer_config);
     });
   }
-  extractMediaUrlsFromVideoInfo(video_info) {
+  extractMediaUrlsFromVideoInfo(ytplayer_config) {
     return new Promise((resolve, reject) => {
       // Will I be doing the deciphering etc from here?
       // I could use another async function!
@@ -107,16 +101,7 @@ let Download = class Download {
       // so we can just use promise resolve and reject api.
     });
   }
-
-  static writeFile(fn, content) {
-    return new Promise((resolve, reject) => {
-      fs.writeFile(__dirname + '/../../../dump/' + fn, content, err => {
-        if (err) return reject(err);
-        resolve();
-      });
-    });
-  }
-}
+};
 
 Download.prototype.start = async function start() {
   try {
@@ -125,22 +110,70 @@ Download.prototype.start = async function start() {
     let url = await this.getValidatedUrl(unvalidated_url);
     let unvalidated_source = await this.getSourceFromUrl(url);
     let source = await this.getValidatedSource(unvalidated_source);
-    await Download.writeFile('source', source);
-    let unsanitized_player_config = await this.getPlayerConfigFromSource(unvalidated_source);
+    let ytplayer_config = await this.getYtPlayerConfigFromSource(
+      unvalidated_source,
+      this.regexp.ytplayer_config
+    );
+    let adaptive_fmts = ytplayer_config.args.adaptive_fmts;
 
-    console.log(unsanitized_player_config);
+    this.writeFile('adaptive_fmts', adaptive_fmts.split(',').join('\n\n'));
 
-    //let unsanitized_player_config = await this.getPlayerConfigFromSource(source);
-    //let video_info = await this.sanitizeVideoInfo();
-    //let media_urls = await this.extractMediaUrlsFromVideoInfo(video_info);
+    adaptive_fmts.split(',').forEach((adaptive_fmt) => {
+      if (adaptive_fmt.indexOf('audio') !== -1)
+        this.writeFile('adaptive_fmt', adaptive_fmt.replace(/=/g, ':').replace(/&/g, ',').split(',').join('\n'));
+    });
+    /*
+    let adaptive_fmts = ytplayer_config.args.adaptive_fmts;
+    let r1 = /url=.+?[\&\,]/g;
+    let fmt_stream_map = adaptive_fmts.match(r1);
+
+    fmt_stream_map.forEach((stream, i) => {
+      stream = stream
+        .replace(/url=/g, '')
+        .replace(/&/g, '')
+        .replace(/%3A/g, ':')
+        .replace(/%2F/g, '/')
+        .replace(/%3F/g, '?')
+        .replace(/%3D/g, '=')
+        .replace(/%26/g, '&')
+        .replace(/%252/g, ',')
 
 
+      if (stream.indexOf('signature') === -1 && stream.indexOf('audio') !== -1) {
+        this.writeFile('stream', stream);
+      }
+    });*/
+    
 
-    this.emit('succes', { result: 'object' });
+
+/*    await this.writeFile('source', source);
+    await this.writeFile(
+      'ytplayer_config.json',
+      JSON.stringify(ytplayer_config, '', 2)
+    );
+*/
+    this.emit('succes', { result: 'result' });
   }
   catch (err) {
     this.emit('error', err);
   }
+};
+
+Download.prototype.regexp = {
+  /**
+   * Captures the ytplayer object, the pattern used is simple:
+   *  <script>.+?ytplayer.config.+?=.+?
+   * This matches a script containing a statement which assigns the
+   * ytplayer.config property.
+   *  (\{.+?\});
+   * This matches and captures the object that is assigned to the
+   * ytplayer.config property. This works because of the fact that the
+   * assignment statement is closed by these two characters };
+   *  .+?;<\/script>
+   * Allow as much character matches as needed till the closing
+   * script tag is found
+   */
+  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/
 };
 
 // Inherit node event emitter

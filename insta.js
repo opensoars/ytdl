@@ -2,16 +2,28 @@
 
 const prodl = require('./dist/index.js');
 
-let dl1 = new prodl.Download({
-  v: '7ruDVn70dPw'
-});
 
-dl1.on('error', (err) => {
-  console.log('error', err);
-});
+let dls = [];
+let vs = [
+  '93zHY-gCvS8',
+  'XcTHAJybjx4',
+  'nj8t8SCx91g',
+  'Me5GvbSHAFk',
+  '7FDGY0UCoTc',
+  'hyR-m-ZAsCU',
+  'w5E1HIqSXdY'
+]
 
-dl1.on('succes', (result) => {
-  console.log('succes', result);
-});
+vs.forEach(v => {
+  let dl = new prodl.Download({v});
 
-dl1.start();
+  dl.on('error', (err) => {
+    console.log('error', err);
+  });
+
+  dl.on('succes', (result) => {
+    console.log('succes', result);
+  });
+
+  dl.start();
+});

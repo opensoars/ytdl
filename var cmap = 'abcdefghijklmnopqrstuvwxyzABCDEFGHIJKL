@@ -1,0 +1,12 @@
+var cmap = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_'.split('');
+
+
+function getRandomYtUrl() {
+  var url = 'https://www.youtube.com/watch?v=';
+  for (var i = 0; i < 11; i++) {
+    url += cmap[ Math.round(Math.random() * (cmap.length-1)) ]
+  }
+  return url;
+}
+
+console.log(getRandomYtUrl());
