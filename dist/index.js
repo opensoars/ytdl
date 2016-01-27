@@ -1,7 +1,7 @@
 "use strict";
 
-let prodl = {};
+let ytdl = {};
 
-prodl.Download = require('./lib/Download');
+ytdl.Download = require('./lib/Download');
 
-module.exports = prodl;
+module.exports = ytdl;

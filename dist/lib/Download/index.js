@@ -6,6 +6,8 @@ const util = require('util');
 const EventEmitter = require('events').EventEmitter;
 const https = require('https');
 const fs = require('fs');
+const url_lib = require('url');
+const querystring = require('querystring');
 
 const ens = require('ens');
 const is = require('is');
@@ -13,6 +15,8 @@ const is = require('is');
 let Download = class Download {
   constructor(a) {
     this.a = ens.obj(a);
+
+    this.public = {};
   }
   writeFile(fn, content, silent) {
     if (!silent) console.log('writeFile', fn);
@@ -75,25 +79,31 @@ let Download = class Download {
       if (is.array(ytplayer_config_matches) && ytplayer_config_matches[1]) resolve(JSON.parse(ytplayer_config_matches[1]));else reject('!ytplayer_config_matches');
     });
   }
-  getSanizitedYtPlayerConfig(ytplayer_config) {
+  getAudioFmtObjectsFromYtPlayerConfig(yt_player_config) {
     return new Promise(function (resolve, reject) {
-      resolve(ytplayer_config);
+      let audio_fmt_objects = [];
+      let adaptive_fmts_string = yt_player_config.args.adaptive_fmts;
+      let adaptive_fmt_strings = adaptive_fmts_string.split(',');
+
+      adaptive_fmt_strings.forEach(function (adaptive_fmt_string) {
+        audio_fmt_objects.push(querystring.decode(adaptive_fmt_string));
+      });
+
+      resolve(audio_fmt_objects);
     });
   }
-  extractMediaUrlsFromVideoInfo(ytplayer_config) {
-    return new Promise(function (resolve, reject) {
-      // Will I be doing the deciphering etc from here?
-      // I could use another async function!
-      // Which would have its code wrapped in another try catch
-      // so we can just use promise resolve and reject api.
-    });
-  }
+  /*  extractMediaUrlsFromVideoInfo(ytplayer_config) {
+      return new Promise((resolve, reject) => {
+        // Will I be doing the deciphering etc from here?
+        // I could use another async function!
+        // Which would have its code wrapped in another try catch
+        // so we can just use promise resolve and reject api.
+      });
+    }*/
 };
 
 Download.prototype.start = function () {
   var ref = _asyncToGenerator(function* () {
-    var _this = this;
-
     try {
       let a = yield this.getValidatedArguments(this.a);
       let unvalidated_url = yield this.getUrlFromArguments(a);
@@ -101,38 +111,23 @@ Download.prototype.start = function () {
       let unvalidated_source = yield this.getSourceFromUrl(url);
       let source = yield this.getValidatedSource(unvalidated_source);
       let ytplayer_config = yield this.getYtPlayerConfigFromSource(unvalidated_source, this.regexp.ytplayer_config);
-      let adaptive_fmts = ytplayer_config.args.adaptive_fmts;
+      let audio_fmt_objects = yield this.getAudioFmtObjectsFromYtPlayerConfig(ytplayer_config);
 
-      this.writeFile('adaptive_fmts', adaptive_fmts.split(',').join('\n\n'));
+      console.log(audio_fmt_objects);
 
-      adaptive_fmts.split(',').forEach(function (adaptive_fmt) {
-        if (adaptive_fmt.indexOf('audio') !== -1) _this.writeFile('adaptive_fmt', adaptive_fmt.replace(/=/g, ':').replace(/&/g, ',').split(',').join('\n'));
-      });
-      /*
-      let adaptive_fmts = ytplayer_config.args.adaptive_fmts;
-      let r1 = /url=.+?[\&\,]/g;
-      let fmt_stream_map = adaptive_fmts.match(r1);
-       fmt_stream_map.forEach((stream, i) => {
-        stream = stream
-          .replace(/url=/g, '')
-          .replace(/&/g, '')
-          .replace(/%3A/g, ':')
-          .replace(/%2F/g, '/')
-          .replace(/%3F/g, '?')
-          .replace(/%3D/g, '=')
-          .replace(/%26/g, '&')
-          .replace(/%252/g, ',')
-          if (stream.indexOf('signature') === -1 && stream.indexOf('audio') !== -1) {
-          this.writeFile('stream', stream);
-        }
-      });*/
+      //this.writeFile('adaptive_fmts', adaptive_fmts.split(',').join('\n\n'));
 
-      /*    await this.writeFile('source', source);
-          await this.writeFile(
-            'ytplayer_config.json',
-            JSON.stringify(ytplayer_config, '', 2)
-          );
-      */
+      /*    adaptive_fmts.split(',').forEach(adaptive_fmt => {
+            if (adaptive_fmt.indexOf('type=audio') !== -1)
+              audio_fmt_objects.push(querystring.decode(adaptive_fmt));
+          });
+      
+          audio_fmt_objects.forEach(audio_fmt_object => {
+            if (!audio_fmt.s) {
+              console.log(audio_fmt);
+            }
+          });*/
+
       this.emit('succes', { result: 'result' });
     } catch (err) {
       this.emit('error', err);

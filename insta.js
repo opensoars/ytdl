@@ -1,21 +1,21 @@
 "use strict";
 
-const prodl = require('./dist/index.js');
+const ytdl = require('./dist/index.js');
 
 
 let dls = [];
 let vs = [
   '93zHY-gCvS8',
-/*  'XcTHAJybjx4',
-  'nj8t8SCx91g',
-  'Me5GvbSHAFk',
-  '7FDGY0UCoTc',
-  'hyR-m-ZAsCU',
-  'w5E1HIqSXdY'*/
-]
+  // 'XcTHAJybjx4',
+  // 'nj8t8SCx91g',
+  // 'Me5GvbSHAFk',
+  // '7FDGY0UCoTc',
+  // 'hyR-m-ZAsCU',              
+  // 'w5E1HIqSXdY'
+];
 
 vs.forEach(v => {
-  let dl = new prodl.Download({v});
+  let dl = new ytdl.Download({v});
 
   dl.on('error', (err) => {
     console.log('error', err);

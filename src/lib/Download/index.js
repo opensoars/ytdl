@@ -4,6 +4,8 @@ const util = require('util');
 const EventEmitter = require('events').EventEmitter;
 const https = require('https');
 const fs = require('fs');
+const url_lib = require('url');
+const querystring = require('querystring');
 
 const ens = require('ens');
 const is = require('is');
@@ -13,6 +15,8 @@ const is = require('is');
 let Download = class Download {
   constructor(a) {
     this.a = ens.obj(a);
+
+    this.public = {};
   }
   writeFile(fn, content, silent) {
     if (!silent) console.log('writeFile', fn);
@@ -88,19 +92,27 @@ let Download = class Download {
         reject('!ytplayer_config_matches');
     });
   }
-  getSanizitedYtPlayerConfig(ytplayer_config) {
+  getAudioFmtObjectsFromYtPlayerConfig(yt_player_config) {
     return new Promise((resolve, reject) => {
-      resolve(ytplayer_config);
+      let audio_fmt_objects = [];
+      let adaptive_fmts_string = yt_player_config.args.adaptive_fmts;
+      let adaptive_fmt_strings = adaptive_fmts_string.split(',');
+
+      adaptive_fmt_strings.forEach(adaptive_fmt_string => {
+        audio_fmt_objects.push(querystring.decode(adaptive_fmt_string));
+      });
+
+      resolve(audio_fmt_objects);
     });
   }
-  extractMediaUrlsFromVideoInfo(ytplayer_config) {
+/*  extractMediaUrlsFromVideoInfo(ytplayer_config) {
     return new Promise((resolve, reject) => {
       // Will I be doing the deciphering etc from here?
       // I could use another async function!
       // Which would have its code wrapped in another try catch
       // so we can just use promise resolve and reject api.
     });
-  }
+  }*/
 };
 
 Download.prototype.start = async function start() {
@@ -114,44 +126,25 @@ Download.prototype.start = async function start() {
       unvalidated_source,
       this.regexp.ytplayer_config
     );
-    let adaptive_fmts = ytplayer_config.args.adaptive_fmts;
+    let audio_fmt_objects = await this.getAudioFmtObjectsFromYtPlayerConfig(
+      ytplayer_config
+    );
 
-    this.writeFile('adaptive_fmts', adaptive_fmts.split(',').join('\n\n'));
+    console.log(audio_fmt_objects);
 
-    adaptive_fmts.split(',').forEach((adaptive_fmt) => {
-      if (adaptive_fmt.indexOf('audio') !== -1)
-        this.writeFile('adaptive_fmt', adaptive_fmt.replace(/=/g, ':').replace(/&/g, ',').split(',').join('\n'));
+    //this.writeFile('adaptive_fmts', adaptive_fmts.split(',').join('\n\n'));
+
+/*    adaptive_fmts.split(',').forEach(adaptive_fmt => {
+      if (adaptive_fmt.indexOf('type=audio') !== -1)
+        audio_fmt_objects.push(querystring.decode(adaptive_fmt));
     });
-    /*
-    let adaptive_fmts = ytplayer_config.args.adaptive_fmts;
-    let r1 = /url=.+?[\&\,]/g;
-    let fmt_stream_map = adaptive_fmts.match(r1);
 
-    fmt_stream_map.forEach((stream, i) => {
-      stream = stream
-        .replace(/url=/g, '')
-        .replace(/&/g, '')
-        .replace(/%3A/g, ':')
-        .replace(/%2F/g, '/')
-        .replace(/%3F/g, '?')
-        .replace(/%3D/g, '=')
-        .replace(/%26/g, '&')
-        .replace(/%252/g, ',')
-
-
-      if (stream.indexOf('signature') === -1 && stream.indexOf('audio') !== -1) {
-        this.writeFile('stream', stream);
+    audio_fmt_objects.forEach(audio_fmt_object => {
+      if (!audio_fmt.s) {
+        console.log(audio_fmt);
       }
     });*/
-    
 
-
-/*    await this.writeFile('source', source);
-    await this.writeFile(
-      'ytplayer_config.json',
-      JSON.stringify(ytplayer_config, '', 2)
-    );
-*/
     this.emit('succes', { result: 'result' });
   }
   catch (err) {
