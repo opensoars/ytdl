@@ -159,7 +159,7 @@ Download.prototype.regexp = {
    * This matches a script containing a statement which assigns the
    * ytplayer.config property.
    *  (\{.+?\});
-   * This matches and captures the object that is assigned to the
+   * This matches and captures the object that is getting assigned to the
    * ytplayer its config property. This works because of the fact that the
    * assignment statement is closed by these two characters };
    *  .+?;<\/script>
