@@ -72,6 +72,7 @@ let Download = class Download {
       });
     });
   }
+  // @TODO
   getValidatedSource(source) {
     return new Promise((resolve, reject) => {
       resolve(source);
@@ -92,27 +93,48 @@ let Download = class Download {
         reject('!ytplayer_config_matches');
     });
   }
-  getAudioFmtObjectsFromYtPlayerConfig(yt_player_config) {
+  getFmtsFromYtplayerConfig(ytplayer_config) {
+    ytplayer_config = ens.obj(ytplayer_config);
     return new Promise((resolve, reject) => {
-      let audio_fmt_objects = [];
-      let adaptive_fmts_string = yt_player_config.args.adaptive_fmts;
-      let adaptive_fmt_strings = adaptive_fmts_string.split(',');
+      if (!ytplayer_config.args)
+        return reject('!ytplayer_config.args');
+      else if (!is.string(ytplayer_config.args.adaptive_fmts))
+        return reject('!is.string(ytplayer_config.args.adaptive_fmts)');
 
-      adaptive_fmt_strings.forEach(adaptive_fmt_string => {
-        audio_fmt_objects.push(querystring.decode(adaptive_fmt_string));
+      let fmts = [];
+      let adaptive_fmts_string = ytplayer_config.args.adaptive_fmts;
+      let split_adaptive_fmt_strings = adaptive_fmts_string.split(',');
+
+      split_adaptive_fmt_strings.forEach(adaptive_fmt_string => {
+        fmts.push(querystring.decode(adaptive_fmt_string));
       });
 
-      resolve(audio_fmt_objects);
+      resolve(fmts);
     });
   }
-/*  extractMediaUrlsFromVideoInfo(ytplayer_config) {
+  getRankedFmts(fmts) {
+    fmts = ens.arr(fmts);
     return new Promise((resolve, reject) => {
-      // Will I be doing the deciphering etc from here?
-      // I could use another async function!
-      // Which would have its code wrapped in another try catch
-      // so we can just use promise resolve and reject api.
+      fmts.sort((a, b) => {
+        let a_i = a.type.indexOf('audio');
+        let b_i = b.type.indexOf('audio');
+        if (a_i < b_i) return 1;
+        if (a_i >= b_i) return -1;
+        return 0;
+      });
+      fmts.sort((a, b) => {
+        let a_i = a.type.indexOf('audio/mp4');
+        let b_i = b.type.indexOf('audio/mp4');
+        if (a_i < b_i) return 1;
+        if (a_i >= b_i) return -1;
+        return 0;
+      // @TODO sort for best bitrate?
+      resolve(fmts);
     });
-  }*/
+  }
+  attemptDownloadsFromRankedFmts(ranked_fmts) {
+
+  }
 };
 
 Download.prototype.start = async function start() {
@@ -126,20 +148,34 @@ Download.prototype.start = async function start() {
       unvalidated_source,
       this.regexp.ytplayer_config
     );
-    let audio_fmt_objects = await this.getAudioFmtObjectsFromYtPlayerConfig(
-      ytplayer_config
-    );
+    let fmts = await this.getFmtsFromYtplayerConfig(ytplayer_config);
+    let ranked_fmts = await this.getRankedFmts(fmts);
+    let temp_loc = await this.attemptDownloadsFromFmts(ranked_fmts);
 
-    console.log(audio_fmt_objects);
+    console.log(temp_loc);
 
-    //this.writeFile('adaptive_fmts', adaptive_fmts.split(',').join('\n\n'));
+    // Todo
+    // loop ranked_fmts till we find one with a working
 
-/*    adaptive_fmts.split(',').forEach(adaptive_fmt => {
+/*    let current_fmt = ranked_fmts[0];
+
+    https.get(current_fmt.url, res => {
+      console.log(res.statusCode);
+    });*/
+
+
+/*    fmts.forEach((fmt_object, i) => {
+      fmts[i].url += '&ratebypass=true';
+    });
+*/
+    //this.writeFile('fmts', fmts.split(',').join('\n\n'));
+
+/*    fmts.split(',').forEach(adaptive_fmt => {
       if (adaptive_fmt.indexOf('type=audio') !== -1)
-        audio_fmt_objects.push(querystring.decode(adaptive_fmt));
+        fmts.push(querystring.decode(adaptive_fmt));
     });
 
-    audio_fmt_objects.forEach(audio_fmt_object => {
+    fmts.forEach(audio_fmt_object => {
       if (!audio_fmt.s) {
         console.log(audio_fmt);
       }
