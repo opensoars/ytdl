@@ -13,8 +13,8 @@ const ens = require('ens');
 const is = require('is');
 
 let Download = class Download {
-  constructor(a) {
-    this.a = ens.obj(a);
+  constructor(args) {
+    this.args = ens.obj(args);
 
     this.public = {};
   }
@@ -27,16 +27,7 @@ let Download = class Download {
       });
     });
   }
-  getValidatedArguments(a) {
-    return new Promise(function (resolve, reject) {
-      if (!a) reject('!a');else if (!a.v && !a.url) reject('!a.v && !a.url');else if (!is.string(a.v) && !is.string(a.url)) reject('!is.string(a.v) && !is.string(a.url)');else resolve(a);
-    });
-  }
-  getUrlFromArguments(a) {
-    return new Promise(function (resolve, reject) {
-      if (is.string(a.url)) resolve(a.url);else if (is.string(a.v)) resolve('https://www.youtube.com/watch?v=' + a.v);else reject('!a.url && !a.v');
-    });
-  }
+
   getValidatedUrl(url) {
     return new Promise(function (resolve, reject) {
       let is_valid_url = false;
@@ -118,37 +109,17 @@ let Download = class Download {
     });
   }
   getWorkingFmt(fmts, ytplayer_config) {
-    let self = this;
     return new Promise(function (resolve, reject) {
-      if (!is.array(fmts)) return reject('!is.array(fmts)');else if (!is.object(ytplayer_config)) return reject('!is.object(ytplayer_config)');
-
-      (function tryRecursiveGetRequest(fmts, i) {
-        if (i >= fmts.length) return reject('i >= fmts.length');else if (fmts[i].s || fmts[i].sig) {
-          self.getDecipheredSignatureFromFmt(fmts[i], ytplayer_config, function (err, deciphered_signature) {
-            https.get(fmts[i].url + '&signature=' + deciphered_signature + '&range=0-100', getRequestHandler);
-          });
-        } else if (!fmts[i].s && !fmts[i].sig) {
-          https.get(fmts[i].url + '&range=0-100', getRequestHandler);
-        }
-
-        function getRequestHandler(res) {
-          res.on('data', function () {});
-          res.on('end', onGetRequestEnd);
-          res.on('error', onGetRequestError);
-        }
-
-        function onGetRequestEnd() {
-          let body_length = parseInt(this.headers['content-length']),
-              status_code = this.statusCode;
-          if (status_code === 200 && body_length > 50 && body_length < 150) resolve(fmts[i]);
-          //else
-          //tryRecursiveGetRequest(fmts, i+1);
-        }
-
-        function onGetRequestError() {
-          //tryRecursiveGetRequest(fmts, i+1);
-        }
-      })(fmts, 0);
+      let attempt1 = new Download.prototype.WorkingFmtFinder({
+        fmts, ytplayer_config, resolve, reject
+      });
+      attempt1.on('error', function (err) {
+        return reject(err);
+      });
+      attempt1.on('succes', function (working_fmt) {
+        return resolve(working_fmt);
+      });
+      attempt1.start();
     });
   }
   getDecipheredSignatureFromFmt(fmt, ytplayer_config, cb) {
@@ -170,12 +141,24 @@ let Download = class Download {
   }
 };
 
+let Download_modules = {
+  validateArguments: './lib/validateArguments',
+  getUrlFromArguments: './lib/getUrlFromArguments'
+};
+
+for (let key in Download_modules) {
+  if (Download_modules.hasOwnProperty(key)) {
+    Download.prototype[key] = require(Download_modules[key]);
+  }
+}
+
 Download.prototype.start = function () {
   var ref = _asyncToGenerator(function* () {
     try {
-      let a = yield this.getValidatedArguments(this.a);
+      let a = yield this.validateArguments(this.args);
       let unvalidated_url = yield this.getUrlFromArguments(a);
       let url = yield this.getValidatedUrl(unvalidated_url);
+      console.log(url);
       let unvalidated_source = yield this.getSourceFromUrl(url);
       let source = yield this.getValidatedSource(unvalidated_source);
       let ytplayer_config = yield this.getYtPlayerConfigFromSource(unvalidated_source, this.regexp.ytplayer_config);
@@ -184,32 +167,6 @@ Download.prototype.start = function () {
       let working_fmt = yield this.getWorkingFmt(ranked_fmts, ytplayer_config);
 
       console.log(working_fmt);
-
-      // Todo
-      // loop ranked_fmts till we find one with a working
-
-      /*    let current_fmt = ranked_fmts[0];
-      
-          https.get(current_fmt.url, res => {
-            console.log(res.statusCode);
-          });*/
-
-      /*    fmts.forEach((fmt_object, i) => {
-            fmts[i].url += '&ratebypass=true';
-          });
-      */
-      //this.writeFile('fmts', fmts.split(',').join('\n\n'));
-
-      /*    fmts.split(',').forEach(adaptive_fmt => {
-            if (adaptive_fmt.indexOf('type=audio') !== -1)
-              fmts.push(querystring.decode(adaptive_fmt));
-          });
-      
-          fmts.forEach(audio_fmt_object => {
-            if (!audio_fmt.s) {
-              console.log(audio_fmt);
-            }
-          });*/
 
       this.emit('succes', { result: 'result' });
     } catch (err) {
@@ -222,10 +179,36 @@ Download.prototype.start = function () {
   };
 }();
 
-Download.prototype.DownloadAttempt = class DownloadAttempt {
-  constructor() {}
+const WorkingFmtFinder = class WorkingFmtFinder {
+  constructor(args) {
+    this.args = args;
+  }
+  validateArguments(args) {
+    return new Promise(function (resolve, reject) {
+      if (!is.object(args)) reject('!is.object(args)');else if (!is.array(args.fmts)) reject('!is.array(args.fmts)');else if (!is.object(args.ytplayer_config)) reject('!is.object(args.ytplayer_config)');else if (!is.function(args.resolve) || !is.function(args.reject)) reject('!is.function(args.resolve) || !is.function(args.reject)');else resolve(args);
+    });
+  }
 };
 
+WorkingFmtFinder.prototype.start = function () {
+  var ref = _asyncToGenerator(function* () {
+    try {
+      let args = yield this.validateArguments(this.args);
+      this.args.resolve(this.args.fmts[0]);
+    } catch (err) {
+      this.emit('error', err);
+    }
+  });
+
+  return function start() {
+    return ref.apply(this, arguments);
+  };
+}();
+
+util.inherits(WorkingFmtFinder, EventEmitter);
+
+/** Set Download prototype properties */
+Download.prototype.WorkingFmtFinder = WorkingFmtFinder;
 Download.prototype.regexp = {
   /**
    * Captures the ytplayer object, the pattern used is simple:
@@ -253,7 +236,6 @@ Download.prototype.regexp = {
 
 Download.prototype.temp_dir = __dirname + '/../../../temp';
 
-// Inherit node event emitter
 util.inherits(Download, EventEmitter);
 
 module.exports = Download;

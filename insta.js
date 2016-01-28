@@ -13,6 +13,7 @@ vs.forEach(v => {
 
   dl.on('error', (err) => {
     console.log('error', err);
+    console.log(err.stack);
   });
 
   dl.on('succes', (result) => {

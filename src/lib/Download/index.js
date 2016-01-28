@@ -13,8 +13,8 @@ const is = require('is');
 
 
 let Download = class Download {
-  constructor(a) {
-    this.a = ens.obj(a);
+  constructor(args) {
+    this.args = ens.obj(args);
 
     this.public = {};
   }
@@ -24,51 +24,6 @@ let Download = class Download {
       fs.writeFile(__dirname + '/../../../dump/' + fn, content, err => {
         if (err) return reject(err);
         resolve();
-      });
-    });
-  }
-  getValidatedArguments(a) {
-    return new Promise((resolve, reject) => {
-      if (!a)
-        reject('!a');
-      else if (!a.v && !a.url)  
-        reject('!a.v && !a.url');
-      else if (!is.string(a.v) && !is.string(a.url))
-        reject('!is.string(a.v) && !is.string(a.url)');
-      else
-        resolve(a);
-    });
-  }
-  getUrlFromArguments(a) {
-    return new Promise((resolve, reject) => {
-      if (is.string(a.url))
-        resolve(a.url);
-      else if (is.string(a.v))
-        resolve('https://www.youtube.com/watch?v=' + a.v);
-      else
-        reject('!a.url && !a.v');
-    });
-  }
-  getValidatedUrl(url) {
-    return new Promise((resolve, reject) => {
-      let is_valid_url = false;
-
-      let re_t1 = /https\:\/\/www\.youtube\.com\/watch\?v\=.+?/;
-
-      if (re_t1.test(url))
-        is_valid_url = true;
-
-      is_valid_url ? resolve(url) : reject('Invalid url' + url);
-    });
-  }
-  getSourceFromUrl(url) {
-    return new Promise((resolve, reject) => {
-      //setTimeout(() => resolve('src code'), 250);
-      https.get(url, res => {
-        let src = '';
-        res.on('data', chunk => src += chunk);
-        res.on('end', () => resolve(src));
-        res.on('error', err => reject(err));
       });
     });
   }
@@ -134,49 +89,13 @@ let Download = class Download {
     });
   }
   getWorkingFmt(fmts, ytplayer_config) {
-    let self = this;
     return new Promise((resolve, reject) => {
-      if (!is.array(fmts))
-        return reject('!is.array(fmts)');
-      else if (!is.object(ytplayer_config))
-        return reject('!is.object(ytplayer_config)');
-
-      (function tryRecursiveGetRequest(fmts, i) {
-        if (i >= fmts.length)
-          return reject('i >= fmts.length');
-        else if (fmts[i].s || fmts[i].sig) {
-          self.getDecipheredSignatureFromFmt(fmts[i], ytplayer_config, 
-            (err, deciphered_signature) => {
-              https.get(fmts[i].url + '&signature=' + deciphered_signature
-                + '&range=0-100'
-                , getRequestHandler
-              );
-            }
-          );
-        }
-        else if (!fmts[i].s && !fmts[i].sig) {
-          https.get(fmts[i].url + '&range=0-100', getRequestHandler);
-        }
-
-        function getRequestHandler(res) {
-          res.on('data', () => {});
-          res.on('end', onGetRequestEnd);
-          res.on('error', onGetRequestError);
-        }
-
-        function onGetRequestEnd() {
-          let body_length = parseInt(this.headers['content-length']),
-              status_code = this.statusCode;
-          if (status_code === 200 && body_length > 50 && body_length < 150)
-            resolve(fmts[i]);
-          //else
-            //tryRecursiveGetRequest(fmts, i+1);
-        }
-
-        function onGetRequestError() {
-          //tryRecursiveGetRequest(fmts, i+1);
-        }
-      }(fmts, 0));
+      let attempt1 = new Download.prototype.WorkingFmtFinder({
+        fmts, ytplayer_config, resolve, reject
+      });
+      attempt1.on('error', (err) => reject(err));
+      attempt1.on('succes', (working_fmt) => resolve(working_fmt));
+      attempt1.start();
     });
   }
   getDecipheredSignatureFromFmt(fmt, ytplayer_config, cb) {
@@ -202,63 +121,77 @@ let Download = class Download {
   }
 };
 
+[
+  'validateArguments',
+  'getUrlFromArguments'
+  'validateUrl',
+  'getSourceFromUrl'
+].forEach(Download_module => 
+  Download.prototype[Download_module] = require('./lib/' + Download_module);
+);
+
+
 Download.prototype.start = async function start() {
   try {
-    let a = await this.getValidatedArguments(this.a);
-    let unvalidated_url = await this.getUrlFromArguments(a);
-    let url = await this.getValidatedUrl(unvalidated_url);
-    let unvalidated_source = await this.getSourceFromUrl(url);
-    let source = await this.getValidatedSource(unvalidated_source);
-    let ytplayer_config = await this.getYtPlayerConfigFromSource(
+    let t = this;
+
+    let a = await t.validateArguments(t.args);
+    let unvalidated_url = await t.getUrlFromArguments(a);
+    let url = await t.validateUrl(unvalidated_url);
+    let unvalidated_source = await t.getSourceFromUrl(url);
+    let source = await t.getValidatedSource(unvalidated_source);
+    let ytplayer_config = await t.getYtPlayerConfigFromSource(
       unvalidated_source,
-      this.regexp.ytplayer_config
+      t.regexp.ytplayer_config
     );
-    let fmts = await this.getFmtsFromYtplayerConfig(ytplayer_config);
-    let ranked_fmts = await this.getRankedFmts(fmts);
-    let working_fmt = await this.getWorkingFmt(ranked_fmts, ytplayer_config);
+    let fmts = await t.getFmtsFromYtplayerConfig(ytplayer_config);
+    let ranked_fmts = await t.getRankedFmts(fmts);
+    let working_fmt = await t.getWorkingFmt(ranked_fmts, ytplayer_config);
 
     console.log(working_fmt);
 
-    // Todo
-    // loop ranked_fmts till we find one with a working
-
-/*    let current_fmt = ranked_fmts[0];
-
-    https.get(current_fmt.url, res => {
-      console.log(res.statusCode);
-    });*/
+    t.emit('succes', { result: 'result' });
+  }
+  catch (err) {
+    t.emit('error', err);
+  }
+};
 
 
-/*    fmts.forEach((fmt_object, i) => {
-      fmts[i].url += '&ratebypass=true';
+const WorkingFmtFinder = class WorkingFmtFinder {
+  constructor(args) {
+    this.args = args;
+  }
+  validateArguments(args) {
+    return new Promise((resolve, reject) => {
+      if (!is.object(args))
+        reject('!is.object(args)');
+      else if (!is.array(args.fmts))
+        reject('!is.array(args.fmts)');
+      else if (!is.object(args.ytplayer_config))
+        reject('!is.object(args.ytplayer_config)');
+      else if (!is.function(args.resolve) || !is.function(args.reject))
+        reject('!is.function(args.resolve) || !is.function(args.reject)');
+      else
+        resolve(args);
     });
-*/
-    //this.writeFile('fmts', fmts.split(',').join('\n\n'));
+  }
+};
 
-/*    fmts.split(',').forEach(adaptive_fmt => {
-      if (adaptive_fmt.indexOf('type=audio') !== -1)
-        fmts.push(querystring.decode(adaptive_fmt));
-    });
-
-    fmts.forEach(audio_fmt_object => {
-      if (!audio_fmt.s) {
-        console.log(audio_fmt);
-      }
-    });*/
-
-    this.emit('succes', { result: 'result' });
+WorkingFmtFinder.prototype.start = async function start() {
+  try {
+    let args = await this.validateArguments(this.args);
+    this.args.resolve(this.args.fmts[0]);
   }
   catch (err) {
     this.emit('error', err);
   }
 };
 
-Download.prototype.DownloadAttempt = class DownloadAttempt {
-  constructor() {
+util.inherits(WorkingFmtFinder, EventEmitter);
 
-  }
-}
-
+ /** Set Download prototype properties */
+Download.prototype.WorkingFmtFinder = WorkingFmtFinder;
 Download.prototype.regexp = {
   /**
    * Captures the ytplayer object, the pattern used is simple:
@@ -284,9 +217,10 @@ Download.prototype.regexp = {
   decipher_function_name: /sig\|\|.+?\..+?\)\{var.+?\|\|(.+?)\(/
 };
 
+
 Download.prototype.temp_dir = __dirname + '/../../../temp';
 
-// Inherit node event emitter
+
 util.inherits(Download, EventEmitter);
 
 module.exports = Download;
