@@ -128,12 +128,77 @@ let Download = class Download {
         if (a_i < b_i) return 1;
         if (a_i >= b_i) return -1;
         return 0;
+      });
       // @TODO sort for best bitrate?
       resolve(fmts);
     });
   }
-  attemptDownloadsFromRankedFmts(ranked_fmts) {
+  getWorkingFmt(fmts, ytplayer_config) {
+    let self = this;
+    return new Promise((resolve, reject) => {
+      if (!is.array(fmts))
+        return reject('!is.array(fmts)');
+      else if (!is.object(ytplayer_config))
+        return reject('!is.object(ytplayer_config)');
 
+      (function tryRecursiveGetRequest(fmts, i) {
+        if (i >= fmts.length)
+          return reject('i >= fmts.length');
+        else if (fmts[i].s || fmts[i].sig) {
+          self.getDecipheredSignatureFromFmt(fmts[i], ytplayer_config, 
+            (err, deciphered_signature) => {
+              https.get(fmts[i].url + '&signature=' + deciphered_signature
+                + '&range=0-100'
+                , getRequestHandler
+              );
+            }
+          );
+        }
+        else if (!fmts[i].s && !fmts[i].sig) {
+          https.get(fmts[i].url + '&range=0-100', getRequestHandler);
+        }
+
+        function getRequestHandler(res) {
+          res.on('data', () => {});
+          res.on('end', onGetRequestEnd);
+          res.on('error', onGetRequestError);
+        }
+
+        function onGetRequestEnd() {
+          let body_length = parseInt(this.headers['content-length']),
+              status_code = this.statusCode;
+          if (status_code === 200 && body_length > 50 && body_length < 150)
+            resolve(fmts[i]);
+          //else
+            //tryRecursiveGetRequest(fmts, i+1);
+        }
+
+        function onGetRequestError() {
+          //tryRecursiveGetRequest(fmts, i+1);
+        }
+      }(fmts, 0));
+    });
+  }
+  getDecipheredSignatureFromFmt(fmt, ytplayer_config, cb) {
+    if (!is.function(cb))
+      cb('!is.function(cb)');
+    else if (!is.object(fmt))
+      cb('!is.object(fmt)');
+    else if (!is.object(ytplayer_config))
+      cb('!is.object(ytplayer_config)');
+
+    https.get('https:' + ytplayer_config.assets.js, (res) => {
+      let body = '';
+      res.on('data', chunk => body += chunk);
+      res.on('end', () => {
+        let r1 = ;
+        // @HERE JUST WROTE THE DECIPHER FUNCTION NAME CAPTURE REGEX
+        // decipher_function_name
+      });
+    });
+
+
+    cb(null, fmt)
   }
 };
 
@@ -150,9 +215,9 @@ Download.prototype.start = async function start() {
     );
     let fmts = await this.getFmtsFromYtplayerConfig(ytplayer_config);
     let ranked_fmts = await this.getRankedFmts(fmts);
-    let temp_loc = await this.attemptDownloadsFromFmts(ranked_fmts);
+    let working_fmt = await this.getWorkingFmt(ranked_fmts, ytplayer_config);
 
-    console.log(temp_loc);
+    console.log(working_fmt);
 
     // Todo
     // loop ranked_fmts till we find one with a working
@@ -188,6 +253,12 @@ Download.prototype.start = async function start() {
   }
 };
 
+Download.prototype.DownloadAttempt = class DownloadAttempt {
+  constructor() {
+
+  }
+}
+
 Download.prototype.regexp = {
   /**
    * Captures the ytplayer object, the pattern used is simple:
@@ -201,12 +272,21 @@ Download.prototype.regexp = {
    *  .+?;<\/script>
    * Allow as much character matches as needed till the closing
    * script tag is found
+   * Example (everything between the parentheses is capturedO)
+   * <script> ... ytplayer.config = ({ ... }); ... ;</script>
    */
-  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/
+  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/,
+
+  /**
+   * Example: (the function call expression gets captured, in this case: sr)
+   * sig||e.s){var h = e.sig||sr(
+   */
+  decipher_function_name: /sig\|\|.+?\..+?\)\{var.+?\|\|(.+?)\(/
 };
+
+Download.prototype.temp_dir = __dirname + '/../../../temp';
 
 // Inherit node event emitter
 util.inherits(Download, EventEmitter);
-
 
 module.exports = Download;
