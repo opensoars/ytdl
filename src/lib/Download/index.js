@@ -191,7 +191,7 @@ let Download = class Download {
       let body = '';
       res.on('data', chunk => body += chunk);
       res.on('end', () => {
-        let r1 = ;
+        //let r1 = ;
         // @HERE JUST WROTE THE DECIPHER FUNCTION NAME CAPTURE REGEX
         // decipher_function_name
       });

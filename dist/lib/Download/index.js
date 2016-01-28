@@ -124,7 +124,7 @@ let Download = class Download {
 
       (function tryRecursiveGetRequest(fmts, i) {
         if (i >= fmts.length) return reject('i >= fmts.length');else if (fmts[i].s || fmts[i].sig) {
-          self.getDecipherSignatureFromFmt(fmts[i], ytplayer_config, function (err, deciphered_signature) {
+          self.getDecipheredSignatureFromFmt(fmts[i], ytplayer_config, function (err, deciphered_signature) {
             https.get(fmts[i].url + '&signature=' + deciphered_signature + '&range=0-100', getRequestHandler);
           });
         } else if (!fmts[i].s && !fmts[i].sig) {
@@ -151,7 +151,7 @@ let Download = class Download {
       })(fmts, 0);
     });
   }
-  getDecipherSignatureFromFmt(fmt, ytplayer_config, cb) {
+  getDecipheredSignatureFromFmt(fmt, ytplayer_config, cb) {
     if (!is.function(cb)) cb('!is.function(cb)');else if (!is.object(fmt)) cb('!is.object(fmt)');else if (!is.object(ytplayer_config)) cb('!is.object(ytplayer_config)');
 
     https.get('https:' + ytplayer_config.assets.js, function (res) {
@@ -160,8 +160,9 @@ let Download = class Download {
         return body += chunk;
       });
       res.on('end', function () {
-        let r1 = /sig\|\|.+?\..+?\)\{var.+?\|\|(.+?)\(/;
-        console.log(r1.exec(body)[1]);
+        //let r1 = ;
+        // @HERE JUST WROTE THE DECIPHER FUNCTION NAME CAPTURE REGEX
+        // decipher_function_name
       });
     });
 
@@ -238,8 +239,16 @@ Download.prototype.regexp = {
    *  .+?;<\/script>
    * Allow as much character matches as needed till the closing
    * script tag is found
+   * Example (everything between the parentheses is capturedO)
+   * <script> ... ytplayer.config = ({ ... }); ... ;</script>
    */
-  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/
+  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/,
+
+  /**
+   * Example: (the function call expression gets captured, in this case: sr)
+   * sig||e.s){var h = e.sig||sr(
+   */
+  decipher_function_name: /sig\|\|.+?\..+?\)\{var.+?\|\|(.+?)\(/
 };
 
 Download.prototype.temp_dir = __dirname + '/../../../temp';
