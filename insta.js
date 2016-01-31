@@ -22,7 +22,5 @@ vs.forEach(v => {
     console.log('succes', result);
   });
 
-  console.log(dl);
-
   dl.start();
 });

@@ -24,6 +24,7 @@ let Download = class Download {
         resolve();
       });
     });
+    console.log('c');
   }
 
   getFmtsFromYtplayerConfig(ytplayer_config) {
@@ -93,7 +94,6 @@ let Download = class Download {
         // decipher_function_name
       });
     });
-    console.log('keke');
 
     cb(null, fmt)
   }
@@ -105,7 +105,8 @@ let Download = class Download {
   'getUrlFromArguments',
   'validateUrl',
   'getSourceFromUrl',
-  'validateSource'
+  'validateSource',
+  'getYtPlayerConfigFromSource'
 ].forEach(Download_module => 
   Download.prototype[Download_module] = require('./lib/' + Download_module)
 );

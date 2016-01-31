@@ -1,10 +1,15 @@
-module.exports = function getYtPlayerConfigFromSource(source, regexp_ytplayer_config) {
-  console.log('keke');
-  return new Promise(function (resolve, reject) {
-    if (!is.string(source)) return reject('!is.string(source)');else if (!is.regexp(regexp_ytplayer_config)) return reject('!is.regexp(regexp_ytplayer_config)');
+"use strict";
 
-    let ytplayer_config_matches = regexp_ytplayer_config.exec(source);
+const is = require('is');
+
+function getYtPlayerConfigFromSource(src, ytplayer_config_re) {
+  return new Promise(function (resolve, reject) {
+    if (!is.string(src)) return reject('!is.string(src)');else if (!is.regexp(ytplayer_config_re)) return reject('!is.regexp(ytplayer_config_re)');
+
+    let ytplayer_config_matches = ytplayer_config_re.exec(src);
 
     if (is.array(ytplayer_config_matches) && ytplayer_config_matches[1]) resolve(JSON.parse(ytplayer_config_matches[1]));else reject('!ytplayer_config_matches');
   });
-};
+}
+
+module.exports = getYtPlayerConfigFromSource;

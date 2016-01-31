@@ -4,14 +4,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 module.exports = function () {
   var ref = _asyncToGenerator(function* () {
+    let t = this;
     try {
-      let t = this;
-
       let a = yield t.validateArguments(t.args);
       let unvalidated_url = yield t.getUrlFromArguments(a);
       let url = yield t.validateUrl(unvalidated_url);
       let unvalidated_source = yield t.getSourceFromUrl(url);
-      let source = yield t.getValidatedSource(unvalidated_source);
+      let source = yield t.validateSource(unvalidated_source);
       let ytplayer_config = yield t.getYtPlayerConfigFromSource(unvalidated_source, t.regexp.ytplayer_config);
       let fmts = yield t.getFmtsFromYtplayerConfig(ytplayer_config);
       let ranked_fmts = yield t.getRankedFmts(fmts);

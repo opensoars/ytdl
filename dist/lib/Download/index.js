@@ -24,6 +24,7 @@ let Download = class Download {
         resolve();
       });
     });
+    console.log('c');
   }
 
   getFmtsFromYtplayerConfig(ytplayer_config) {
@@ -91,13 +92,12 @@ let Download = class Download {
         // decipher_function_name
       });
     });
-    console.log('keke');
 
     cb(null, fmt);
   }
 };
 
-['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource'].forEach(function (Download_module) {
+['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource'].forEach(function (Download_module) {
   return Download.prototype[Download_module] = require('./lib/' + Download_module);
 });
 
