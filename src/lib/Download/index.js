@@ -24,7 +24,6 @@ let Download = class Download {
         resolve();
       });
     });
-    console.log('c');
   }
 
   getFmtsFromYtplayerConfig(ytplayer_config) {
@@ -106,45 +105,15 @@ let Download = class Download {
   'validateUrl',
   'getSourceFromUrl',
   'validateSource',
-  'getYtPlayerConfigFromSource'
+  'getYtPlayerConfigFromSource',
+  'WorkingFmtFinder'
 ].forEach(Download_module => 
   Download.prototype[Download_module] = require('./lib/' + Download_module)
 );
 
-const WorkingFmtFinder = class WorkingFmtFinder {
-  constructor(args) {
-    this.args = args;
-  }
-  validateArguments(args) {
-    return new Promise((resolve, reject) => {
-      if (!is.object(args))
-        reject('!is.object(args)');
-      else if (!is.array(args.fmts))
-        reject('!is.array(args.fmts)');
-      else if (!is.object(args.ytplayer_config))
-        reject('!is.object(args.ytplayer_config)');
-      else if (!is.function(args.resolve) || !is.function(args.reject))
-        reject('!is.function(args.resolve) || !is.function(args.reject)');
-      else
-        resolve(args);
-    });
-  }
-};
 
-WorkingFmtFinder.prototype.start = async function start() {
-  try {
-    let args = await this.validateArguments(this.args);
-    this.args.resolve(this.args.fmts[0]);
-  }
-  catch (err) {
-    this.emit('error', err);
-  }
-};
-
-util.inherits(WorkingFmtFinder, EventEmitter);
 
  /** Set Download prototype properties */
-Download.prototype.WorkingFmtFinder = WorkingFmtFinder;
 Download.prototype.regexp = {
   /**
    * Captures the ytplayer object, the pattern used is simple:
