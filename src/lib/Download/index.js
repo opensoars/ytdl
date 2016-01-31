@@ -15,8 +15,6 @@ const is = require('is');
 let Download = class Download {
   constructor(args) {
     this.args = ens.obj(args);
-
-    this.public = {};
   }
   writeFile(fn, content, silent) {
     if (!silent) console.log('writeFile', fn);
@@ -27,27 +25,7 @@ let Download = class Download {
       });
     });
   }
-  // @TODO
-  getValidatedSource(source) {
-    return new Promise((resolve, reject) => {
-      resolve(source);
-    });
-  }
-  getYtPlayerConfigFromSource(source, regexp_ytplayer_config) {
-    return new Promise((resolve, reject) => {
-      if (!is.string(source)) 
-        return reject('!is.string(source)');
-      else if (!is.regexp(regexp_ytplayer_config)) 
-        return reject('!is.regexp(regexp_ytplayer_config)');
-      
-      let ytplayer_config_matches = regexp_ytplayer_config.exec(source);
 
-      if (is.array(ytplayer_config_matches) && ytplayer_config_matches[1])
-        resolve(JSON.parse(ytplayer_config_matches[1]));
-      else
-        reject('!ytplayer_config_matches');
-    });
-  }
   getFmtsFromYtplayerConfig(ytplayer_config) {
     ytplayer_config = ens.obj(ytplayer_config);
     return new Promise((resolve, reject) => {
@@ -115,20 +93,21 @@ let Download = class Download {
         // decipher_function_name
       });
     });
-
+    console.log('keke');
 
     cb(null, fmt)
   }
 };
 
 [
+  'start',
   'validateArguments',
-  'getUrlFromArguments'
+  'getUrlFromArguments',
   'validateUrl',
   'getSourceFromUrl',
-  'start'
+  'validateSource'
 ].forEach(Download_module => 
-  Download.prototype[Download_module] = require('./lib/' + Download_module);
+  Download.prototype[Download_module] = require('./lib/' + Download_module)
 );
 
 const WorkingFmtFinder = class WorkingFmtFinder {

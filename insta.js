@@ -8,6 +8,8 @@ let vs = [
   'NnTg4vzli5s',
 ];
 
+
+
 vs.forEach(v => {
   let dl = new ytdl.Download({v, out: __dirname + '/done'});
 
@@ -19,6 +21,8 @@ vs.forEach(v => {
   dl.on('succes', (result) => {
     console.log('succes', result);
   });
+
+  console.log(dl);
 
   dl.start();
 });

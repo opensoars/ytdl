@@ -15,8 +15,6 @@ const is = require('is');
 let Download = class Download {
   constructor(args) {
     this.args = ens.obj(args);
-
-    this.public = {};
   }
   writeFile(fn, content, silent) {
     if (!silent) console.log('writeFile', fn);
@@ -28,49 +26,6 @@ let Download = class Download {
     });
   }
 
-  getValidatedUrl(url) {
-    return new Promise(function (resolve, reject) {
-      let is_valid_url = false;
-
-      let re_t1 = /https\:\/\/www\.youtube\.com\/watch\?v\=.+?/;
-
-      if (re_t1.test(url)) is_valid_url = true;
-
-      is_valid_url ? resolve(url) : reject('Invalid url' + url);
-    });
-  }
-  getSourceFromUrl(url) {
-    return new Promise(function (resolve, reject) {
-      //setTimeout(() => resolve('src code'), 250);
-      https.get(url, function (res) {
-        let src = '';
-        res.on('data', function (chunk) {
-          return src += chunk;
-        });
-        res.on('end', function () {
-          return resolve(src);
-        });
-        res.on('error', function (err) {
-          return reject(err);
-        });
-      });
-    });
-  }
-  // @TODO
-  getValidatedSource(source) {
-    return new Promise(function (resolve, reject) {
-      resolve(source);
-    });
-  }
-  getYtPlayerConfigFromSource(source, regexp_ytplayer_config) {
-    return new Promise(function (resolve, reject) {
-      if (!is.string(source)) return reject('!is.string(source)');else if (!is.regexp(regexp_ytplayer_config)) return reject('!is.regexp(regexp_ytplayer_config)');
-
-      let ytplayer_config_matches = regexp_ytplayer_config.exec(source);
-
-      if (is.array(ytplayer_config_matches) && ytplayer_config_matches[1]) resolve(JSON.parse(ytplayer_config_matches[1]));else reject('!ytplayer_config_matches');
-    });
-  }
   getFmtsFromYtplayerConfig(ytplayer_config) {
     ytplayer_config = ens.obj(ytplayer_config);
     return new Promise(function (resolve, reject) {
@@ -136,48 +91,15 @@ let Download = class Download {
         // decipher_function_name
       });
     });
+    console.log('keke');
 
     cb(null, fmt);
   }
 };
 
-let Download_modules = {
-  validateArguments: './lib/validateArguments',
-  getUrlFromArguments: './lib/getUrlFromArguments'
-};
-
-for (let key in Download_modules) {
-  if (Download_modules.hasOwnProperty(key)) {
-    Download.prototype[key] = require(Download_modules[key]);
-  }
-}
-
-Download.prototype.start = function () {
-  var ref = _asyncToGenerator(function* () {
-    try {
-      let a = yield this.validateArguments(this.args);
-      let unvalidated_url = yield this.getUrlFromArguments(a);
-      let url = yield this.getValidatedUrl(unvalidated_url);
-      console.log(url);
-      let unvalidated_source = yield this.getSourceFromUrl(url);
-      let source = yield this.getValidatedSource(unvalidated_source);
-      let ytplayer_config = yield this.getYtPlayerConfigFromSource(unvalidated_source, this.regexp.ytplayer_config);
-      let fmts = yield this.getFmtsFromYtplayerConfig(ytplayer_config);
-      let ranked_fmts = yield this.getRankedFmts(fmts);
-      let working_fmt = yield this.getWorkingFmt(ranked_fmts, ytplayer_config);
-
-      console.log(working_fmt);
-
-      this.emit('succes', { result: 'result' });
-    } catch (err) {
-      this.emit('error', err);
-    }
-  });
-
-  return function start() {
-    return ref.apply(this, arguments);
-  };
-}();
+['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource'].forEach(function (Download_module) {
+  return Download.prototype[Download_module] = require('./lib/' + Download_module);
+});
 
 const WorkingFmtFinder = class WorkingFmtFinder {
   constructor(args) {
