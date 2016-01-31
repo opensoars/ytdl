@@ -26,27 +26,7 @@ let Download = class Download {
   }
 
 
-  getRankedFmts(fmts) {
-    fmts = ens.arr(fmts);
-    return new Promise((resolve, reject) => {
-      fmts.sort((a, b) => {
-        let a_i = a.type.indexOf('audio');
-        let b_i = b.type.indexOf('audio');
-        if (a_i < b_i) return 1;
-        if (a_i >= b_i) return -1;
-        return 0;
-      });
-      fmts.sort((a, b) => {
-        let a_i = a.type.indexOf('audio/mp4');
-        let b_i = b.type.indexOf('audio/mp4');
-        if (a_i < b_i) return 1;
-        if (a_i >= b_i) return -1;
-        return 0;
-      });
-      // @TODO sort for best bitrate?
-      resolve(fmts);
-    });
-  }
+
   getWorkingFmt(fmts, ytplayer_config) {
     return new Promise((resolve, reject) => {
       let attempt1 = new Download.prototype.WorkingFmtFinder({
