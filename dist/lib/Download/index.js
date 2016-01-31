@@ -1,12 +1,11 @@
 "use strict";
 
 const util = require('util');
-const EventEmitter = require('events').EventEmitter;
 const https = require('https');
 const fs = require('fs');
 const url_lib = require('url');
 const querystring = require('querystring');
-
+const EventEmitter = require('events').EventEmitter;
 const ens = require('ens');
 const is = require('is');
 
@@ -24,22 +23,6 @@ let Download = class Download {
     });
   }
 
-  getFmtsFromYtplayerConfig(ytplayer_config) {
-    ytplayer_config = ens.obj(ytplayer_config);
-    return new Promise(function (resolve, reject) {
-      if (!ytplayer_config.args) return reject('!ytplayer_config.args');else if (!is.string(ytplayer_config.args.adaptive_fmts)) return reject('!is.string(ytplayer_config.args.adaptive_fmts)');
-
-      let fmts = [];
-      let adaptive_fmts_string = ytplayer_config.args.adaptive_fmts;
-      let split_adaptive_fmt_strings = adaptive_fmts_string.split(',');
-
-      split_adaptive_fmt_strings.forEach(function (adaptive_fmt_string) {
-        fmts.push(querystring.decode(adaptive_fmt_string));
-      });
-
-      resolve(fmts);
-    });
-  }
   getRankedFmts(fmts) {
     fmts = ens.arr(fmts);
     return new Promise(function (resolve, reject) {
@@ -94,7 +77,7 @@ let Download = class Download {
   }
 };
 
-['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource', 'WorkingFmtFinder'].forEach(function (Download_module) {
+['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource', 'getFmtsFromYtplayerConfig', 'WorkingFmtFinder'].forEach(function (Download_module) {
   return Download.prototype[Download_module] = require('./lib/' + Download_module);
 });
 
