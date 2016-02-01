@@ -14,11 +14,20 @@ module.exports = function () {
       let ytplayer_config = yield t.getYtPlayerConfigFromSource(unvalidated_source, t.regexp.ytplayer_config);
       let fmts = yield t.getFmtsFromYtplayerConfig(ytplayer_config);
       let ranked_fmts = yield t.getRankedFmts(fmts);
-      let working_fmt = yield t.getWorkingFmt(ranked_fmts, ytplayer_config);
+      let working_fmt = yield t.getWorkingFmt({
+        ranked_fmts,
+        ytplayer_config,
+        WorkingFmtFinder: t.WorkingFmtFinder
+      });
 
-      console.log(working_fmt);
+      //decipher_function_name_re: t.regexp.decipher_function_name
+      if (working_fmt) {
+        t.emit('succes', { result: 'result' });
+      } else {
+        t.emit('error', 'if (working_fmt) not passed');
+      }
 
-      t.emit('succes', { result: 'result' });
+      // console.log(working_fmt);
     } catch (err) {
       t.emit('error', err);
     }

@@ -5,17 +5,17 @@ const is = require('is');
 
 module.exports = function getRankedFmts(fmts) {
   fmts = ens.arr(fmts);
-  return new Promise((resolve, reject) => {
+  return new Promise(function (resolve, reject) {
     if (fmts.length === 0) return reject('fmts.length === 0');
 
-    fmts.sort((a, b) => {
+    fmts.sort(function (a, b) {
       let a_i = a.type.indexOf('audio');
       let b_i = b.type.indexOf('audio');
       if (a_i < b_i) return 1;
       if (a_i >= b_i) return -1;
       return 0;
     });
-    fmts.sort((a, b) => {
+    fmts.sort(function (a, b) {
       let a_i = a.type.indexOf('audio/mp4');
       let b_i = b.type.indexOf('audio/mp4');
       if (a_i < b_i) return 1;
@@ -25,4 +25,4 @@ module.exports = function getRankedFmts(fmts) {
     // @TODO sort for best bitrate?
     resolve(fmts);
   });
-}
+};

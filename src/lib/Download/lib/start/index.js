@@ -14,11 +14,23 @@ module.exports = async function start() {
     );
     let fmts = await t.getFmtsFromYtplayerConfig(ytplayer_config);
     let ranked_fmts = await t.getRankedFmts(fmts);
-    let working_fmt = await t.getWorkingFmt(ranked_fmts, ytplayer_config);
+    let working_fmt = await t.getWorkingFmt({
+      ranked_fmts,
+      ytplayer_config,
+      WorkingFmtFinder: t.WorkingFmtFinder,
+      //decipher_function_name_re: t.regexp.decipher_function_name
+    });
 
-    console.log(working_fmt);
+    if (working_fmt) {
+      t.emit('succes', { result: 'result' });
+    }
+    else {
+      t.emit('error', 'if (working_fmt) not passed');
+    }
 
-    t.emit('succes', { result: 'result' });
+   // console.log(working_fmt);
+
+    
   }
   catch (err) {
     t.emit('error', err);

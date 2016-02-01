@@ -24,19 +24,6 @@ let Download = class Download {
       });
     });
   }
-
-
-
-  getWorkingFmt(fmts, ytplayer_config) {
-    return new Promise((resolve, reject) => {
-      let attempt1 = new Download.prototype.WorkingFmtFinder({
-        fmts, ytplayer_config, resolve, reject
-      });
-      attempt1.on('error', (err) => reject(err));
-      attempt1.on('succes', (working_fmt) => resolve(working_fmt));
-      attempt1.start();
-    });
-  }
   getDecipheredSignatureFromFmt(fmt, ytplayer_config, cb) {
     if (!is.function(cb))
       cb('!is.function(cb)');
@@ -59,6 +46,7 @@ let Download = class Download {
   }
 };
 
+
 [
   'start',
   'validateArguments',
@@ -68,10 +56,12 @@ let Download = class Download {
   'validateSource',
   'getYtPlayerConfigFromSource',
   'getFmtsFromYtplayerConfig',
+  'getRankedFmts',
+  'getWorkingFmt',
 
   'WorkingFmtFinder'
-].forEach(Download_module => 
-  Download.prototype[Download_module] = require('./lib/' + Download_module)
+].forEach(module => 
+  Download.prototype[module] = require('./lib/' + module)
 );
 
  /** Set Download prototype properties */

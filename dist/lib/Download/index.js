@@ -22,42 +22,6 @@ let Download = class Download {
       });
     });
   }
-
-  getRankedFmts(fmts) {
-    fmts = ens.arr(fmts);
-    return new Promise(function (resolve, reject) {
-      fmts.sort(function (a, b) {
-        let a_i = a.type.indexOf('audio');
-        let b_i = b.type.indexOf('audio');
-        if (a_i < b_i) return 1;
-        if (a_i >= b_i) return -1;
-        return 0;
-      });
-      fmts.sort(function (a, b) {
-        let a_i = a.type.indexOf('audio/mp4');
-        let b_i = b.type.indexOf('audio/mp4');
-        if (a_i < b_i) return 1;
-        if (a_i >= b_i) return -1;
-        return 0;
-      });
-      // @TODO sort for best bitrate?
-      resolve(fmts);
-    });
-  }
-  getWorkingFmt(fmts, ytplayer_config) {
-    return new Promise(function (resolve, reject) {
-      let attempt1 = new Download.prototype.WorkingFmtFinder({
-        fmts, ytplayer_config, resolve, reject
-      });
-      attempt1.on('error', function (err) {
-        return reject(err);
-      });
-      attempt1.on('succes', function (working_fmt) {
-        return resolve(working_fmt);
-      });
-      attempt1.start();
-    });
-  }
   getDecipheredSignatureFromFmt(fmt, ytplayer_config, cb) {
     if (!is.function(cb)) cb('!is.function(cb)');else if (!is.object(fmt)) cb('!is.object(fmt)');else if (!is.object(ytplayer_config)) cb('!is.object(ytplayer_config)');
 
@@ -77,8 +41,8 @@ let Download = class Download {
   }
 };
 
-['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource', 'getFmtsFromYtplayerConfig', 'WorkingFmtFinder'].forEach(function (Download_module) {
-  return Download.prototype[Download_module] = require('./lib/' + Download_module);
+['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource', 'getFmtsFromYtplayerConfig', 'getRankedFmts', 'getWorkingFmt', 'WorkingFmtFinder'].forEach(function (module) {
+  return Download.prototype[module] = require('./lib/' + module);
 });
 
 /** Set Download prototype properties */
