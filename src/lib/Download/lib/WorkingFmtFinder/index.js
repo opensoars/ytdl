@@ -83,10 +83,9 @@ WorkingFmtFinder.prototype.start = async function start() {
       throw 'No fmt.s || fmt.sig && no fmt.url';
 
     let working_url = await this.testUrl(test_url);
-
     fmt.working_url = working_url;
 
-    this.emit('succes', fmt)
+    this.emit('succes', fmt);
   }
   catch (err) {
     this.emit('error', err);

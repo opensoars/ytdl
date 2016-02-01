@@ -7,8 +7,9 @@ module.exports = function getWorkingFmt(args) {
   return new Promise((resolve, reject) => {
     let ranked_fmts = args.ranked_fmts;
     let ytplayer_config = args.ytplayer_config;
-    // If attempt1 fails, loop through other fmts!!
 
+    // If attempt1 fails, loop through other fmts!!
+    // Listen events and act accordingly
     let attempt1 = new args.WorkingFmtFinder({
       fmt: ranked_fmts[0],
       ytplayer_config

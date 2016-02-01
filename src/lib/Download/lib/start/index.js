@@ -21,7 +21,7 @@ module.exports = async function start() {
       //decipher_function_name_re: t.regexp.decipher_function_name
     });
 
-    console.log(working_fmt);
+    console.log(working_fmt.working_url);
 
 /*    if (working_fmt) {
       t.emit('succes', { result: 'result' });

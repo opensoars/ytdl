@@ -73,7 +73,6 @@ WorkingFmtFinder.prototype.start = function () {
       } else if (fmt.url) test_url = fmt.url;else throw 'No fmt.s || fmt.sig && no fmt.url';
 
       let working_url = yield this.testUrl(test_url);
-
       fmt.working_url = working_url;
 
       this.emit('succes', fmt);
