@@ -10,9 +10,7 @@ module.exports = function getWorkingFmt(args) {
 
     let attempt1 = new args.WorkingFmtFinder({
       fmt: ranked_fmts[0],
-      ytplayer_config,
-      resolve,
-      reject
+      ytplayer_config
     });
     attempt1.on('error', function (err) {
       return reject(err);
@@ -21,10 +19,5 @@ module.exports = function getWorkingFmt(args) {
       return resolve(working_fmt);
     });
     attempt1.start();
-
-    /*    ranked_fmts.forEach(fmt => {
-    
-        });
-    */
   });
 };

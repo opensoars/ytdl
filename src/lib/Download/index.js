@@ -24,26 +24,6 @@ let Download = class Download {
       });
     });
   }
-  getDecipheredSignatureFromFmt(fmt, ytplayer_config, cb) {
-    if (!is.function(cb))
-      cb('!is.function(cb)');
-    else if (!is.object(fmt))
-      cb('!is.object(fmt)');
-    else if (!is.object(ytplayer_config))
-      cb('!is.object(ytplayer_config)');
-
-    https.get('https:' + ytplayer_config.assets.js, (res) => {
-      let body = '';
-      res.on('data', chunk => body += chunk);
-      res.on('end', () => {
-        //let r1 = ;
-        // @HERE JUST WROTE THE DECIPHER FUNCTION NAME CAPTURE REGEX
-        // decipher_function_name
-      });
-    });
-
-    cb(null, fmt)
-  }
 };
 
 
@@ -81,13 +61,7 @@ Download.prototype.regexp = {
    * Example (everything between the parentheses is capturedO)
    * <script> ... ytplayer.config = ({ ... }); ... ;</script>
    */
-  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/,
-
-  /**
-   * Example: (the function call expression gets captured, in this case: sr)
-   * sig||e.s){var h = e.sig||sr(
-   */
-  decipher_function_name: /sig\|\|.+?\..+?\)\{var.+?\|\|(.+?)\(/
+  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/
 };
 
 
