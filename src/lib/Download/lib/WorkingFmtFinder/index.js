@@ -68,33 +68,25 @@ WorkingFmtFinder.prototype.start = async function start() {
     let args = await this.validateArguments(this.args);
     let fmt = await this.validateFmt(args.fmt);
 
-
     let test_url;
-
     if (this.fmtHasSignature(fmt)) {
       let deciphered_signature = await this.decipherSignature({
         SignatureDecipherer: this.SignatureDecipherer,
         ytplayer_config: args.ytplayer_config,
         signature: fmt.s || fmt.sig
       });
-
       test_url = fmt.url + '&signature=' + deciphered_signature
     }
-    else if (fmt.url) {
+    else if (fmt.url)
       test_url = fmt.url;
-    }
-    else {
+    else
       throw 'No fmt.s || fmt.sig && no fmt.url';
-    }
 
-    //this.emit('succes', 'asd');
+    let working_url = await this.testUrl(test_url);
 
+    fmt.working_url = working_url;
 
-
-    let t1 = await this.testUrl(test_url);
-    console.log(t1);
-    //console.log(t1);
-    //args.resolve(fmt);
+    this.emit('succes', fmt)
   }
   catch (err) {
     this.emit('error', err);

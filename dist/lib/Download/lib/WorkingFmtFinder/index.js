@@ -63,27 +63,20 @@ WorkingFmtFinder.prototype.start = function () {
       let fmt = yield this.validateFmt(args.fmt);
 
       let test_url;
-
       if (this.fmtHasSignature(fmt)) {
         let deciphered_signature = yield this.decipherSignature({
           SignatureDecipherer: this.SignatureDecipherer,
           ytplayer_config: args.ytplayer_config,
           signature: fmt.s || fmt.sig
         });
-
         test_url = fmt.url + '&signature=' + deciphered_signature;
-      } else if (fmt.url) {
-        test_url = fmt.url;
-      } else {
-        throw 'No fmt.s || fmt.sig && no fmt.url';
-      }
+      } else if (fmt.url) test_url = fmt.url;else throw 'No fmt.s || fmt.sig && no fmt.url';
 
-      //this.emit('succes', 'asd');
+      let working_url = yield this.testUrl(test_url);
 
-      let t1 = yield this.testUrl(test_url);
-      console.log(t1);
-      //console.log(t1);
-      //args.resolve(fmt);
+      fmt.working_url = working_url;
+
+      this.emit('succes', fmt);
     } catch (err) {
       this.emit('error', err);
     }
