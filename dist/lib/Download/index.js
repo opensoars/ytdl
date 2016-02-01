@@ -24,11 +24,16 @@ let Download = class Download {
   }
 };
 
-['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource', 'getFmtsFromYtplayerConfig', 'getRankedFmts', 'getWorkingFmt', 'WorkingFmtFinder'].forEach(function (module) {
+['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource', 'getFmtsFromYtplayerConfig', 'getRankedFmts', 'getWorkingUrl'].forEach(function (module) {
   return Download.prototype[module] = require('./lib/' + module);
 });
 
 /** Set Download prototype properties */
+
+Download.prototype.WorkingUrlFinder = require('./lib/WorkingUrlFinder');
+
+Download.prototype.temp_dir = __dirname + '/../../../temp';
+
 Download.prototype.regexp = {
   /**
    * Captures the ytplayer object, the pattern used is simple:
@@ -47,8 +52,6 @@ Download.prototype.regexp = {
    */
   ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/
 };
-
-Download.prototype.temp_dir = __dirname + '/../../../temp';
 
 util.inherits(Download, EventEmitter);
 

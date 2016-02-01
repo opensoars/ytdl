@@ -41,12 +41,9 @@ const WorkingUrlFinder = class WorkingUrlFinder {
   }
   testUrl(url) {
     return new Promise(function (resolve, reject) {
-      let test_url = url + '&ratebypass=yes&range=0-1';
-
-      https.get(test_url, function (res) {
-        res.on('data', function () {/*console.log('keke');*/});
+      https.get('&ratebypass=yes&range=0-1', function (res) {
+        res.on('data', function () {});
         res.on('end', function () {
-          //console.log(res.headers);
           parseInt(res.headers['content-length']) === 2 ? resolve(url) : reject("res.headers['content-length']) === 2 not passed");
         });
       }).on('error', function (err) {
@@ -70,12 +67,10 @@ WorkingUrlFinder.prototype.start = function () {
           signature: fmt.s || fmt.sig
         });
         test_url = fmt.url + '&signature=' + deciphered_signature;
-      } else if (fmt.url) test_url = fmt.url;else throw 'No fmt.s || fmt.sig && no fmt.url';
+      } else if (fmt.url) test_url = fmt.url;
 
       let working_url = yield this.testUrl(test_url);
-      fmt.working_url = working_url;
-
-      this.emit('succes', fmt);
+      this.emit('succes', working_url);
     } catch (err) {
       this.emit('error', err);
     }
@@ -86,9 +81,11 @@ WorkingUrlFinder.prototype.start = function () {
   };
 }();
 
-['SignatureDecipherer'].forEach(function (module) {
+[].forEach(function (module) {
   return WorkingUrlFinder.prototype[module] = require('./lib/' + module);
 });
+
+WorkingUrlFinder.prototype.SignatureDecipherer = require('./lib/SignatureDecipherer');
 
 util.inherits(WorkingUrlFinder, EventEmitter);
 

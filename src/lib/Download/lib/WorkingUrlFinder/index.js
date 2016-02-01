@@ -7,7 +7,7 @@ const https = require('https');
 const ens = require('ens');
 const is = require('is');
 
-const WorkingFmtFinder = class WorkingFmtFinder {
+const WorkingUrlFinder = class WorkingUrlFinder {
   constructor(args) {
     this.args = ens.obj(args);
   }
@@ -48,12 +48,9 @@ const WorkingFmtFinder = class WorkingFmtFinder {
   }
   testUrl(url) {
     return new Promise((resolve, reject) => {
-      let test_url = url + '&ratebypass=yes&range=0-1';
-
-      https.get(test_url, res => {
-        res.on('data', () => { /*console.log('keke');*/ });
+      https.get('&ratebypass=yes&range=0-1', res => {
+        res.on('data', () => {});
         res.on('end', () => {
-          //console.log(res.headers);
           parseInt(res.headers['content-length']) === 2
             ? resolve(url)
             : reject("res.headers['content-length']) === 2 not passed");
@@ -63,7 +60,7 @@ const WorkingFmtFinder = class WorkingFmtFinder {
   }
 };
 
-WorkingFmtFinder.prototype.start = async function start() {
+WorkingUrlFinder.prototype.start = async function start() {
   try {
     let args = await this.validateArguments(this.args);
     let fmt = await this.validateFmt(args.fmt);
@@ -75,17 +72,13 @@ WorkingFmtFinder.prototype.start = async function start() {
         ytplayer_config: args.ytplayer_config,
         signature: fmt.s || fmt.sig
       });
-      test_url = fmt.url + '&signature=' + deciphered_signature
+      test_url = fmt.url + '&signature=' + deciphered_signature;
     }
     else if (fmt.url)
       test_url = fmt.url;
-    else
-      throw 'No fmt.s || fmt.sig && no fmt.url';
 
     let working_url = await this.testUrl(test_url);
-    fmt.working_url = working_url;
-
-    this.emit('succes', fmt);
+    this.emit('succes', working_url);
   }
   catch (err) {
     this.emit('error', err);
@@ -93,11 +86,15 @@ WorkingFmtFinder.prototype.start = async function start() {
 };
 
 [
-  'SignatureDecipherer'
 ].forEach(module => 
-  WorkingFmtFinder.prototype[module] = require('./lib/' + module)
+  WorkingUrlFinder.prototype[module] = require('./lib/' + module)
 );
 
-util.inherits(WorkingFmtFinder, EventEmitter);
+WorkingUrlFinder.prototype.SignatureDecipherer = require(
+  './lib/SignatureDecipherer'
+);
 
-module.exports = WorkingFmtFinder;
+
+util.inherits(WorkingUrlFinder, EventEmitter);
+
+module.exports = WorkingUrlFinder;

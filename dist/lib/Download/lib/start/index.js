@@ -14,14 +14,13 @@ module.exports = function () {
       let ytplayer_config = yield t.getYtPlayerConfigFromSource(unvalidated_source, t.regexp.ytplayer_config);
       let fmts = yield t.getFmtsFromYtplayerConfig(ytplayer_config);
       let ranked_fmts = yield t.getRankedFmts(fmts);
-      let working_fmt = yield t.getWorkingFmt({
+      let working_url = yield t.getWorkingUrl({
         ranked_fmts,
         ytplayer_config,
-        WorkingFmtFinder: t.WorkingFmtFinder
+        WorkingUrlFinder: t.WorkingUrlFinder
       });
-
       //decipher_function_name_re: t.regexp.decipher_function_name
-      console.log(working_fmt.working_url);
+      console.log(working_url);
 
       /*    if (working_fmt) {
             t.emit('succes', { result: 'result' });
