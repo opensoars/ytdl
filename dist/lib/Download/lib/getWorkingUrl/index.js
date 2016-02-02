@@ -2,6 +2,8 @@
 
 const ens = require('ens');
 
+const WorkingUrlFinder = require('./lib/WorkingUrlFinder');
+
 module.exports = function getWorkingUrl(args) {
   args = ens.obj(args);
   return new Promise(function (resolve, reject) {
@@ -10,7 +12,7 @@ module.exports = function getWorkingUrl(args) {
 
     // If attempt1 fails, loop through other fmts!!
     // Listen events and act accordingly
-    let attempt1 = new args.WorkingUrlFinder({
+    let attempt1 = new WorkingUrlFinder({
       fmt: ranked_fmts[0],
       ytplayer_config
     });

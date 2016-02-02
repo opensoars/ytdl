@@ -24,13 +24,11 @@ let Download = class Download {
   }
 };
 
-['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource', 'getFmtsFromYtplayerConfig', 'getRankedFmts', 'getWorkingUrl'].forEach(function (module) {
+['start', 'validateArguments', 'getUrlFromArguments', 'validateUrl', 'getSourceFromUrl', 'validateSource', 'getYtPlayerConfigFromSource', 'getVideoInfoFromYtplayerConfig', 'getFmtsFromYtplayerConfig', 'getRankedFmts', 'getWorkingUrl', 'streamFileToTempDir', 'convertFile', 'makeStringFileSafe'].forEach(function (module) {
   return Download.prototype[module] = require('./lib/' + module);
 });
 
 /** Set Download prototype properties */
-
-Download.prototype.WorkingUrlFinder = require('./lib/WorkingUrlFinder');
 
 Download.prototype.temp_dir = __dirname + '/../../../temp';
 

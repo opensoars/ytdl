@@ -12,16 +12,29 @@ module.exports = async function start() {
       unvalidated_source,
       t.regexp.ytplayer_config
     );
+    let video_info = await t.getVideoInfoFromYtplayerConfig(ytplayer_config);
+    let file_safe_video_title = await t.makeStringFileSafe(video_info.title);
     let fmts = await t.getFmtsFromYtplayerConfig(ytplayer_config);
     let ranked_fmts = await t.getRankedFmts(fmts);
     let working_url = await t.getWorkingUrl({
       ranked_fmts,
-      ytplayer_config,
-      WorkingUrlFinder: t.WorkingUrlFinder,
-      //decipher_function_name_re: t.regexp.decipher_function_name
+      ytplayer_config
     });
-    console.log(working_url);
+    let temp_file_loc = await t.streamFileToTempDir({
+      working_url,
+      temp_dir: this.temp_dir,
+      file_name: file_safe_video_title
+    });
 
+    let converted_temp_file_loc = await t.convertFile({
+      temp_file_loc,
+      temp_dir: this.temp_dir,
+      file_name: file_safe_video_title
+    });
+
+    this.emit('succes', {
+      converted_temp_file_loc
+    });
 
 /*    if (working_fmt) {
       t.emit('succes', { result: 'result' });

@@ -34,19 +34,20 @@ let Download = class Download {
   'getSourceFromUrl',
   'validateSource',
   'getYtPlayerConfigFromSource',
+  'getVideoInfoFromYtplayerConfig',
   'getFmtsFromYtplayerConfig',
   'getRankedFmts',
-  'getWorkingUrl'
+  'getWorkingUrl',
+  'streamFileToTempDir',
+  'convertFile',
+
+  'makeStringFileSafe'
 ].forEach(module => 
   Download.prototype[module] = require('./lib/' + module)
 );
 
 
 /** Set Download prototype properties */
-
-Download.prototype.WorkingUrlFinder = require(
-  './lib/WorkingUrlFinder'
-);
 
 Download.prototype.temp_dir = __dirname + '/../../../temp';
 
