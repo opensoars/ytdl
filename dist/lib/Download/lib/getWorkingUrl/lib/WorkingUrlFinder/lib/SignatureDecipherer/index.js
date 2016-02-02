@@ -126,13 +126,15 @@ SignatureDecipherer.prototype.regexp = {
    * sig||e.s){var h = e.sig||sr(
    */
   decipher_name: /sig\|\|.+?\..+?\)\{var.+?\|\|(.+?)\(/,
-
+  /**
+   * Captures the first argument name of the decipher function
+   * Gets prefixed with decipher name (in this case sr)
+   * Example: (a will be captured)
+   * sr=function(a){ ... }
+   */
   decipher_argument: '=function\\((.+?)\\)\\{[\\w\\W]+?\\}',
-
   decipher_body: '=function\\(.+?\\)\\{([\\w\\W]+?)\\}',
-
   decipher_helpers_name: /;(.+?)\..+?\(.+?\,.+?\);/,
-
   decipher_helpers_body: '=\\{([\\w\\W\\.\\:]+?)\\};'
 };
 
