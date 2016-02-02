@@ -39,11 +39,6 @@
     "url": "https://github.com/opensoars/es7"
   },
   "keywords": [
-    "es7",
-    "EcmaScript",
-    "JavaScript",
-    "transpile",
-    "boilerplate"
   ],
   "readmeFilename": "README.md",
   "license": "MIT"
