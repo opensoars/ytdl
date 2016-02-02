@@ -1,6 +1,6 @@
 {
   "name": "es7",
-  "description": "EcmaScript 7 boilerplate project",
+  "description": "Aync power Youtube Downloader",
   "version": "0.0.1",
   "author": "opensoars",
   "scripts": {
