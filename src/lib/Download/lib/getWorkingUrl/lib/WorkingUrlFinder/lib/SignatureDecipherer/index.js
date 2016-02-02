@@ -169,8 +169,17 @@ SignatureDecipherer.prototype.regexp = {
    * sr=function(a){ ... }
    */
   decipher_argument: '=function\\((.+?)\\)\\{[\\w\\W]+?\\}',
+  /**
+   * 
+   */
   decipher_body: '=function\\(.+?\\)\\{([\\w\\W]+?)\\}',
+  /**
+   * 
+   */
   decipher_helpers_name: /;(.+?)\..+?\(.+?\,.+?\);/,
+  /**
+   * 
+   */
   decipher_helpers_body: '=\\{([\\w\\W\\.\\:]+?)\\};'
 };
 
