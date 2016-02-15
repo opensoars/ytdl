@@ -6,9 +6,10 @@ Introduction
   What is ytdl? Why ytdl? How ytdl?
   Basic how ytdl works (abstract description of app logic)
   Basic reverse engineering description
-  Why Node.js
 Application development
   Technology
+    Node.js
+      Intro / Motivation
     Gulp task runner
       Intro
       babel (build)
