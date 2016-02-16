@@ -10,7 +10,7 @@ Application development
   Technology
     Node.js
       Intro / Motivation
-    Gulp task runner
+    Gulp
       Intro
       babel (build)
       watch
