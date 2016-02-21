@@ -19,7 +19,7 @@ module.exports = function getWorkingUrl(args) {
     attempt1.on('error', function (err) {
       return reject(err);
     });
-    attempt1.on('succes', function (working_url) {
+    attempt1.on('success', function (working_url) {
       return resolve(working_url);
     });
     attempt1.start();

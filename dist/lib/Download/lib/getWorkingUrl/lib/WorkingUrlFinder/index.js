@@ -34,7 +34,7 @@ const WorkingUrlFinder = class WorkingUrlFinder {
       new SignatureDecipherer({
         ytplayer_config: args.ytplayer_config,
         signature: args.signature
-      }).on('succes', function (deciphered_signature) {
+      }).on('success', function (deciphered_signature) {
         return resolve(deciphered_signature);
       }).on('error', function (err) {
         return reject(err);
@@ -71,7 +71,7 @@ WorkingUrlFinder.prototype.start = function () {
       } else if (fmt.url) test_url = fmt.url;
 
       let working_url = yield this.testUrl(test_url);
-      this.emit('succes', working_url + '&ratebypass=yes');
+      this.emit('success', working_url + '&ratebypass=yes');
     } catch (err) {
       this.emit('error', err);
     }

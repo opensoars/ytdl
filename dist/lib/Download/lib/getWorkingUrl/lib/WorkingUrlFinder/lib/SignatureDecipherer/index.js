@@ -109,7 +109,7 @@ SignatureDecipherer.prototype.start = function () {
       });
       let deciphered_signature = yield t.decipherSignature(decipherFunction, args.signature);
 
-      t.emit('succes', deciphered_signature);
+      t.emit('success', deciphered_signature);
     } catch (err) {
       t.emit('error', err);
     }

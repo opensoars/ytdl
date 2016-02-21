@@ -20,8 +20,8 @@ vs.forEach(v => {
     console.log(err.stack);
   });
 
-  dl.on('succes', (result) => {
-    console.log('succes', result);
+  dl.on('success', (result) => {
+    console.log('success', result);
   });
 
   dl.start();

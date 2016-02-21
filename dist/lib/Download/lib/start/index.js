@@ -32,12 +32,12 @@ module.exports = function () {
         file_name: file_safe_video_title
       });
 
-      this.emit('succes', {
+      this.emit('success', {
         converted_temp_file_loc
       });
 
       /*    if (working_fmt) {
-            t.emit('succes', { result: 'result' });
+            t.emit('success', { result: 'result' });
           }
           else {
             t.emit('error', 'if (working_fmt) not passed');
