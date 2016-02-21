@@ -17,7 +17,7 @@ module.exports = function getWorkingUrl(args) {
       ytplayer_config
     });
     attempt1.on('error', (err) => reject(err));
-    attempt1.on('succes', (working_url) => resolve(working_url));
+    attempt1.on('success', (working_url) => resolve(working_url));
     attempt1.start();
   });
 };
