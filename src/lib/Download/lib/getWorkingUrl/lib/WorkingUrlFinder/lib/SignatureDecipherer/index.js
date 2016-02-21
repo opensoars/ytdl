@@ -149,7 +149,7 @@ SignatureDecipherer.prototype.start = async function start() {
       args.signature
     );
 
-    t.emit('succes', deciphered_signature);
+    t.emit('success', deciphered_signature);
   }
   catch (err) {
     t.emit('error', err);
