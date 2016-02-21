@@ -43,7 +43,7 @@ const WorkingUrlFinder = class WorkingUrlFinder {
         ytplayer_config: args.ytplayer_config,
         signature: args.signature
       })
-        .on('succes', (deciphered_signature) => resolve(deciphered_signature))
+        .on('success', (deciphered_signature) => resolve(deciphered_signature))
         .on('error', (err) => reject(err))
         .start();
     });
@@ -79,7 +79,7 @@ WorkingUrlFinder.prototype.start = async function start() {
       test_url = fmt.url;
 
     let working_url = await this.testUrl(test_url);
-    this.emit('succes', working_url + '&ratebypass=yes');
+    this.emit('success', working_url + '&ratebypass=yes');
   }
   catch (err) {
     this.emit('error', err);
