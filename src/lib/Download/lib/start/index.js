@@ -26,26 +26,13 @@ module.exports = async function start() {
       file_name: file_safe_video_title
     });
 
-    let converted_temp_file_loc = await t.convertFile({
+    let file_loc = await t.convertFile({
       temp_file_loc,
       temp_dir: this.temp_dir,
       file_name: file_safe_video_title
     });
 
-    this.emit('success', {
-      converted_temp_file_loc
-    });
-
-/*    if (working_fmt) {
-      t.emit('success', { result: 'result' });
-    }
-    else {
-      t.emit('error', 'if (working_fmt) not passed');
-    }*/
-
-   // console.log(working_fmt);
-
-    
+    this.emit('success', { file_loc });
   }
   catch (err) {
     t.emit('error', err);
