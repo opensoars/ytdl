@@ -17,7 +17,6 @@ module.exports = function getWorkingUrl(args) {
         fmt: ranked_fmts[attempt_i],
         ytplayer_config
       });
-      console.log(attempt_i);
       attempt.on('error', (err) => attemptWorkIngUrlFinder(err));
       attempt.on('success', (working_url) => resolve(working_url));
       attempt_i++;
