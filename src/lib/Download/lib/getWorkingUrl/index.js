@@ -10,14 +10,18 @@ module.exports = function getWorkingUrl(args) {
     let ranked_fmts = args.ranked_fmts;
     let ytplayer_config = args.ytplayer_config;
 
-    // If attempt1 fails, loop through other fmts!!
-    // Listen events and act accordingly
-    let attempt1 = new WorkingUrlFinder({
-      fmt: ranked_fmts[0],
-      ytplayer_config
-    });
-    attempt1.on('error', (err) => reject(err));
-    attempt1.on('success', (working_url) => resolve(working_url));
-    attempt1.start();
+    let attempt_i = 0;
+    (function attemptWorkIngUrlFinder(err) {
+      if (attempt_i === ranked_fmts.length - 1) return reject(err);
+      let attempt = new WorkingUrlFinder({
+        fmt: ranked_fmts[attempt_i],
+        ytplayer_config
+      });
+      console.log(attempt_i);
+      attempt.on('error', (err) => attemptWorkIngUrlFinder(err));
+      attempt.on('success', (working_url) => resolve(working_url));
+      attempt_i++;
+      attempt.start();
+    }());
   });
 };

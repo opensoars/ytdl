@@ -23,6 +23,7 @@ vs.forEach(v => {
   dl.on('success', (result) => {
     console.log('success', result);
   });
+  console.log('goin');
 
   dl.start();
 });
