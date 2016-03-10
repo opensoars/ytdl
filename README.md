@@ -1,6 +1,6 @@
 # ytdl
 
-Async YouTube downloader. Utilizing using ES6 and ES7 features.
+Async YouTube downloader. Utilizing ES6 and ES7 features.
 
 [![Build Status](https://travis-ci.org/opensoars/ytdl.svg?branch=master)](https://travis-ci.org/opensoars/ytdl)
 
