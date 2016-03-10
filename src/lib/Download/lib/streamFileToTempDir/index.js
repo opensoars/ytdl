@@ -10,7 +10,7 @@ module.exports = function streamFileToTempDir(args) {
     let writeStream = fs.createWriteStream(full_loc)
       .on('error', (err) => reject('Stream error'));
 
-    https.get(args.working_url, res => {  
+    https.get(args.working_url, res => {
       let stream = res.pipe(writeStream);
 
       let progress_interval = setInterval(() => {
@@ -18,7 +18,7 @@ module.exports = function streamFileToTempDir(args) {
           bytesWritten: stream.bytesWritten,
           'content-length': res.headers['content-length']
         });
-      }, 1000);
+      }, 500);
 
       res.on('end', () => {
         clearInterval(progress_interval);
