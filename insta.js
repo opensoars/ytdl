@@ -15,13 +15,35 @@ let vs = [
 
 
 vs.forEach(v => {
-const log = console.log;
+  let dl = new ytdl.Download({ v });
 
-new ytdl.Download({v: 'NnTg4vzli5s'})
-  .on('error', err => log('error', err))
-  .on('succes', result => log('succes', result))
-  .on('callMethod', method => log(`callMethod: ${method}`))
-  .on('stream-progress', prog => log('stream-progress', prog))
-  .on('conversion-progress', prog => log('conversion-progress', prog))
-  .start();
+  dl.on('error', (err) => {
+    console.log('error', err);
+    console.log(err.stack);
+  });
+
+  dl.on('success', (result) => {
+    ytdl.Download.copyAndClean({
+      dir: __dirname + '/done',
+      result_file_location: result.file_location,
+      file_ext: dl.file_ext,
+      file_name: result.file_name
+    });
+    console.log('success', result);
+  });
+
+  dl.on('callMethod', (method) => {
+    console.log('callMethod', method);
+  }); 
+
+  dl.on('stream-progress', (o) => {
+    console.log('stream-progress', o);
+  });
+
+  dl.on('conversion-progress', (o) => {
+    console.log('conversion-progress', o);
+  });
+
+
+  dl.start();
 });
