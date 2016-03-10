@@ -72,10 +72,23 @@ Download.prototype.regexp = {
    *  .+?;<\/script>
    * Allow as much character matches as needed till the closing
    * script tag is found
-   * Example (everything between the parentheses is capturedO)
+   * Example (everything between the parentheses is captured)
    * <script> ... ytplayer.config = ({ ... }); ... ;</script>
    */
-  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/
+  ytplayer_config: /<script>.+?ytplayer.config.+?=.+?(\{.+?\});.+?;<\/script>/,
+
+  /**
+   * Example (everything between the parentheses is captured)
+   * ... Duration: (00:00:00.00),
+   */
+  duration: /Duration: (.+?),/,
+
+  /**
+   * Note the trailing space.
+   * Example (everything between the parentheses is captured)
+   * ... time=(00:00:00.00) 
+   */
+  time: /time=(.+?) /
 };
 
 

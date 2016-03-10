@@ -8,7 +8,7 @@ module.exports = async function start() {
     let url = await t.callMethod('validateUrl', unvalidated_url);
     let unvalidated_source = await t.callMethod('getSourceFromUrl', url);
     let source = await t.callMethod('validateSource', unvalidated_source);
-    let ytplayer_config = await t.callMethod('getYtPlayerConfigFromSource', 
+    let ytplayer_config = await t.callMethod('getYtPlayerConfigFromSource',
       unvalidated_source,
       t.regexp.ytplayer_config
     );
@@ -35,7 +35,9 @@ module.exports = async function start() {
     let file_location = await t.callMethod('convertFile', {
       temp_file_loc,
       temp_dir: this.temp_dir,
-      file_name: file_safe_video_title
+      file_name: file_safe_video_title,
+      duration_re: t.regexp.duration,
+      time_re: t.regexp.time
     });
 
     this.emit('success', { file_location });
