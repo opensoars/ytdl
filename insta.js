@@ -6,8 +6,8 @@ const ytdl = require('./dist/index.js');
 let dls = [];
 let vs = [
   //'NnTg4vzli5s'
-  //'sQVeK7Dt18U'
-  'ynMPpTU_VuI'
+  'sQVeK7Dt18U'
+  //'ynMPpTU_VuI'
 ];
 
 
@@ -27,6 +27,10 @@ vs.forEach(v => {
   dl.on('callMethod', (method) => {
     console.log('callMethod', method);
   });
+
+  dl.on('stream-progress', (o) => {
+    console.log('progress', o);
+  })
 
   console.log('goin');
 
