@@ -7,8 +7,8 @@ const ytdl = require('./dist/index.js');
 
 let dls = [];
 let vs = [
-  'NnTg4vzli5s',
-  'sQVeK7Dt18U',
+  //'NnTg4vzli5s',
+  //'sQVeK7Dt18U',
   'ynMPpTU_VuI'
 ];
 
@@ -23,7 +23,7 @@ vs.forEach(v => {
   });
 
   dl.on('success', (result) => {
-    dl.copyAndClean({
+    ytdl.Download.copyAndClean({
       dir: __dirname + '/done',
       result_file_location: result.file_location,
       file_ext: dl.file_ext,

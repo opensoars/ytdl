@@ -28,7 +28,7 @@ let Download = class Download {
     this.emit('callMethod', method);
     return this[method].apply(this, args);
   }
-  copyAndClean(args) {
+  static copyAndClean(args) {
     fs.readFile(args.result_file_location, (err, file) => {
       fs.writeFile(args.dir + '/' + args.file_name, file, err => {
         if (err) console.log(err);
@@ -41,7 +41,7 @@ let Download = class Download {
       fs.unlink(args.result_file_location.replace(args.file_ext, ''), err => {
         if (err) console.log(err);
         else console.log('unlink mp4');
-      })
+      });
     });
   }
 };
