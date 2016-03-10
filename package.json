@@ -33,8 +33,7 @@
     "type": "git",
     "url": "https://github.com/opensoars/es7"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "readmeFilename": "README.md",
   "license": "MIT"
 }

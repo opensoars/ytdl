@@ -3,8 +3,8 @@
 module.exports = async function start() {
   let t = this;
   try {
-    let a = await t.validateArguments(t.args);
-    let unvalidated_url = await t.getUrlFromArguments(a);
+    let a = await t.callMethod('validateArguments', t.args)
+    let unvalidated_url = await t.callMethod('getUrlFromArguments', a);
     let url = await t.validateUrl(unvalidated_url);
     let unvalidated_source = await t.getSourceFromUrl(url);
     let source = await t.validateSource(unvalidated_source);
