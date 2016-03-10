@@ -1,10 +1,7 @@
 "use strict";
 
 const util = require('util');
-const https = require('https');
 const fs = require('fs');
-const url_lib = require('url');
-const querystring = require('querystring');
 const EventEmitter = require('events').EventEmitter;
 const ens = require('ens');
 const is = require('is');
@@ -30,6 +27,22 @@ let Download = class Download {
       throw new Error(`callMethod could not call method ${method}`);
     this.emit('callMethod', method);
     return this[method].apply(this, args);
+  }
+  copyAndClean(args) {
+    fs.readFile(args.result_file_location, (err, file) => {
+      fs.writeFile(args.dir + '/' + args.file_name, file, err => {
+        if (err) console.log(err);
+        else console.log('write');
+      });
+      fs.unlink(args.result_file_location, err => {
+        if (err) console.log(err);
+        else console.log('unlink mp3');
+      });
+      fs.unlink(args.result_file_location.replace(args.file_ext, ''), err => {
+        if (err) console.log(err);
+        else console.log('unlink mp4');
+      })
+    });
   }
 };
 
@@ -57,7 +70,6 @@ let Download = class Download {
 
 /** Set Download prototype properties */
 
-Download.prototype.temp_dir = __dirname + '/../../../temp';
 
 Download.prototype.regexp = {
   /**

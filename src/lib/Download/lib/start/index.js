@@ -31,16 +31,19 @@ module.exports = async function start() {
       temp_dir: this.temp_dir,
       file_name: file_safe_video_title
     });
-
     let file_location = await t.callMethod('convertFile', {
       temp_file_loc,
       temp_dir: this.temp_dir,
       file_name: file_safe_video_title,
       duration_re: t.regexp.duration,
-      time_re: t.regexp.time
+      time_re: t.regexp.time,
+      file_ext: t.file_ext
     });
 
-    this.emit('success', { file_location });
+    this.emit('success', {
+      file_location,
+      file_name: file_safe_video_title
+    });
   }
   catch (err) {
     t.emit('error', err);

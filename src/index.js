@@ -1,7 +1,14 @@
 "use strict";
 
-let ytdl = {};
+const ytdl = {};
 
-ytdl.Download = require('./lib/Download');
+let Download = require('./lib/Download');
+
+
+Download.prototype.temp_dir = __dirname + '/../temp';
+Download.prototype.file_ext = '.mp3';
+
+
+ytdl.Download = Download;
 
 module.exports = ytdl;

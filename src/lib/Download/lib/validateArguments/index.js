@@ -3,7 +3,6 @@
 const is = require('is');
 
 module.exports = function validateArguments(args) {
-  console.log(args);
   return new Promise((resolve, reject) => {
     if (!is.object(args))
       reject('!is.object(args)');
