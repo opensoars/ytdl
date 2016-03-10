@@ -18,15 +18,14 @@ Async YouTube downloader. Utilizing ES6 and ES7 features.
 # Use
 
 ```js
-const ytdl = require('ytdl');
-
 const log = console.log;
+const Download = require('ytdl').Download;
 
-new ytdl.Download({v: 'NnTg4vzli5s'})
+new Download({ v: 'NnTg4vzli5s' })
   .on('error', err => log('error', err))
   .on('succes', result => log('succes', result))
   .on('callMethod', method => log(`callMethod: ${method}`))
   .on('stream-progress', prog => log('stream-progress', prog))
   .on('conversion-progress', prog => log('conversion-progress', prog))
-  .start();
+  .start(); 
 ```
