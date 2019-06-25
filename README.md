@@ -1,4 +1,4 @@
-# ytdl
+# ytdl (MOVED TO [ytmp3dl-core](https://github.com/opensoars/ytmp3dl-core))
 
 Async YouTube downloader. Utilizing ES6 and ES7 features.
 
